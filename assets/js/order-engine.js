@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchPricingRules = async () => {
         try {
             // Adjust the URL to match your WordPress installation URL
-            const response = await fetch('/wp-json/wh/v1/pricing');
+            const response = await fetch('/?rest_route=/wh/v1/pricing');
             if (response.ok) {
                 const rules = await response.json();
                 rules.forEach(rule => {
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             
             try {
-                const response = await fetch('/wp-json/wh/v1/orders/create', {
+                const response = await fetch('/?rest_route=/wh/v1/orders/create', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
