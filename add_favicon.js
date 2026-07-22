@@ -20,10 +20,10 @@ walkDir('.', function(file) {
   content = content.replace(/<link rel="icon"[^>]*>\n?/gi, '');
   content = content.replace(/<link rel="shortcut icon"[^>]*>\n?/gi, '');
   
-  const faviconTag = '<link rel="icon" type="image/jpeg" href="/assets/images/favicon.jpg">\n';
+  const faviconTag = '<link rel="icon" type="image/png" href="/assets/images/favicon.png">\n';
   if (content.includes('</head>')) {
     content = content.replace('</head>', faviconTag + '</head>');
     fs.writeFileSync(file, content);
   }
 });
-console.log('Favicon added to all HTML files.');
+console.log('Favicon (PNG) added to all HTML files.');
