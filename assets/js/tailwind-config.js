@@ -64,12 +64,12 @@ tailwind.config = {
             },
             "spacing": {
                 "container-max": "1280px",
-                "stack-lg": "32px",
-                "gutter": "24px",
+                "stack-lg": "24px",
+                "gutter": "16px",
                 "margin-mobile": "16px",
-                "section-padding": "80px",
+                "section-padding": "48px",
                 "stack-sm": "8px",
-                "stack-md": "16px"
+                "stack-md": "12px"
             },
             "maxWidth": {
                 "container-max": "1280px"
@@ -85,14 +85,14 @@ tailwind.config = {
                 "body-lg": ["Montserrat"]
             },
             "fontSize": {
-                "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                "label-lg": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
-                "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                "display-lg": ["44px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["14px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "label-lg": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
             }
         }
     }
