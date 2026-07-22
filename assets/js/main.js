@@ -40,4 +40,29 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileNav.classList.toggle('hidden');
         });
     }
+
+    // Highlight active nav link in orange
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href) return;
+        
+        // Exact match for the path, ignore homepage logo link
+        if ((href === currentPath || href === currentPath.split('/').pop() || (currentPath === '/' && href === '/index.html')) && href !== '/' && href !== '/index.html') {
+            // Apply orange color
+            link.classList.remove('text-on-surface-variant', 'dark:text-surface-variant', 'text-primary');
+            link.classList.add('text-accent-vibrant', 'dark:text-accent-vibrant');
+            
+            // If it's inside a dropdown, also highlight the parent button
+            const dropdown = link.closest('.group');
+            if (dropdown) {
+                const btn = dropdown.querySelector('button');
+                if (btn) {
+                    btn.classList.remove('text-on-surface-variant', 'dark:text-surface-variant');
+                    btn.classList.add('text-accent-vibrant', 'dark:text-accent-vibrant');
+                }
+            }
+        }
+    });
 });
