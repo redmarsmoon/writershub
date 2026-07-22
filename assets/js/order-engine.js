@@ -113,11 +113,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Dynamic Pricing Engine
+    let pricingRules = {
+        base_price_academic: 11.00,
+        mult_level_undergrad_1: 0.0,
+        mult_level_undergrad_3: 0.10,
+        mult_level_masters: 0.25,
+        mult_level_phd: 0.40,
+        mult_writer_advanced: 0.25,
+        mult_writer_enl: 0.30
+    };
+
+    // Fetch live pricing rules from WP Backend
+    const fetchPricingRules = async () => {
+        try {
+            // Adjust the URL to match your WordPress installation URL
+            const response = await fetch('http://writershub.local/wp-json/wh/v1/pricing');
+            if (response.ok) {
+                const rules = await response.json();
+                rules.forEach(rule => {
+                    pricingRules[rule.rule_key] = parseFloat(rule.rule_value);
+                });
+                calculatePrice(); // Recalculate once live rules are loaded
+            }
+        } catch (error) {
+            console.warn('Could not fetch live pricing from backend, using defaults.', error);
+        }
+    };
+    fetchPricingRules();
+
     const calculatePrice = () => {
-        let basePrice = 11.00;
+        let basePrice = pricingRules.base_price_academic;
         let pages = parseInt(document.getElementById('qty-pages')?.value || 1);
         let spacing = document.querySelector('.spacing-btn.bg-primary')?.getAttribute('data-value') || 'double';
         
+        // Apply Academic Level Multiplier
+        let levelEl = document.querySelector('#step-2 .option-btn.bg-primary');
+        let levelText = levelEl ? levelEl.innerText.trim() : '';
+        let levelMult = 0;
+        if (levelText.includes('Undergrad (1-2)')) levelMult = pricingRules.mult_level_undergrad_1 || 0;
+        else if (levelText.includes('Undergrad (3-4)')) levelMult = pricingRules.mult_level_undergrad_3 || 0;
+        else if (levelText.includes("Master's")) levelMult = pricingRules.mult_level_masters || 0;
+        else if (levelText.includes('PhD')) levelMult = pricingRules.mult_level_phd || 0;
+        
+        basePrice = basePrice * (1 + levelMult);
+
+        // Apply Writer Category Multiplier
+        let writerEl = document.querySelector('#step-4 .option-btn.bg-primary');
+        let writerMult = 0;
+        if (writerEl) {
+            if (writerEl.innerText.includes('Advanced')) writerMult = pricingRules.mult_writer_advanced || 0;
+            else if (writerEl.innerText.includes('ENL')) writerMult = pricingRules.mult_writer_enl || 0;
+        }
+
+        basePrice = basePrice * (1 + writerMult);
+
+        // Spacing doubles the modified base price
         if (spacing === 'single') {
             basePrice *= 2;
         }
