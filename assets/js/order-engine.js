@@ -221,6 +221,62 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('change', calculatePrice);
     });
 
+    // Submit Logic
+    const submitBtn = document.getElementById('btn-submit');
+    if (submitBtn) {
+        submitBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            
+            // Simple validation
+            const emailInput = document.getElementById('order-email');
+            if(emailInput && !emailInput.value) {
+                alert('Please provide an email address in the final step.');
+                return;
+            }
+
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Processing...';
+            submitBtn.disabled = true;
+
+            // Gather all form data (simplified for this example)
+            const formData = {
+                email: emailInput ? emailInput.value : 'guest@example.com',
+                pages: document.getElementById('qty-pages')?.value,
+                calculated_total: document.getElementById('summary-total')?.textContent.replace('$', ''),
+                service: document.querySelector('#step-1 .option-btn.bg-primary')?.innerText.trim(),
+                level: document.querySelector('#step-2 .option-btn.bg-primary')?.innerText.trim(),
+            };
+            
+            try {
+                const response = await fetch('http://writershub.local/wp-json/wh/v1/orders/create', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Success UI state
+                    submitBtn.innerHTML = 'Success!';
+                    submitBtn.classList.replace('bg-primary', 'bg-green-600');
+                    alert(result.message + ' (Order ID: ' + result.order_id + ')');
+                    // Optional: window.location.href = '/customer-dashboard';
+                } else {
+                    alert('Error: ' + (result.message || 'Unknown error'));
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }
+            } catch (error) {
+                console.error(error);
+                alert('An error occurred submitting the order. Please check your connection.');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+
     // Initialize
     updateWizard();
     calculatePrice();
