@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchPricingRules = async () => {
         try {
             // Adjust the URL to match your WordPress installation URL
-            const response = await fetch('http://writershub.local/wp-json/wh/v1/pricing');
+            const response = await fetch('/wp-json/wh/v1/pricing');
             if (response.ok) {
                 const rules = await response.json();
                 rules.forEach(rule => {
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             
             try {
-                const response = await fetch('http://writershub.local/wp-json/wh/v1/orders/create', {
+                const response = await fetch('/wp-json/wh/v1/orders/create', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -261,8 +261,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Success UI state
                     submitBtn.innerHTML = 'Success!';
                     submitBtn.classList.replace('bg-primary', 'bg-green-600');
-                    alert(result.message + ' (Order ID: ' + result.order_id + ')');
-                    // Optional: window.location.href = '/customer-dashboard';
+                    // Redirect to simulated checkout
+                    window.location.href = `/checkout/?order_id=${result.order_id}`;
                 } else {
                     alert('Error: ' + (result.message || 'Unknown error'));
                     submitBtn.innerHTML = originalText;
