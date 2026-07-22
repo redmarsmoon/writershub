@@ -35,7 +35,7 @@
 <div class="flex items-center w-full h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="flex-shrink-0 mr-8 lg:mr-16"><a href="/index.html"><img src="/assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
 <!-- Desktop Nav -->
-<div class="hidden md:flex items-center space-x-6 lg:space-x-8 flex-1">
+<div class="hidden md:flex items-center justify-center space-x-6 lg:space-x-8 flex-1">
 <a class="text-on-surface-variant dark:text-surface-variant text-[15px] font-semibold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="/how-it-works.html">How It Works</a>
 <a class="text-on-surface-variant dark:text-surface-variant text-[15px] font-semibold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="/pricing.html">Pricing</a>
 <!-- Services Dropdown -->
@@ -54,7 +54,20 @@
         </div>
     </div>
 </div>
-<a class="text-on-surface-variant dark:text-surface-variant text-[15px] font-semibold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="/faq.html">FAQ</a>
+<!-- FAQ Dropdown -->
+<div class="relative group">
+    <button class="flex items-center text-on-surface-variant dark:text-surface-variant text-[15px] font-semibold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 py-2">
+        FAQ
+        <span class="material-symbols-outlined ml-1" style="font-size: 18px;">expand_more</span>
+    </button>
+    <div class="absolute left-0 mt-0 w-48 rounded-md shadow-lg bg-surface dark:bg-surface-container-high ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <div class="py-1" role="menu" aria-orientation="vertical">
+            <a href="/faq.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">FAQ</a>
+            <a href="/about-us.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">About Us</a>
+            <a href="/contact-us.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">Contact Us</a>
+        </div>
+    </div>
+</div>
 </div>
 <div class="flex items-center space-x-4">
 <button class="hidden md:flex items-center text-[15px] font-semibold text-primary dark:text-primary-fixed hover:opacity-80">
