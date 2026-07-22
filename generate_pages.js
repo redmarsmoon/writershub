@@ -10,8 +10,8 @@ const TEMPLATE = `<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="{depth}assets/css/styles.css">
-    <script src="{depth}assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="{depth}assets/js/tailwind-config.js"></script>
 </head>
 <body class="bg-background text-on-background antialiased">
     <!-- TopNavBar -->
