@@ -1,110 +1,20 @@
-<!DOCTYPE html>
+const fs = require('fs');
+const path = require('path');
 
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Get a Quote - WritersHub Plus</title>
+const targetFile = path.join(__dirname, 'order-now.html');
+let content = fs.readFileSync(targetFile, 'utf8');
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+// Ensure order-engine.js is included in head
+if(!content.includes('order-engine.js')) {
+    content = content.replace('</head>', '    <script src="/assets/js/order-engine.js"></script>\n</head>');
+}
 
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-        .form-input-focus:focus {
-            outline: none;
-            border-color: #2558AB;
-            box-shadow: 0 0 0 2px rgba(37, 88, 171, 0.1);
-        }
-        .card-shadow {
-            box-shadow: 0px 4px 20px rgba(37, 88, 171, 0.08);
-        }
-        .step-inactive { opacity: 0.5; }
-        .transition-all-200 { transition: all 0.2s ease-in-out; }
-    </style>
+const headerSplit = content.split('<!-- Form Section -->');
+const header = headerSplit[0];
+const footerSplit = headerSplit[1].split('<!-- Social Proof -->');
+const footer = '<!-- Social Proof -->' + footerSplit[1];
 
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="/assets/js/tailwind-config.js"></script>
-<link rel="icon" type="image/png" href="/assets/images/favicon.png">
-    <script src="/assets/js/order-engine.js"></script>
-</head>
-<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
-<!-- TopNavBar -->
-<nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
-<div class="flex items-center w-full h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="flex-shrink-0 mr-8 lg:mr-16"><a href="/index.html"><img src="/assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
-<!-- Desktop Nav -->
-<div class="hidden md:flex items-center justify-center space-x-6 lg:space-x-8 flex-1">
-<a class="text-on-surface-variant dark:text-surface-variant text-[15px] font-semibold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="/how-it-works.html">How It Works</a>
-<a class="text-on-surface-variant dark:text-surface-variant text-[15px] font-semibold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="/pricing.html">Pricing</a>
-<!-- Services Dropdown -->
-<div class="relative group">
-    <button class="flex items-center text-on-surface-variant dark:text-surface-variant text-[15px] font-semibold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 py-2">
-        Our Services
-        <span class="material-symbols-outlined ml-1" style="font-size: 18px;">expand_more</span>
-    </button>
-    <div class="absolute left-0 mt-0 w-56 rounded-md shadow-lg bg-surface dark:bg-surface-container-high ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-        <div class="py-1" role="menu" aria-orientation="vertical">
-            <a href="/writing-services/index.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">Academic Services</a>
-            <a href="/job-hunting-services/index.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">Career Services</a>
-            <a href="/ecommerce-marketing.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">eCommerce Strategy</a>
-            <hr class="border-outline-variant dark:border-outline my-1">
-            <a href="/services.html" class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">View All Services</a>
-        </div>
-    </div>
-</div>
-<!-- FAQ Dropdown -->
-<div class="relative group">
-    <button class="flex items-center text-on-surface-variant dark:text-surface-variant text-[15px] font-semibold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 py-2">
-        FAQ
-        <span class="material-symbols-outlined ml-1" style="font-size: 18px;">expand_more</span>
-    </button>
-    <div class="absolute left-0 mt-0 w-48 rounded-md shadow-lg bg-surface dark:bg-surface-container-high ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-        <div class="py-1" role="menu" aria-orientation="vertical">
-            <a href="/faq.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">FAQ</a>
-            <a href="/about-us.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">About Us</a>
-            <a href="/contact-us.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">Contact Us</a>
-        </div>
-    </div>
-</div>
-</div>
-<div class="flex items-center space-x-4">
-<button class="hidden md:flex items-center text-[15px] font-semibold text-accent-vibrant hover:opacity-80">
-    <span class="material-symbols-outlined mr-1" style="font-size: 20px;">person</span>
-    Login
-</button>
-<a href="/order-now.html" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-sm font-semibold active:scale-95 duration-150 transition-transform">Order Now</a>
-</div>
-</div>
-</nav>
-<main class="flex-grow">
-<!-- Hero Section -->
-<section class="py-8 md:py-10 bg-surface-container-lowest">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-<div class="space-y-6">
-<span class="inline-block px-3 py-1 rounded-full bg-surface-blue-muted text-primary font-label-sm text-label-sm">EFFICIENT &amp; PROFESSIONAL</span>
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-tight">Order <span class="text-primary">Now</span></h1>
-<p class="font-body-lg text-body-lg text-text-muted max-w-lg">
-                        Get a precise quote for your CV writing, SEO content, or business requirements. Our team of expert writers is ready to help you achieve your goals.
-                    </p>
-<div class="flex items-center gap-4 text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
-<span class="font-label-md text-label-md">100% Human-Written Guarantee</span>
-</div>
-</div>
-<div class="relative">
-<img class="w-full max-w-lg mx-auto drop-shadow-xl" data-alt="A professional minimalist illustration in the style of the reference image featuring orange and blue accents. A character is interacting with a digital interface to request a professional quote for writing services, surrounded by abstract geometric shapes and a clean white background. Modern, corporate aesthetic with high-quality whitespace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiy3NDmkVytEGHAjkO2_VgIjst1poupz1QVEbQDAVpWkQsCbN8gtRwUWpfhJweAmwMthvsMXztZrOeAvfogEDESha6B37Jhk6mY84rtuSOo4rdPxvAuDSUAnM7F7XZKt6xKxUsHqUYj0RYKWvI5lMX935U-cjxMOCADb4uIUhxJHa-4RP4yK6vnPRRLTF_XpNLkAxMYsVVWNhKozFVaExfW_DFy1NYFhxre4II4-XBMPPJR9g2YvqR"/>
-</div>
-</div>
-</section>
-<!-- Form Section -->
+const newBody = `<!-- Form Section -->
 <section class="py-16 md:py-8 bg-surface-container-lowest">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
     
@@ -624,123 +534,9 @@
 
 </div>
 </section>
-<!-- Social Proof -->
-<section class="py-8 bg-surface-container">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
-<div class="flex flex-wrap justify-center items-center gap-8 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-<span class="font-headline-sm text-headline-sm tracking-tighter">TRUSTPILOT ★★★★</span>
-<span class="font-headline-sm text-headline-sm tracking-tighter">FORBES ADVISOR</span>
-<span class="font-headline-sm text-headline-sm tracking-tighter">GLASSDOOR</span>
-<span class="font-headline-sm text-headline-sm tracking-tighter">CLUTCH.CO</span>
-</div>
-</div>
-</section>
-</main>
+`;
 
-<section class="py-16 bg-surface-container-lowest border-t border-outline-variant dark:border-outline">
-    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-        <div class="prose dark:prose-invert max-w-none">
-            <h2 class="text-3xl font-display-md text-on-surface mb-6">Place Your Order with WritersHub Plus: Secure, Fast, and Reliable</h2>
-            <p class="text-on-surface-variant leading-relaxed mb-4">
-                You are just moments away from securing industry-leading <a href="/writing-services/index.html" class="text-primary hover:underline">academic writing support</a> or transformative <a href="/job-hunting-services/index.html" class="text-primary hover:underline">career advancement strategies</a>. At WritersHub Plus, we understand that time is often your most critical asset. Whether you are facing an imminent deadline for a major university assignment or urgently need to submit an optimized resume for a dream job opening, our streamlined ordering portal is designed to capture your exact requirements rapidly and accurately.
-            </p>
+const finalContent = header + newBody + footer;
 
-            <h3 class="text-2xl font-semibold text-on-surface mt-8 mb-4">Tailoring Your Academic Writing Request</h3>
-            <p class="text-on-surface-variant leading-relaxed mb-4">
-                If you are utilizing our academic services, precision is key. Our dynamic intake form allows you to specify the exact parameters of your project. For standard assignments, you can select our <a href="/essay-cave.html" class="text-primary hover:underline">essay writing services</a>, indicating your academic level, required citation style (such as APA 7th edition or MLA), and the precise number of pages needed. 
-            </p>
-            <p class="text-on-surface-variant leading-relaxed mb-4">
-                For more rigorous academic endeavors, such as a master's level <a href="/research-paper.html" class="text-primary hover:underline">research paper</a> or a multi-chapter <a href="/writing-services/dissertation-writing.html" class="text-primary hover:underline">doctoral dissertation</a>, the form provides ample space to upload critical supplementary materials. We strongly encourage you to attach your syllabus, grading rubrics, peer-reviewed articles you wish to include, and any direct feedback from your professors. By providing comprehensive instructions, you empower our Ph.D.-level experts to craft a document that seamlessly mimics your academic voice and strictly adheres to institutional standards.
-            </p>
-
-            <h3 class="text-2xl font-semibold text-on-surface mt-8 mb-4">Upgrading Your Professional Portfolio</h3>
-            <p class="text-on-surface-variant leading-relaxed mb-4">
-                Professionals seeking an edge in the competitive modern job market can easily secure our specialized career services through this same portal. When placing an order for resume optimization or a <a href="/job-hunting-services/linkedin-optimization.html" class="text-primary hover:underline">LinkedIn profile overhaul</a>, you will be prompted to share your current CV and links to your target roles. This allows our certified career strategists to immediately begin aligning your professional narrative with the specific keywords and metrics required to bypass corporate Applicant Tracking Systems (ATS).
-            </p>
-            <p class="text-on-surface-variant leading-relaxed mb-4">
-                Business owners and corporate entities looking to scale their digital presence can also initiate projects here. While comprehensive <a href="/ecommerce-marketing.html" class="text-primary hover:underline">eCommerce strategy</a> and <a href="/ai-seo/index.html" class="text-primary hover:underline">Generative AI SEO</a> campaigns often require a bespoke consultation, utilizing the order form to submit an initial project brief ensures that our senior marketing directors can prepare a highly targeted proposal before your first strategic meeting.
-            </p>
-
-            <h3 class="text-2xl font-semibold text-on-surface mt-8 mb-4">Guaranteed Quality and Complete Confidentiality</h3>
-            <p class="text-on-surface-variant leading-relaxed mb-4">
-                Once you complete the form and securely process your payment, your project is instantly routed to the most qualified expert in our network. We operate with complete transparency; you can review our <a href="/pricing.html" class="text-primary hover:underline">pricing models</a> beforehand to ensure there are no surprises. More importantly, we operate with absolute confidentiality. 
-            </p>
-            <p class="text-on-surface-variant leading-relaxed">
-                As detailed in our <a href="/privacy-policy.html" class="text-primary hover:underline">Privacy Policy</a>, your personal information, institutional affiliations, and payment details are heavily encrypted and never shared with third parties. Furthermore, every single order is backed by our ironclad <a href="/buyer-purchase-protection.html" class="text-primary hover:underline">Buyer Purchase Protection</a>. We guarantee 100% original, human-written content delivered on time, or your money back. If you need a refresher on the steps involved, please review <a href="/how-it-works.html" class="text-primary hover:underline">how it works</a>, or simply proceed below to start your journey with WritersHub Plus.
-            </p>
-        </div>
-    </div>
-</section>
-    
-<!-- Footer -->
-<footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="col-span-1 md:col-span-1">
-<div class="text-lg font-bold text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
-<p class="text-sm opacity-70">
-                    Elevating communication through professional research and high-impact writing.
-                </p>
-</div>
-<div>
-<h4 class="text-[15px] font-semibold text-white mb-4">Writing Services</h4>
-<ul class="space-y-2">
-<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/writing-services/index.html">Academic Services</a></li>
-<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/writing-services/dissertation-writing.html">Dissertation Writing</a></li>
-<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/essay-cave.html">Essay Cave</a></li>
-<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/research-paper.html">Research Papers</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-[15px] font-semibold text-white mb-4">Career Services</h4>
-<ul class="space-y-2">
-<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/job-hunting-services/index.html">Job Hunting</a></li>
-<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/job-hunting-services/linkedin-optimization.html">LinkedIn Optimization</a></li>
-<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/ai-training/index.html">Writers AI</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-[15px] font-semibold text-white mb-4">eCommerce & Company</h4>
-<ul class="space-y-2">
-<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/ecommerce-marketing.html">eCommerce Strategy</a></li>
-<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/blog.html">Blog</a></li>
-<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/pricing.html">Pricing Plans</a></li>
-<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/contact-us.html">Contact Us</a></li>
-<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/privacy-policy.html">Privacy Policy</a></li>
-</ul>
-</div>
-</div>
-<div class="border-t border-white/10 py-6 text-center text-[14px] opacity-50">
-            © <span id="current-year"></span> WritersHub Plus. All rights reserved.
-            <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
-        </div>
-</footer>
-<script>
-        // Simple UI interactions
-        document.querySelectorAll('.service-chip').forEach(chip => {
-            chip.addEventListener('click', () => {
-                // Clear active states
-                document.querySelectorAll('.service-chip').forEach(c => {
-                    c.classList.remove('border-primary', 'bg-surface-blue-muted');
-                    c.classList.add('border-surface-blue-muted');
-                });
-                // Set active state
-                chip.classList.add('border-primary', 'bg-surface-blue-muted');
-                chip.classList.remove('border-surface-blue-muted');
-            });
-        });
-
-        // Form Submission visual feedback
-        document.getElementById('quoteForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = e.target.querySelector('button[type="submit"]');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<span class="material-symbols-outlined animate-spin mr-2">sync</span> Calculating...';
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                btn.innerHTML = '<span class="material-symbols-outlined mr-2">check_circle</span> Quote Ready! Redirecting...';
-                btn.classList.replace('bg-secondary', 'bg-success-green');
-            }, 1500);
-        });
-    </script>
-</body></html>
+fs.writeFileSync(targetFile, finalContent);
+console.log('Successfully rebuilt order-now.html');
