@@ -17,7 +17,7 @@ const TEMPLATE = `<!DOCTYPE html>
     <!-- TopNavBar -->
     <nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
         <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="text-headline-sm font-headline-md font-bold text-primary dark:text-primary-fixed"><a href="{depth}index.html">WritersHub Plus</a></div>
+            <div class="flex-shrink-0"><a href="{depth}index.html"><img src="{depth}assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
             <div class="hidden md:flex items-center space-x-gutter">
                 <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="{depth}writing-services/index.html">Writing Services</a>
                 <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="{depth}job-hunting-services/index.html">Job Hunting</a>
