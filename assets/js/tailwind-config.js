@@ -71,6 +71,9 @@ tailwind.config = {
                 "stack-sm": "8px",
                 "stack-md": "16px"
             },
+            "maxWidth": {
+                "container-max": "1280px"
+            },
             "fontFamily": {
                 "display-lg": ["Montserrat"],
                 "body-md": ["Montserrat"],
