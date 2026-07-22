@@ -1,143 +1,435 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Email Me Essay | WritersHub Plus</title>
-    <meta name="description" content="Fast, reliable essay delivery straight to your inbox.">
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EmailmeEssay | WritersHub Plus</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#d6dae4",
+                    "surface-subtle": "#f8fafc",
+                    "outline-variant": "#c3c6d3",
+                    "on-surface": "#171c23",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#ffb688",
+                    "primary-container": "#2558ab",
+                    "outline": "#737783",
+                    "on-tertiary-container": "#ffc6a4",
+                    "accent-vibrant": "#ff6b35",
+                    "inverse-on-surface": "#edf1fb",
+                    "on-primary-container": "#c0d2ff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#914500",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-variant": "#dee2ec",
+                    "secondary-fixed-dim": "#ffb59b",
+                    "inverse-surface": "#2c3138",
+                    "surface-container-high": "#e4e8f2",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#171c23",
+                    "primary-fixed-dim": "#aec6ff",
+                    "on-tertiary-fixed-variant": "#733500",
+                    "on-secondary-fixed": "#380d00",
+                    "secondary-container": "#ff8c61",
+                    "on-secondary-container": "#742401",
+                    "surface-bright": "#f8f9ff",
+                    "background": "#f8f9ff",
+                    "surface-container-low": "#f0f4fe",
+                    "surface": "#f8f9ff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#7e2b07",
+                    "border-low-contrast": "#e2e8f0",
+                    "tertiary-fixed": "#ffdbc7",
+                    "tertiary": "#6d3200",
+                    "on-primary-fixed": "#001a42",
+                    "on-primary-fixed-variant": "#004395",
+                    "secondary": "#9e421d",
+                    "on-tertiary-fixed": "#311300",
+                    "surface-container-highest": "#dee2ec",
+                    "surface-container": "#eaeef8",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "text-muted": "#64748b",
+                    "surface-elevated": "#ffffff",
+                    "on-surface-variant": "#434752",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#ffdbcf",
+                    "primary": "#00408e",
+                    "surface-tint": "#2a5caf",
+                    "inverse-primary": "#aec6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "stack-sm": "8px",
+                    "margin-mobile": "16px",
+                    "section-padding": "80px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "label-lg": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "button": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "body-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #e4e8f2, transparent), radial-gradient(circle at bottom left, #f0f4fe, transparent);
+        }
+    </style>
+
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="{depth}assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="assets/js/tailwind-config.js"></script>
+    <script src="{depth}assets/js/tailwind-config.js"></script>
 </head>
-<body class="bg-background text-on-background antialiased">
-    <!-- TopNavBar -->
-    <nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
-        <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="flex-shrink-0"><a href="index.html"><img src="assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
-            <div class="hidden md:flex items-center space-x-gutter">
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="writing-services/index.html">Writing Services</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="job-hunting-services/index.html">Job Hunting</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ai-training/index.html">AI Training</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ai-seo/index.html">AI SEO</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
-                <a href="#" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
-            </div>
-        </div>
-    </nav>
-    
-    <main class="hero-gradient relative overflow-hidden">
-        <!-- Hero Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 flex flex-col justify-center text-center items-center">
-            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background leading-tight mb-6 max-w-3xl">
-                Email Me Essay
-            </h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
-                Fast, reliable essay delivery straight to your inbox.
-            </p>
-            <a href="#" class="btn-hover bg-primary text-on-primary px-8 py-4 rounded-lg font-button text-button inline-flex items-center justify-center">
-                Get Started
-                <span class="material-symbols-outlined ml-2" style="font-size: 20px;">arrow_forward</span>
-            </a>
-        </section>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface-elevated dark:bg-inverse-surface shadow-sm sticky top-0 z-50 transition-all duration-300">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+<span class="font-display-lg text-headline-md text-primary dark:text-inverse-primary tracking-tight">WritersHub Plus</span>
+</div>
+<nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex-shrink-0"><a href="index.html"><img src="assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="writing-services/index.html">Academic</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="job-hunting-services/index.html">Job Hunting</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ecommerce-marketing.html">eCommerce</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="pricing.html">Pricing</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
+<a href="order-now.html" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
+</div>
+</div>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-text-muted font-button cursor-pointer active:scale-95 transition-transform px-4 py-2 hover:text-primary">Login</button>
+<button class="bg-primary text-on-primary font-button px-6 py-3 rounded-lg shadow-sm hover:bg-primary-container transition-all active:scale-95">Order Now</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden hero-gradient py-20 md:py-32">
 
-        <!-- Benefits Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-elevated rounded-xl border border-border-low-contrast my-12">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Why Choose Us?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">star</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">Expert Professionals</h3>
-                    <p class="text-on-surface-variant">Our team consists of industry veterans and academic experts.</p>
-                </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">timer</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">On-Time Delivery</h3>
-                    <p class="text-on-surface-variant">We never miss a deadline. Get your work when you need it.</p>
-                </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">support_agent</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">24/7 Support</h3>
-                    <p class="text-on-surface-variant">We're always here to answer your questions and assist you.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Overview Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Pricing Overview</h2>
-            <div class="bg-surface-elevated rounded-xl border border-border-low-contrast p-8 max-w-2xl mx-auto text-center card-shadow">
-                <h3 class="font-headline-md text-2xl font-bold mb-4">Transparent Pricing</h3>
-                <p class="text-on-surface-variant mb-6">Our pricing is clear, upfront, and competitive. Proceed to our order form to get an exact quote based on your requirements.</p>
-                <a href="#" class="btn-hover bg-accent-vibrant text-on-primary px-6 py-3 rounded-lg font-button text-button inline-flex items-center justify-center">
-                    View Full Pricing & Order
-                </a>
-            </div>
-        </section>
-
-        <!-- FAQs Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-subtle mb-16 rounded-xl">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Frequently Asked Questions</h2>
-            <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">How fast can you deliver?</h3>
-                    <p class="text-on-surface-variant">We offer various delivery speeds, starting from just 24 hours depending on the complexity of the task.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">Is the process confidential?</h3>
-                    <p class="text-on-surface-variant">Absolutely. We use enterprise-grade encryption and strict privacy policies to protect your data.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">What if I need revisions?</h3>
-                    <p class="text-on-surface-variant">We offer free revisions within a specified period to ensure you are 100% satisfied with the final result.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="col-span-1 md:col-span-1">
-                <div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
-                <p class="font-body-md text-body-md opacity-70">
+<div class="relative z-10 max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div class="flex flex-col gap-stack-md">
+<span class="bg-primary-container/10 text-primary-container px-4 py-1.5 rounded-full w-fit font-label-lg text-label-lg">
+                        EMAILMEESSAY BY WRITERSHUB
+                    </span>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface leading-tight">
+                        EmailmeEssay: Your Expert <span class="text-primary">Academic Writing</span> Partner
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Unlock your academic potential with 100% human-written, high-quality essays. Our scholarly rigor ensures your voice shines through original, peer-reviewed research.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<button class="bg-accent-vibrant text-on-primary font-button px-8 py-4 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all active:scale-95">
+                            Get a Quote
+                        </button>
+<button class="bg-surface-elevated text-primary border border-primary/20 font-button px-8 py-4 rounded-lg hover:bg-surface-container transition-all flex items-center gap-2">
+                            Calculate Pricing
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+<div class="flex items-center gap-6 mt-8 pt-8 border-t border-outline-variant/30">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-surface-dim shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Portrait of a professional academic writer, mid-40s, friendly expression, studio lighting, soft corporate aesthetic consistent with primary blue brand palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtos8Vvw6JLh54njLat4Gn7wh04km0TC8aMbdUsWCSvmSaNhD_3S1HLNelClrHAWSmSASWnN8GmPQxUMSOM-KC64_HdkonWdK6titq3HHqhiO9NSWdh55lrfmFTON-W9y0nQ0y3AaN8IVD-JPbOfiMcmzGJFhQEn3cWos_wXGkiAVS21rzduFsAuNfcCFnqbooFbn5Y6GDLokRf-5Yri8_aD_n9hF9GZGQzmLyO9nO4oN7XEfY2Fxr"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-surface-dim shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close-up of a female scholar wearing glasses, focused expression, intellectual atmosphere, professional soft focus background, corporate blue and white lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC94WXdxGmUpKjQ5VofRKImUgxJ4DMNPebMcxtnJp29rrT_IVTPPAde1baQFf-oNAR_lnRVchBUC-Hx94NN8PFtq5WXCP3_4f9PRnXleDwCrCuJfAjS5iRxuHWI25lZx4zWiZgQEgWE3YbB3aVL4bkW7KxeSZUah2PeNsoQv6tXa_XPPGgrckAi1O52wHRXmSmWUD08S7vknMgJ6KpR2m25sjsRULITryRUJR0Z9ViIk0Pc8j0NUTkb"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-surface-dim shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Male academic researcher in a bright modern workspace, clean lines, professional business casual attire, vibrant yet professional lighting matching the brand's primary colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8AntZ-ONtk-dNpoovKI_9Nqqu2_dq5qBXnJ96YBHFHhEM-P5XVOjVXXX4RZq8slg0MV_ZhVb6xn4eQSrlroRbdGDT9NxmsrY2oK7dp3he-jxImdnhpt5w1tQr8tC_AAqxhbR7i4q6IgpAljtBlwvPJfkd8s_uRn22a9Y3HyTxR7Tmv1bvldf9W1kDIDrUGDZq9XRgY9u5uZKjU7tl5cu-5povVcBs8EMWWrDI6MyCe8LT0YBnAesn"/>
+</div>
+</div>
+<div class="text-label-lg font-label-lg text-on-surface-variant">
+<span class="text-primary font-bold">500+</span> Ph.D. Level Writers Active
+                        </div>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<div class="relative z-10 rounded-xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2">
+<img class="w-full aspect-[4/3] object-cover" data-alt="Top-down view of a modern wooden desk with an open laptop showing a scholarly paper, a fountain pen, a cup of coffee, and clean white notebooks. The lighting is crisp and airy with soft blue shadows, creating a productive and high-end academic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPUsrNYgql2MmLg0-C2PIlGaUfDSiy0gdxgR14pf3jFEvYUt5DIGpkWTCQu05g7oy4qyqpZ79oOPclks2NnNpvc6XBITlDy819aTvnebVWbrr1C1z2j2Ep-BDoeSWrdFg9zC9IdRkjt-GjJrnNT8reveGuSD_bloTZfDIPkrB11S5hj2-88Rant02R3KkgTSqPm5XdXWKrYYkT6hkxXvMJAxLM0eI_lgoIC_lX7Xi_JXNljC107Qar"/>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-10 -right-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-accent-vibrant/10 rounded-full blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-section-padding bg-surface-elevated">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col items-center text-center mb-16 gap-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Tailored Academic Excellence</h2>
+<p class="text-on-surface-variant max-w-2xl font-body-lg">
+                        Specialized support across all academic disciplines, handled by subject matter experts.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service 1 -->
+<div class="group p-8 rounded-xl border border-border-low-contrast hover:border-primary/50 hover:shadow-xl transition-all duration-300 bg-white flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary-container transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">history_edu</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Essay Writing</h3>
+<p class="text-text-muted">From argumentative essays to reflective journals, we master every tone and format.</p>
+</div>
+<!-- Service 2 -->
+<div class="group p-8 rounded-xl border border-border-low-contrast hover:border-primary/50 hover:shadow-xl transition-all duration-300 bg-white flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Dissertation Support</h3>
+<p class="text-text-muted">Full-cycle assistance for thesis proposals, data analysis, and final chapter drafting.</p>
+</div>
+<!-- Service 3 -->
+<div class="group p-8 rounded-xl border border-border-low-contrast hover:border-primary/50 hover:shadow-xl transition-all duration-300 bg-white flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">library_books</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Literature Reviews</h3>
+<p class="text-text-muted">Comprehensive synthesis of existing research with critical appraisal of major works.</p>
+</div>
+<!-- Service 4 -->
+<div class="group p-8 rounded-xl border border-border-low-contrast hover:border-primary/50 hover:shadow-xl transition-all duration-300 bg-white flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">spellcheck</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Editing &amp; Proofreading</h3>
+<p class="text-text-muted">Polishing grammar, structure, and citation styles to professional publishing standards.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Process Section -->
+<section class="py-section-padding bg-surface-subtle overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="relative">
+<div class="absolute -top-12 -left-12 text-[200px] font-extrabold text-primary/5 select-none leading-none">PROCESS</div>
+<h2 class="font-headline-lg text-headline-lg mb-12 relative z-10">How We Deliver <br/><span class="text-primary">Scholarly Excellence</span></h2>
+</div>
+<div class="flex flex-col gap-8 relative">
+<!-- Step 1 -->
+<div class="flex gap-6 items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xl relative z-10 group-hover:bg-accent-vibrant transition-colors">1</div>
+<div class="pb-8 border-l-2 border-primary/20 pl-8 -ml-[42px] mt-12">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Submit Brief</h4>
+<p class="text-on-surface-variant">Provide your instructions, rubrics, and deadlines through our secure dashboard.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-6 items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xl relative z-10 group-hover:bg-accent-vibrant transition-colors">2</div>
+<div class="pb-8 border-l-2 border-primary/20 pl-8 -ml-[42px] mt-12">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Writer Match</h4>
+<p class="text-on-surface-variant">We assign a writer with a Ph.D. or Master's degree in your specific subject area.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-6 items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xl relative z-10 group-hover:bg-accent-vibrant transition-colors">3</div>
+<div class="pb-8 border-l-2 border-primary/20 pl-8 -ml-[42px] mt-12">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Drafting &amp; Review</h4>
+<p class="text-on-surface-variant">Track progress in real-time and provide feedback on initial drafts and outlines.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex gap-6 items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xl relative z-10 group-hover:bg-accent-vibrant transition-colors">4</div>
+<div class="pl-8 -ml-[42px] mt-12">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Quality Check</h4>
+<p class="text-on-surface-variant">Final review by our editorial team ensures plagiarism-free, perfect work.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<div class="relative bg-white p-4 rounded-2xl shadow-xl transform lg:rotate-3">
+<img class="w-full rounded-xl shadow-inner" data-alt="A clean and professional digital interface mockup showing a user dashboard for an academic writing service. The screen displays clear progress bars, document upload zones, and a messaging window with a profile picture of a expert writer. Aesthetic is ultra-modern, using whites, light grays, and the brand's primary blue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlb_RQ_XEkU_q6C3sE2XvKqbQ0MfqlZJ2wjrkdgDFP6bFZUiurKlkyQUFCvPP7yBvXM-BpDp5fdxF4KBA61-0M0NNHYL5GIJZ2k36cI9YPYHPYsNxbQOVNSm288t2geQnYeEvg3X6qv07_CZVS22rI8FmmilTxAHmGWYOwLZd6MnXpi0Vqd8Sjn_TYzlg8t5GHBdxbEvjZOdVrkyRL32L4HIVhIqTTeEF1i--k1wIsu-rcWcpxns5R"/>
+<div class="absolute -bottom-6 -right-6 bg-accent-vibrant text-white p-6 rounded-xl shadow-lg hidden md:block">
+<p class="font-bold text-2xl">99.8%</p>
+<p class="text-sm opacity-90">On-Time Delivery Rate</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust / Social Proof Section -->
+<section class="py-section-padding bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid md:grid-cols-3 gap-stack-lg text-center">
+<div class="flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-5xl text-secondary-fixed">workspace_premium</span>
+<h3 class="font-headline-md text-headline-md">Ph.D. Experts Only</h3>
+<p class="text-on-primary-container text-lg">Every writer undergoes a rigorous subject-specific qualification process.</p>
+</div>
+<div class="flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-5xl text-secondary-fixed">support_agent</span>
+<h3 class="font-headline-md text-headline-md">24/7 Human Support</h3>
+<p class="text-on-primary-container text-lg">No bots. Real academic consultants available around the clock to assist you.</p>
+</div>
+<div class="flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-5xl text-secondary-fixed">verified_user</span>
+<h3 class="font-headline-md text-headline-md">Guaranteed Originality</h3>
+<p class="text-on-primary-container text-lg">Detailed plagiarism reports provided with every single order at no extra cost.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-24 bg-surface-elevated relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="bg-surface-container-low rounded-3xl p-12 md:p-20 text-center flex flex-col items-center gap-stack-md border border-border-low-contrast shadow-sm">
+<h2 class="font-headline-lg text-headline-lg md:text-display-lg max-w-3xl">Ready to Elevate Your Academic Standing?</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl mb-8">
+                        Join thousands of students who trust EmailmeEssay for their most critical assignments. Fast, reliable, and entirely human.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+<button class="bg-primary text-on-primary font-button px-12 py-5 rounded-lg text-lg shadow-xl hover:bg-primary-container hover:-translate-y-1 transition-all active:scale-95">
+                            Get a Quote Today
+                        </button>
+<button class="bg-white text-primary border-2 border-primary font-button px-12 py-5 rounded-lg text-lg hover:bg-surface-container-highest transition-all active:scale-95">
+                            Calculate Pricing
+                        </button>
+</div>
+<p class="mt-8 text-label-lg font-label-lg text-text-muted flex items-center gap-2">
+<span class="material-symbols-outlined text-green-600">lock</span>
+                        SSL Secure &amp; Completely Confidential
+                    </p>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full -ml-32 -mb-32 blur-3xl"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
+<p class="font-body-md text-body-md opacity-70">
                     Elevating communication through professional research and high-impact writing.
                 </p>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="writing-services/index.html">Academic Services</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="job-hunting-services/index.html">Career Coaching</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ai-training/index.html">AI Training</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ai-seo/index.html">AI SEO</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Pricing Plans</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Contact Us</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
-                <div class="flex space-x-2">
-                    <input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary" placeholder="Email address" type="email"/>
-                    <button class="bg-primary px-4 py-2 rounded-lg">
-                        <span class="material-symbols-outlined text-white">send</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="writing-services/index.html">Academic Services</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="job-hunting-services/index.html">Career Coaching</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ecommerce-marketing.html">eCommerce Strategy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="pricing.html">Pricing Plans</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="contact-us.html">Contact Us</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
+<div class="flex space-x-2">
+<input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary placeholder-white/40" placeholder="Email address" type="email"/>
+<button class="bg-primary px-4 py-2 rounded-lg text-white hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
             © 2024 WritersHub Plus. All rights reserved.
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+</footer>
+<script>
+        // Micro-interactions and effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('py-2', 'shadow-md');
+                    header.classList.remove('py-4', 'shadow-sm');
+                } else {
+                    header.classList.add('py-4', 'shadow-sm');
+                    header.classList.remove('py-2', 'shadow-md');
+                }
+            });
+
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section > div').forEach(el => {
+                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>

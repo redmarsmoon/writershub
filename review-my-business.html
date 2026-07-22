@@ -1,143 +1,441 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Review My Business | WritersHub Plus</title>
-    <meta name="description" content="Get a comprehensive review of your business strategy and web presence.">
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Review My Business | WritersHub Plus Reputation Management</title>
+<meta content="Elevate your brand credibility with automated review generation, 24/7 reputation monitoring, and expert Google Business Profile management." name="description"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#ffb688",
+                    "accent-vibrant": "#ff6b35",
+                    "on-surface": "#171c23",
+                    "inverse-surface": "#2c3138",
+                    "surface-subtle": "#f8fafc",
+                    "on-tertiary-container": "#ffc6a4",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#9e421d",
+                    "primary-container": "#2558ab",
+                    "inverse-primary": "#aec6ff",
+                    "on-primary-container": "#c0d2ff",
+                    "primary-fixed": "#d8e2ff",
+                    "text-muted": "#64748b",
+                    "tertiary-fixed": "#ffdbc7",
+                    "on-secondary-fixed-variant": "#7e2b07",
+                    "surface-variant": "#dee2ec",
+                    "background": "#f8f9ff",
+                    "surface-dim": "#d6dae4",
+                    "on-tertiary-fixed": "#311300",
+                    "surface-bright": "#f8f9ff",
+                    "surface-elevated": "#ffffff",
+                    "surface": "#f8f9ff",
+                    "on-background": "#171c23",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#2a5caf",
+                    "surface-container-high": "#e4e8f2",
+                    "inverse-on-surface": "#edf1fb",
+                    "error": "#ba1a1a",
+                    "border-low-contrast": "#e2e8f0",
+                    "primary-fixed-dim": "#aec6ff",
+                    "secondary-fixed": "#ffdbcf",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#001a42",
+                    "secondary-container": "#ff8c61",
+                    "tertiary-container": "#914500",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed": "#380d00",
+                    "on-secondary-container": "#742401",
+                    "secondary-fixed-dim": "#ffb59b",
+                    "on-tertiary-fixed-variant": "#733500",
+                    "primary": "#00408e",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#6d3200",
+                    "surface-container-low": "#f0f4fe",
+                    "outline-variant": "#c3c6d3",
+                    "outline": "#737783",
+                    "surface-container-highest": "#dee2ec",
+                    "surface-container": "#eaeef8",
+                    "on-surface-variant": "#434752",
+                    "on-primary-fixed-variant": "#004395",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "section-padding": "80px",
+                    "container-max": "1280px",
+                    "stack-md": "16px",
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "label-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Montserrat"],
+                    "button": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+    </style>
+
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="{depth}assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="assets/js/tailwind-config.js"></script>
+    <script src="{depth}assets/js/tailwind-config.js"></script>
 </head>
-<body class="bg-background text-on-background antialiased">
-    <!-- TopNavBar -->
-    <nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
-        <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="flex-shrink-0"><a href="index.html"><img src="assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
-            <div class="hidden md:flex items-center space-x-gutter">
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="writing-services/index.html">Writing Services</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="job-hunting-services/index.html">Job Hunting</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ai-training/index.html">AI Training</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ai-seo/index.html">AI SEO</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
-                <a href="#" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
-            </div>
-        </div>
-    </nav>
-    
-    <main class="hero-gradient relative overflow-hidden">
-        <!-- Hero Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 flex flex-col justify-center text-center items-center">
-            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background leading-tight mb-6 max-w-3xl">
-                Review My Business
-            </h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
-                Get a comprehensive review of your business strategy and web presence.
-            </p>
-            <a href="#" class="btn-hover bg-primary text-on-primary px-8 py-4 rounded-lg font-button text-button inline-flex items-center justify-center">
-                Get Started
-                <span class="material-symbols-outlined ml-2" style="font-size: 20px;">arrow_forward</span>
-            </a>
-        </section>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex-shrink-0"><a href="index.html"><img src="assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="writing-services/index.html">Academic</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="job-hunting-services/index.html">Job Hunting</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ecommerce-marketing.html">eCommerce</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="pricing.html">Pricing</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
+<a href="order-now.html" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-section-padding overflow-hidden">
+<div class="absolute inset-0 z-0">
 
-        <!-- Benefits Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-elevated rounded-xl border border-border-low-contrast my-12">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Why Choose Us?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">star</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">Expert Professionals</h3>
-                    <p class="text-on-surface-variant">Our team consists of industry veterans and academic experts.</p>
-                </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">timer</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">On-Time Delivery</h3>
-                    <p class="text-on-surface-variant">We never miss a deadline. Get your work when you need it.</p>
-                </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">support_agent</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">24/7 Support</h3>
-                    <p class="text-on-surface-variant">We're always here to answer your questions and assist you.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Overview Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Pricing Overview</h2>
-            <div class="bg-surface-elevated rounded-xl border border-border-low-contrast p-8 max-w-2xl mx-auto text-center card-shadow">
-                <h3 class="font-headline-md text-2xl font-bold mb-4">Transparent Pricing</h3>
-                <p class="text-on-surface-variant mb-6">Our pricing is clear, upfront, and competitive. Proceed to our order form to get an exact quote based on your requirements.</p>
-                <a href="#" class="btn-hover bg-accent-vibrant text-on-primary px-6 py-3 rounded-lg font-button text-button inline-flex items-center justify-center">
-                    View Full Pricing & Order
-                </a>
-            </div>
-        </section>
-
-        <!-- FAQs Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-subtle mb-16 rounded-xl">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Frequently Asked Questions</h2>
-            <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">How fast can you deliver?</h3>
-                    <p class="text-on-surface-variant">We offer various delivery speeds, starting from just 24 hours depending on the complexity of the task.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">Is the process confidential?</h3>
-                    <p class="text-on-surface-variant">Absolutely. We use enterprise-grade encryption and strict privacy policies to protect your data.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">What if I need revisions?</h3>
-                    <p class="text-on-surface-variant">We offer free revisions within a specified period to ensure you are 100% satisfied with the final result.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="col-span-1 md:col-span-1">
-                <div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
-                <p class="font-body-md text-body-md opacity-70">
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div class="space-y-stack-lg">
+<div class="inline-flex items-center gap-2 bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-lg text-label-lg">REPUTATION MANAGEMENT</span>
+</div>
+<h1 class="font-display-lg text-display-lg lg:text-display-lg md:text-headline-lg-mobile text-on-background">
+                    Reputation Management. Review Generation. <span class="text-primary">Brand Credibility.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    In a world where your online reputation is your most valuable currency, we provide the tools and expertise to ensure your brand shines brighter than the competition.
+                </p>
+<div class="flex flex-wrap gap-stack-md pt-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-button flex items-center gap-2 transition-all hover:translate-y-[-2px] shadow-lg">
+                        Order Now <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface-elevated text-primary border border-primary px-8 py-4 rounded-lg font-button transition-all hover:bg-surface-subtle">
+                        How It Works
+                    </button>
+</div>
+</div>
+<div class="relative flex justify-center lg:justify-end">
+<div class="relative w-full aspect-[1.59] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Our dedicated reputation management team collaborating in a modern office space" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsh4a5iTiA-lkBJ_z2q_fWaPixDjPulqhKJf_QzozYCJJjnWxtc2A1ZcaOO3Y2L6yKMcpje47OH7uaHgSK2sPh_qq979MlPULI25fX0PJa-eDpzdTwdTzLKQGWEkoqi8FMUbZXnlWnyxvCe4Ll2VV2ohnH24F_k08XrPi5nsDT98P1yKkHHOn0hO5lZ8qLn-1WFAYhL7gxZ7t9HyZtL0FtBbOG37FvN-MKNLyl5bj2ve42Kt1cT79Ud6eM"/>
+</div>
+<div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-xl shadow-xl hidden md:block">
+<div class="flex items-center gap-4">
+<div class="bg-accent-vibrant text-white p-3 rounded-lg">
+<span class="material-symbols-outlined">stars</span>
+</div>
+<div>
+<div class="font-bold text-headline-md">4.9/5</div>
+<div class="text-text-muted text-label-lg">Average Review Score</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Why Choose Section (Bento Grid) -->
+<section class="py-section-padding bg-surface-subtle">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 space-y-stack-sm">
+<h2 class="font-headline-lg text-headline-lg text-on-background">Why Choose Review My Business</h2>
+<p class="text-text-muted font-body-lg">Boost Your Online Presence. Attract More Customers. Build Unshakeable Trust.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Proactive Generation -->
+<div class="bg-surface-elevated p-stack-lg rounded-xl shadow-sm border border-border-low-contrast transition-all hover:shadow-md group">
+<div class="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Proactive and Automated Review Generation</h3>
+<p class="text-on-surface-variant mb-6">We utilize intelligent automation to send timely, personalized review requests via email and SMS, making the process effortless for your customers.</p>
+<a class="text-primary font-button flex items-center gap-1 hover:gap-2 transition-all" href="#">Learn More <span class="material-symbols-outlined">arrow_right_alt</span></a>
+</div>
+<!-- 24/7 Monitoring -->
+<div class="bg-surface-elevated p-stack-lg rounded-xl shadow-sm border border-border-low-contrast transition-all hover:shadow-md group">
+<div class="w-12 h-12 bg-secondary-fixed flex items-center justify-center rounded-lg mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Comprehensive 24/7 Reputation Monitoring</h3>
+<p class="text-on-surface-variant mb-6">Our advanced sentiment analysis tools provide real-time alerts and deep insights into how your brand is perceived across all major platforms.</p>
+<a class="text-primary font-button flex items-center gap-1 hover:gap-2 transition-all" href="#">Learn More <span class="material-symbols-outlined">arrow_right_alt</span></a>
+</div>
+<!-- Local SEO -->
+<div class="bg-surface-elevated p-stack-lg rounded-xl shadow-sm border border-border-low-contrast transition-all hover:shadow-md group">
+<div class="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Enhanced Local SEO and Brand Credibility</h3>
+<p class="text-on-surface-variant mb-6">Improve your review metrics to signal to search engines that your business is reputable, translating directly into higher organic traffic.</p>
+<a class="text-primary font-button flex items-center gap-1 hover:gap-2 transition-all" href="#">Learn More <span class="material-symbols-outlined">arrow_right_alt</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission Statement -->
+<section class="py-section-padding bg-on-surface text-on-primary">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-display-lg text-headline-lg mb-8 leading-tight">
+                        In the modern digital landscape, what people say about you online is often more important than what you say about yourself.
+                    </h2>
+<p class="font-body-lg text-outline-variant mb-8">
+                        Review My Business was founded on the principle that every business deserves a reputation that reflects its true quality and commitment to excellence. We act as a seamless extension of your business.
+                    </p>
+<button class="bg-accent-vibrant text-white px-8 py-4 rounded-lg font-button hover:bg-opacity-90 transition-all">About Our Services</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-inverse-surface p-8 rounded-xl border border-outline/20">
+<div class="text-display-lg font-bold text-accent-vibrant mb-2">90%</div>
+<p class="text-label-lg uppercase tracking-widest text-outline-variant">Consumers Read Reviews</p>
+</div>
+<div class="bg-inverse-surface p-8 rounded-xl border border-outline/20 mt-8">
+<div class="text-display-lg font-bold text-primary-fixed mb-2">24/7</div>
+<p class="text-label-lg uppercase tracking-widest text-outline-variant">Continuous Monitoring</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section (Horizontal Timeline) -->
+<section class="py-section-padding bg-background overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Our Reputation Management Process</h2>
+<div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="relative">
+<!-- Decorative line -->
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-border-low-contrast -translate-y-1/2 hidden lg:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Step 1 -->
+<div class="relative bg-surface-elevated p-8 rounded-xl border border-border-low-contrast shadow-sm z-10 transition-transform hover:-translate-y-2">
+<div class="w-10 h-10 bg-primary text-white flex items-center justify-center rounded-full font-bold mb-6 mx-auto lg:mx-0">1</div>
+<h4 class="font-headline-md text-body-lg font-bold mb-3">Deep-Dive Audit</h4>
+<p class="text-body-md text-on-surface-variant">A comprehensive, 360-degree audit of your current online reputation and local SEO performance.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative bg-surface-elevated p-8 rounded-xl border border-border-low-contrast shadow-sm z-10 transition-transform hover:-translate-y-2">
+<div class="w-10 h-10 bg-primary text-white flex items-center justify-center rounded-full font-bold mb-6 mx-auto lg:mx-0">2</div>
+<h4 class="font-headline-md text-body-lg font-bold mb-3">Customized Strategy</h4>
+<p class="text-body-md text-on-surface-variant">A bespoke strategy defining clear, measurable objectives for review generation and response protocols.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative bg-surface-elevated p-8 rounded-xl border border-border-low-contrast shadow-sm z-10 transition-transform hover:-translate-y-2">
+<div class="w-10 h-10 bg-primary text-white flex items-center justify-center rounded-full font-bold mb-6 mx-auto lg:mx-0">3</div>
+<h4 class="font-headline-md text-body-lg font-bold mb-3">Proactive Management</h4>
+<p class="text-body-md text-on-surface-variant">Deploying tools, 24/7 monitoring, and expert copywriting to handle day-to-day reputation complexities.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative bg-surface-elevated p-8 rounded-xl border border-border-low-contrast shadow-sm z-10 transition-transform hover:-translate-y-2">
+<div class="w-10 h-10 bg-primary text-white flex items-center justify-center rounded-full font-bold mb-6 mx-auto lg:mx-0">4</div>
+<h4 class="font-headline-md text-body-lg font-bold mb-3">Continuous Optimization</h4>
+<p class="text-body-md text-on-surface-variant">Ongoing cycle of performance reporting and adapting strategy to remain effective in digital landscapes.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Deep Dive Features -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="space-y-stack-lg">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<h3 class="font-headline-lg text-headline-lg mb-6">Google Business Profile Review Management</h3>
+<p class="font-body-lg text-on-surface-variant mb-6">
+                            Managing your GBP reviews is not just about responding; it's about strategic optimization. We monitor every new review in real-time, crafting keyword-rich responses that signal authority to Google's algorithms.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 font-body-md">
+<span class="material-symbols-outlined text-primary">check_circle</span> 
+                                Real-time monitoring and 100% response rate
+                            </li>
+<li class="flex items-center gap-3 font-body-md">
+<span class="material-symbols-outlined text-primary">check_circle</span> 
+                                Local Pack and Google Maps ranking optimization
+                            </li>
+<li class="flex items-center gap-3 font-body-md">
+<span class="material-symbols-outlined text-primary">check_circle</span> 
+                                Professional, keyword-rich expert response drafting
+                            </li>
+</ul>
+</div>
+<div class="bg-surface-elevated rounded-2xl p-1 shadow-2xl overflow-hidden relative group">
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="p-8">
+<div class="flex items-center justify-between mb-8 border-b pb-4">
+<div class="font-bold">Latest Google Reviews</div>
+<div class="text-accent-vibrant font-bold">5.0 ★★★★★</div>
+</div>
+<div class="space-y-6">
+<div class="p-4 bg-surface-subtle rounded-lg border border-border-low-contrast animate-pulse">
+<div class="h-4 w-1/4 bg-outline-variant rounded mb-2"></div>
+<div class="h-10 w-full bg-outline-variant rounded"></div>
+</div>
+<div class="p-4 bg-surface-subtle rounded-lg border border-border-low-contrast">
+<div class="font-bold text-body-md mb-1">Satisfied Customer</div>
+<p class="italic text-on-surface-variant">"Incredible service, our reviews tripled in two months!"</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-padding bg-surface-elevated">
+<div class="max-w-container-max mx-auto px-gutter">
+<h2 class="font-headline-lg text-headline-lg text-center mb-16">Frequently Asked Questions</h2>
+<div class="grid lg:grid-cols-2 gap-x-12 gap-y-6">
+<!-- FAQ Item -->
+<div class="border-b border-border-low-contrast pb-6">
+<h4 class="font-bold text-body-lg mb-2 text-primary">Why is reputation management so critical?</h4>
+<p class="text-on-surface-variant">Over 90% of consumers read online reviews before a purchase. A positive reputation builds immediate trust and significantly impacts search rankings.</p>
+</div>
+<div class="border-b border-border-low-contrast pb-6">
+<h4 class="font-bold text-body-lg mb-2 text-primary">Can you really help me remove negative reviews?</h4>
+<p class="text-on-surface-variant">While platforms don't allow removal of legitimate negatives, we identify violations and provide expert strategies to turn dissatisfaction into loyalty.</p>
+</div>
+<div class="border-b border-border-low-contrast pb-6">
+<h4 class="font-bold text-body-lg mb-2 text-primary">Is your process compliant with guidelines?</h4>
+<p class="text-on-surface-variant">Absolutely. We do not engage in unethical practices like buying reviews. We focus on authentic collection compliant with Google and Yelp terms.</p>
+</div>
+<div class="border-b border-border-low-contrast pb-6">
+<h4 class="font-bold text-body-lg mb-2 text-primary">How do you handle a sudden reputation crisis?</h4>
+<p class="text-on-surface-variant">We provide specialized Crisis Management services, moving into high gear with intensive monitoring and rapid-response templates to restore credibility.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-padding">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="bg-primary-container rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden text-on-primary-container">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-[200px]">verified</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg lg:text-display-lg mb-6 relative z-10">Ready to Take Control of Your Reputation?</h2>
+<p class="font-body-lg text-on-primary-container/80 mb-10 max-w-2xl mx-auto relative z-10">Join hundreds of businesses growing their revenue through social proof and unshakeable brand credibility.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+<button class="bg-accent-vibrant text-white px-10 py-5 rounded-lg font-button text-lg shadow-xl hover:scale-105 transition-all">Get Started Now</button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-10 py-5 rounded-lg font-button text-lg hover:bg-white/20 transition-all">Schedule a Free Audit</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
+<p class="font-body-md text-body-md opacity-70">
                     Elevating communication through professional research and high-impact writing.
                 </p>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="writing-services/index.html">Academic Services</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="job-hunting-services/index.html">Career Coaching</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ai-training/index.html">AI Training</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ai-seo/index.html">AI SEO</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Pricing Plans</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Contact Us</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
-                <div class="flex space-x-2">
-                    <input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary" placeholder="Email address" type="email"/>
-                    <button class="bg-primary px-4 py-2 rounded-lg">
-                        <span class="material-symbols-outlined text-white">send</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="writing-services/index.html">Academic Services</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="job-hunting-services/index.html">Career Coaching</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ecommerce-marketing.html">eCommerce Strategy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="pricing.html">Pricing Plans</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="contact-us.html">Contact Us</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
+<div class="flex space-x-2">
+<input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary placeholder-white/40" placeholder="Email address" type="email"/>
+<button class="bg-primary px-4 py-2 rounded-lg text-white hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
             © 2024 WritersHub Plus. All rights reserved.
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+</footer>
+<script>
+        // Simple intersection observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

@@ -1,143 +1,406 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Blog | WritersHub Plus</title>
-    <meta name="description" content="Insights, tips, and news on writing, career growth, and more.">
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog | WritersHub Plus - Professional Writing Insights</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f8f9ff",
+                    "tertiary-fixed": "#ffdbc7",
+                    "surface-container-highest": "#dee2ec",
+                    "tertiary-fixed-dim": "#ffb688",
+                    "on-primary-fixed": "#001a42",
+                    "on-tertiary-container": "#ffc6a4",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f0f4fe",
+                    "on-tertiary-fixed-variant": "#733500",
+                    "inverse-surface": "#2c3138",
+                    "on-surface": "#171c23",
+                    "tertiary": "#6d3200",
+                    "surface": "#f8f9ff",
+                    "outline-variant": "#c3c6d3",
+                    "error": "#ba1a1a",
+                    "secondary": "#9e421d",
+                    "on-secondary-container": "#742401",
+                    "secondary-fixed": "#ffdbcf",
+                    "inverse-primary": "#aec6ff",
+                    "tertiary-container": "#914500",
+                    "surface-container-high": "#e4e8f2",
+                    "primary-fixed-dim": "#aec6ff",
+                    "on-secondary-fixed-variant": "#7e2b07",
+                    "primary-container": "#2558ab",
+                    "on-tertiary-fixed": "#311300",
+                    "on-primary-fixed-variant": "#004395",
+                    "surface-dim": "#d6dae4",
+                    "primary": "#00408e",
+                    "surface-variant": "#dee2ec",
+                    "on-background": "#171c23",
+                    "inverse-on-surface": "#edf1fb",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-subtle": "#f8fafc",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#ffb59b",
+                    "surface-tint": "#2a5caf",
+                    "on-secondary": "#ffffff",
+                    "surface-elevated": "#ffffff",
+                    "text-muted": "#64748b",
+                    "background": "#f8f9ff",
+                    "secondary-container": "#ff8c61",
+                    "on-surface-variant": "#434752",
+                    "on-primary-container": "#c0d2ff",
+                    "surface-container-lowest": "#ffffff",
+                    "accent-vibrant": "#ff6b35",
+                    "on-error-container": "#93000a",
+                    "border-low-contrast": "#e2e8f0",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#380d00",
+                    "surface-container": "#eaeef8",
+                    "outline": "#737783",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "stack-sm": "8px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "gutter": "24px",
+                    "section-padding": "80px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "button": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "body-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "label-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      .image-hover-zoom {
+        overflow: hidden;
+      }
+      .image-hover-zoom img {
+        transition: transform 0.5s ease;
+      }
+      .image-hover-zoom:hover img {
+        transform: scale(1.05);
+      }
+    </style>
+
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="{depth}assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="assets/js/tailwind-config.js"></script>
+    <script src="{depth}assets/js/tailwind-config.js"></script>
 </head>
-<body class="bg-background text-on-background antialiased">
-    <!-- TopNavBar -->
-    <nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
-        <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="flex-shrink-0"><a href="index.html"><img src="assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
-            <div class="hidden md:flex items-center space-x-gutter">
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="writing-services/index.html">Writing Services</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="job-hunting-services/index.html">Job Hunting</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ai-training/index.html">AI Training</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ai-seo/index.html">AI SEO</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
-                <a href="#" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
-            </div>
-        </div>
-    </nav>
-    
-    <main class="hero-gradient relative overflow-hidden">
-        <!-- Hero Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 flex flex-col justify-center text-center items-center">
-            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background leading-tight mb-6 max-w-3xl">
-                Blog
-            </h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
-                Insights, tips, and news on writing, career growth, and more.
-            </p>
-            <a href="#" class="btn-hover bg-primary text-on-primary px-8 py-4 rounded-lg font-button text-button inline-flex items-center justify-center">
-                Get Started
-                <span class="material-symbols-outlined ml-2" style="font-size: 20px;">arrow_forward</span>
-            </a>
-        </section>
-
-        <!-- Benefits Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-elevated rounded-xl border border-border-low-contrast my-12">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Why Choose Us?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">star</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">Expert Professionals</h3>
-                    <p class="text-on-surface-variant">Our team consists of industry veterans and academic experts.</p>
-                </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">timer</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">On-Time Delivery</h3>
-                    <p class="text-on-surface-variant">We never miss a deadline. Get your work when you need it.</p>
-                </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">support_agent</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">24/7 Support</h3>
-                    <p class="text-on-surface-variant">We're always here to answer your questions and assist you.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Overview Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Pricing Overview</h2>
-            <div class="bg-surface-elevated rounded-xl border border-border-low-contrast p-8 max-w-2xl mx-auto text-center card-shadow">
-                <h3 class="font-headline-md text-2xl font-bold mb-4">Transparent Pricing</h3>
-                <p class="text-on-surface-variant mb-6">Our pricing is clear, upfront, and competitive. Proceed to our order form to get an exact quote based on your requirements.</p>
-                <a href="#" class="btn-hover bg-accent-vibrant text-on-primary px-6 py-3 rounded-lg font-button text-button inline-flex items-center justify-center">
-                    View Full Pricing & Order
-                </a>
-            </div>
-        </section>
-
-        <!-- FAQs Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-subtle mb-16 rounded-xl">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Frequently Asked Questions</h2>
-            <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">How fast can you deliver?</h3>
-                    <p class="text-on-surface-variant">We offer various delivery speeds, starting from just 24 hours depending on the complexity of the task.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">Is the process confidential?</h3>
-                    <p class="text-on-surface-variant">Absolutely. We use enterprise-grade encryption and strict privacy policies to protect your data.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">What if I need revisions?</h3>
-                    <p class="text-on-surface-variant">We offer free revisions within a specified period to ensure you are 100% satisfied with the final result.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="col-span-1 md:col-span-1">
-                <div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
-                <p class="font-body-md text-body-md opacity-70">
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex-shrink-0"><a href="index.html"><img src="assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="writing-services/index.html">Academic</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="job-hunting-services/index.html">Job Hunting</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ecommerce-marketing.html">eCommerce</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="pricing.html">Pricing</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
+<a href="order-now.html" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Featured Post Hero -->
+<section class="max-w-container-max mx-auto px-gutter mb-section-padding">
+<div class="relative rounded-xl overflow-hidden shadow-sm group">
+<div class="aspect-[21/9] w-full">
+<img class="w-full h-full object-cover" data-alt="A professional, high-end desk setup for a writer, featuring a modern laptop, a premium fountain pen, and a leather-bound notebook. The scene is bathed in soft, warm morning sunlight filtering through a large window, creating an atmosphere of focus and creativity. The color palette is clean with whites and soft grays, punctuated by deep navy blue accents and warm mahogany wood. Minimalist and corporate-chic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIOsThFJJ4qBc5ogCJsNLiFsvvr-bsimaimcbsyTI-hA9_FIcBMCsFSZkNVpsy47uHT7zqYoJ7MIhULTpJn8auYsko24CFb6BvgQa-qMi3VCVRJFEjxggxoQ3We3L4XeGXNv9ttJXtirupneFJOsjXaSuuaQ45BrZ5m2qo0e2SvxS3WMYmki_wVsKrQ0CIZk-WRinoKsuizn5zmdOPmlSdNNbiRqbOY2DUvqXlhXdsj3qNupJTCdlX"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-stack-lg md:p-16">
+<span class="bg-accent-vibrant text-on-primary font-label-lg text-label-lg px-4 py-1 rounded-full w-fit mb-4 uppercase tracking-widest">Featured Insight</span>
+<h1 class="text-white font-display-lg text-headline-lg-mobile md:text-display-lg max-w-3xl mb-6">Mastering the Art of Persuasive Academic Writing for Ph.D. Candidates</h1>
+<p class="text-white/80 font-body-lg text-body-lg max-w-2xl mb-8 hidden md:block">Explore advanced rhetorical strategies and structural frameworks that elevate academic papers from informative to influential. Our expert panel breaks down the nuances of peer-reviewed excellence.</p>
+<div class="flex items-center gap-4">
+<button class="bg-secondary text-on-secondary font-button px-8 py-4 rounded-lg flex items-center gap-2 hover:translate-x-1 transition-transform">
+                            Read Full Article <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<span class="text-white/60 font-label-lg text-label-lg">12 Min Read • By Dr. Elena Vance</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Layout -->
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-stack-lg pb-section-padding">
+<!-- Articles Grid -->
+<div class="lg:col-span-8 space-y-stack-lg">
+<!-- Category Section: Academic -->
+<div>
+<div class="flex items-center justify-between border-b border-border-low-contrast pb-4 mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-primary">Academic Excellence</h2>
+<a class="text-accent-vibrant font-label-lg text-label-lg flex items-center hover:underline" href="#">View All Academic →</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Card 1 -->
+<div class="bg-surface-elevated rounded-lg border border-border-low-contrast overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro shot of a sleek silver laptop keyboard with one hand resting on the keys, set against a backdrop of organized library shelves. Soft blueish lighting emphasizes a high-tech academic environment. The style is sharp, clean, and professional, maintaining a modern editorial feel with cool color tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4T3ucKG0SR-OypRPebJjwaFPSNgPqPUs0pzvma5pdNB6NwxJyM-E97oJ9iRrk9YhMGIfEidMjTjSoU6Kcs6nNwA4d3uaIiYVrJPzFJDcjN4Qe-xF2bK8pYu4_4gS5ZIYu6xzPI3x6oWrSx_R8eWruQZJq9_sf8lfHQlVcUcuzbwcJaFbyrUBJRmvqwqyxpt_-9JQKQdfMYMIw1HZzrCpNAfiwy8IA_-TXqz28qlpbIsvKyS5bsS6y"/>
+</div>
+<div class="p-6">
+<span class="text-primary font-label-lg text-label-lg mb-2 block">Research Methodology</span>
+<h3 class="font-headline-md text-body-lg font-bold mb-3 group-hover:text-primary transition-colors">Avoiding Common Pitfalls in Quantitative Data Analysis</h3>
+<p class="text-on-surface-variant font-body-md text-sm line-clamp-2">Learn how to present your findings with statistical integrity and clarity that satisfies the most rigorous reviewers.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-elevated rounded-lg border border-border-low-contrast overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A collection of vintage and modern books stacked neatly on a white marble surface, with a pair of professional glasses resting on top. Bright, airy lighting with high-key whites and subtle gold accents. The image conveys a sense of intellectual depth and polished academic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2nYAxdHScep1L1GYAeJacwrrUOfr3TnkDXJiXBj8kwGNIFB9qs4KPnOzIWPWcGUqMRZebcVzeHyGovBYqWzhfAaq-xHvv65Mu4zH-f6WA_JgQMeBlFXHqVg_MG202Xoh16CqOkg0BrXJ4bZNIRWzPJHf0RTsBK11QKuJ9O2YvEwRp6n7II-HGfpHX5_Gy1uyPFzXfRSmtXxIIhWk9L5kwwwhNNQnJv1H4282KDyOUXIBGu1E4q99Q"/>
+</div>
+<div class="p-6">
+<span class="text-primary font-label-lg text-label-lg mb-2 block">Literature Review</span>
+<h3 class="font-headline-md text-body-lg font-bold mb-3 group-hover:text-primary transition-colors">The Synthesis Technique: Beyond Summarizing Sources</h3>
+<p class="text-on-surface-variant font-body-md text-sm line-clamp-2">How to build a compelling narrative thread through diverse academic perspectives in your dissertation.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Category Section: Career -->
+<div>
+<div class="flex items-center justify-between border-b border-border-low-contrast pb-4 mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-primary">Career Strategies</h2>
+<a class="text-accent-vibrant font-label-lg text-label-lg flex items-center hover:underline" href="#">View All Career →</a>
+</div>
+<!-- Large Horizontal Card -->
+<div class="bg-surface-elevated rounded-lg border border-border-low-contrast overflow-hidden shadow-sm flex flex-col md:flex-row hover:shadow-md transition-shadow group">
+<div class="md:w-1/3 h-64 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional man in a tailored blue suit shakes hands with a recruiter in a bright, modern corporate office. Large glass windows in the background reveal a blurred cityscape. The lighting is crisp and natural, highlighting a successful, high-stakes career moment. Sophisticated blue and charcoal color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdD2C96AeHmpXMrTi_4W8x2p-8aAFVfbwQOB_qxK4NmP2kBErBGOkAR45v45VHoZxjybHVJvx2hElHBnvcy_EBKXCu7X4sID6DYDEU3kqjAFAq_Gvn6rupv18uX-UW-luTeNEa-F6rXZnGWfiYUwAv0_IetGhI5ndhwKEC71KexEF6vbXGiZIvtGR59LC7zycNIV9K6-y3_v0J1umrOqWJai4iScTZmOHH8EtZqMKfn0pTIMZQ16uM"/>
+</div>
+<div class="p-8 md:w-2/3 flex flex-col justify-center">
+<span class="text-secondary font-label-lg text-label-lg mb-2 block">Resume Services</span>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-primary transition-colors">ATS-Optimized Resumes: The Blueprint for Modern Job Seeking</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Discover the hidden algorithms behind Applicant Tracking Systems and how to structure your resume to ensure it actually reaches human eyes.</p>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">timer</span>
+<span class="text-on-surface-variant font-label-lg">8 min read</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Category Section: eCommerce -->
+<div>
+<div class="flex items-center justify-between border-b border-border-low-contrast pb-4 mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-primary">eCommerce Content</h2>
+<a class="text-accent-vibrant font-label-lg text-label-lg flex items-center hover:underline" href="#">View All eCommerce →</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+<div class="space-y-4 group">
+<div class="aspect-square rounded-lg overflow-hidden border border-border-low-contrast">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A minimalist product shot of high-end skincare bottles arranged on a textured stone surface. The lighting is dramatic and directional, creating sharp shadows. The style is ultra-modern and retail-focused, emphasizing premium brand storytelling through visuals. Muted earthy tones with clean white accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiQxQnK2q_RKK_KPRlXC7oXRwdUpFrnZf5mYPqwmKsYW9WrC_ahhL9CCigRPLs_AMx84IaG1JvCL3oqKlM9cg0bMRC4th4p952pvXpWX3fL_mZOBYy9iujt1mz5UdZtdZE7xM7t3rZmJp8N4gMmhDOlkHIyL3p7qS0KZZCRryBjBih44_Nfx4JBqk850L5FnGdvUuxLpYs90E0ZagVbaafwriJ-CPvi23tkL9BqjIzqYG56wVtj5o7"/>
+</div>
+<h4 class="font-bold text-body-md leading-snug group-hover:text-accent-vibrant transition-colors">Emotional Triggers in Product Descriptions that Drive Sales</h4>
+</div>
+<div class="space-y-4 group">
+<div class="aspect-square rounded-lg overflow-hidden border border-border-low-contrast">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A workspace with a high-resolution tablet displaying a colorful analytics dashboard. Next to it is a designer coffee mug. The setting is a trendy co-working space with soft bokeh in the background. Bright, saturated colors and a tech-forward atmosphere. The mood is energetic and data-driven." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXbJEzIwSQDEVsm-8vpPuSqwLotovPZETWZRwZXzOq01SzsEpy6xuukIDj6MdpadTAcUTI67QMrXxu-xL7DNU98lUN0kRW4MqiwVkuacWnXC4CqFcRe8lpsWV0b7LozT6TTPBXNOlTCpFMNf4kUc4ZGLVDKNU02uynAmp-_S4u47N_RSYc2q8UIB2feYK455hKk0q7RW24ATxrQGXL6Url_VAsj2Pds3pNyDkHKVxD0s1Y_FHbeGIg"/>
+</div>
+<h4 class="font-bold text-body-md leading-snug group-hover:text-accent-vibrant transition-colors">SEO for Shopify: A Guide to Rank #1 for Niche Keywords</h4>
+</div>
+<div class="space-y-4 group">
+<div class="aspect-square rounded-lg overflow-hidden border border-border-low-contrast">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A flat lay of digital gadgets including a smartphone, wireless earbuds, and a stylus pen on a geometric gray background. The lighting is clean and flat, emphasizing symmetry and professional organization. A modern tech aesthetic that feels efficient and reliable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFfY6jfbnxpv_-WVXJWXLOzkmNTC-76GAi97nL4KYfYYXlFAyCzlO0ln3IUvMdZTNVwKgbhC1T61Y9EHmvJrAyEj7rZWlJrSyyt_T7gwz6liLXrOPXS5LLUm0iWz2dl0J0L6gzsYe_-U_4dAN-UD8FKI7uc5hcSBpYb6--ZfTBXnvkr4Y1fdDWxfH8eWSu8NWpsf4k64Ixxgodf5R7cwl7X1FPBPuSZrwN581yYIeGeZJ5ZFccheVs"/>
+</div>
+<h4 class="font-bold text-body-md leading-snug group-hover:text-accent-vibrant transition-colors">Writing Conversion-Focused Amazon Listing Copy</h4>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar -->
+<aside class="lg:col-span-4 space-y-stack-lg">
+<!-- Newsletter Signup -->
+<div class="bg-primary p-8 rounded-xl text-on-primary shadow-lg relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-4">The Writer's Edge</h3>
+<p class="font-body-md mb-6 opacity-90">Get weekly strategies on high-impact writing delivered straight to your inbox.</p>
+<form class="space-y-4">
+<input class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-accent-vibrant" placeholder="Your work email" type="email"/>
+<button class="w-full bg-accent-vibrant text-white font-button py-3 rounded-lg hover:brightness-110 transition-all shadow-md">Subscribe Now</button>
+</form>
+<p class="text-[10px] mt-4 opacity-60 text-center uppercase tracking-tighter">No spam. Just professional growth. Unsubscribe anytime.</p>
+</div>
+<!-- Abstract decorative element -->
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary opacity-20 rounded-full blur-3xl"></div>
+</div>
+<!-- Top Categories -->
+<div class="bg-surface-elevated p-8 rounded-xl border border-border-low-contrast">
+<h3 class="font-bold text-headline-md mb-6 border-b border-border-low-contrast pb-2">Top Categories</h3>
+<ul class="space-y-4">
+<li class="flex justify-between items-center group cursor-pointer">
+<span class="font-medium text-on-surface-variant group-hover:text-primary transition-colors">Dissertation Help</span>
+<span class="bg-surface-container text-primary text-xs font-bold px-2 py-1 rounded">24</span>
+</li>
+<li class="flex justify-between items-center group cursor-pointer">
+<span class="font-medium text-on-surface-variant group-hover:text-primary transition-colors">Resume Polishing</span>
+<span class="bg-surface-container text-primary text-xs font-bold px-2 py-1 rounded">18</span>
+</li>
+<li class="flex justify-between items-center group cursor-pointer">
+<span class="font-medium text-on-surface-variant group-hover:text-primary transition-colors">SEO Copywriting</span>
+<span class="bg-surface-container text-primary text-xs font-bold px-2 py-1 rounded">32</span>
+</li>
+<li class="flex justify-between items-center group cursor-pointer">
+<span class="font-medium text-on-surface-variant group-hover:text-primary transition-colors">Technical Writing</span>
+<span class="bg-surface-container text-primary text-xs font-bold px-2 py-1 rounded">11</span>
+</li>
+<li class="flex justify-between items-center group cursor-pointer">
+<span class="font-medium text-on-surface-variant group-hover:text-primary transition-colors">Ad Copy Mastery</span>
+<span class="bg-surface-container text-primary text-xs font-bold px-2 py-1 rounded">09</span>
+</li>
+</ul>
+</div>
+<!-- Popular Posts -->
+<div class="space-y-6">
+<h3 class="font-bold text-headline-md border-b border-border-low-contrast pb-2">Popular Posts</h3>
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up of a luxury watch and a professional pen on a desk. Dark, moody lighting with elegant highlights. Representing professionalism and time management." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC82pMGfR3e3eDT2E2n18dBc8JeQ11D15sViQxM77_YqmdRXs9lJ-w7uD1s6CUJY8ttU290wEcvQUHJpQ4g59ROvmGgT4P9-z8evzy5tAh0S9KoA8BD42WxsrEUN9nCLr-maEaKyri1zjICB9E9zF4g4LL9CgeqXtiyIRzKsI2Uws8hsEKvWkjG-8JfIPEyboUlkfJvfeZfC6aK08Y_YspRmf0ig-Ff74YBQtdCAxiB_m5lXD1pCsaN"/>
+</div>
+<div>
+<h4 class="font-bold text-sm leading-tight group-hover:text-primary transition-colors">10 Secrets of High-Converting Product Descriptions</h4>
+<span class="text-xs text-on-surface-variant mt-2 block">12,402 views</span>
+</div>
+</div>
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist office window looking out at a city sunrise. Symbols of growth and new beginnings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3_TUw4gzcPCrQTg1mHF4nix6YGa_Ap2BtDgLjopuhhWDA7uVo4Th6VZM73fEzUoTmvN7MWW4_eWUL_0bXoyE4fKG-RD6ljaYi2LePNYJrG-_TD69sytJjFXM1FoxmMkpzoMZ6cvfqLWxgUxvW2dCkhG1AWxM7pZGaEMsBsxp_t6DXVkRbBfzNDsETGRU4bh8SIYE8oHpxGQNX5gB1d9GpUv_1LYG7nHRJz0CDbcCgvbD8Rg20B9dz"/>
+</div>
+<div>
+<h4 class="font-bold text-sm leading-tight group-hover:text-primary transition-colors">Why Your Cover Letter Isn't Getting Interviews</h4>
+<span class="text-xs text-on-surface-variant mt-2 block">8,950 views</span>
+</div>
+</div>
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A magnifying glass over a book, highlighting text. Warm, scholarly atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlnIAbfYwTFyzYKjRHhejDqe2iMYhyNh8yufAKwliJLcD1Dm8AbwGS-mKoGsDOJCwflUXpVbCIz6ijtda-hfZlSjOYzz5BOsSlJfEnIsF1OEMlKLHFTdn4H6r2alHk8r8vyNU-kPJVku6JNhFZJtWfalSIa638DGbV_-4ZULQxev57MRzU_cn2oPbAJHZTDFNFRafqf7qECqjd6EL2NETG27pVhs367ULdCYYiIFCA0FtOvCraXKZp"/>
+</div>
+<div>
+<h4 class="font-bold text-sm leading-tight group-hover:text-primary transition-colors">The Definitive Guide to APA 7th Edition Citations</h4>
+<span class="text-xs text-on-surface-variant mt-2 block">15,118 views</span>
+</div>
+</div>
+</div>
+<!-- Ad/CTA Widget -->
+<div class="bg-surface-container-low border-2 border-dashed border-outline-variant p-8 rounded-xl text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-4" data-weight="fill">history_edu</span>
+<h3 class="font-bold text-body-lg mb-2">Need professional help?</h3>
+<p class="text-sm text-on-surface-variant mb-6">Our PhD-level writers are standing by to help with your project.</p>
+<button class="bg-primary text-white font-button w-full py-3 rounded-lg hover:opacity-90 transition-all">Get a Quote</button>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
+<p class="font-body-md text-body-md opacity-70">
                     Elevating communication through professional research and high-impact writing.
                 </p>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="writing-services/index.html">Academic Services</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="job-hunting-services/index.html">Career Coaching</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ai-training/index.html">AI Training</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ai-seo/index.html">AI SEO</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Pricing Plans</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Contact Us</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
-                <div class="flex space-x-2">
-                    <input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary" placeholder="Email address" type="email"/>
-                    <button class="bg-primary px-4 py-2 rounded-lg">
-                        <span class="material-symbols-outlined text-white">send</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="writing-services/index.html">Academic Services</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="job-hunting-services/index.html">Career Coaching</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ecommerce-marketing.html">eCommerce Strategy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="pricing.html">Pricing Plans</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="contact-us.html">Contact Us</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
+<div class="flex space-x-2">
+<input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary placeholder-white/40" placeholder="Email address" type="email"/>
+<button class="bg-primary px-4 py-2 rounded-lg text-white hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
             © 2024 WritersHub Plus. All rights reserved.
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+</footer>
+<!-- Micro-interaction Script -->
+<script>
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) icon.style.transform = 'translateX(4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) icon.style.transform = 'translateX(0px)';
+            });
+        });
+
+        // Simple scroll reveal for nav shadow
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

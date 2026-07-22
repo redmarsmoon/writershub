@@ -1,143 +1,461 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>VerifiMe | WritersHub Plus</title>
-    <meta name="description" content="Verify your credentials and enhance your professional reputation.">
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VerifiMe | Professional Identity Verification &amp; Global Trust</title>
+<meta content="Securely connecting global users with trusted U.S. identity partners for seamless compliance and digital inclusion." name="description"/>
+<!-- Tailwind CSS -->
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#ffb688",
+                    "accent-vibrant": "#ff6b35",
+                    "on-surface": "#171c23",
+                    "inverse-surface": "#2c3138",
+                    "surface-subtle": "#f8fafc",
+                    "on-tertiary-container": "#ffc6a4",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#9e421d",
+                    "primary-container": "#2558ab",
+                    "inverse-primary": "#aec6ff",
+                    "on-primary-container": "#c0d2ff",
+                    "primary-fixed": "#d8e2ff",
+                    "text-muted": "#64748b",
+                    "tertiary-fixed": "#ffdbc7",
+                    "on-secondary-fixed-variant": "#7e2b07",
+                    "surface-variant": "#dee2ec",
+                    "background": "#f8f9ff",
+                    "surface-dim": "#d6dae4",
+                    "on-tertiary-fixed": "#311300",
+                    "surface-bright": "#f8f9ff",
+                    "surface-elevated": "#ffffff",
+                    "surface": "#f8f9ff",
+                    "on-background": "#171c23",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#2a5caf",
+                    "surface-container-high": "#e4e8f2",
+                    "inverse-on-surface": "#edf1fb",
+                    "error": "#ba1a1a",
+                    "border-low-contrast": "#e2e8f0",
+                    "primary-fixed-dim": "#aec6ff",
+                    "secondary-fixed": "#ffdbcf",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#001a42",
+                    "secondary-container": "#ff8c61",
+                    "tertiary-container": "#914500",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed": "#380d00",
+                    "on-secondary-container": "#742401",
+                    "secondary-fixed-dim": "#ffb59b",
+                    "on-tertiary-fixed-variant": "#733500",
+                    "primary": "#00408e",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#6d3200",
+                    "surface-container-low": "#f0f4fe",
+                    "outline-variant": "#c3c6d3",
+                    "outline": "#737783",
+                    "surface-container-highest": "#dee2ec",
+                    "surface-container": "#eaeef8",
+                    "on-surface-variant": "#434752",
+                    "on-primary-fixed-variant": "#004395",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "section-padding": "80px",
+                    "container-max": "1280px",
+                    "stack-md": "16px",
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "label-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Montserrat"],
+                    "button": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .asymmetric-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+      }
+      @media (max-width: 768px) {
+        .asymmetric-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="{depth}assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="assets/js/tailwind-config.js"></script>
+    <script src="{depth}assets/js/tailwind-config.js"></script>
 </head>
-<body class="bg-background text-on-background antialiased">
-    <!-- TopNavBar -->
-    <nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
-        <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="flex-shrink-0"><a href="index.html"><img src="assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
-            <div class="hidden md:flex items-center space-x-gutter">
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="writing-services/index.html">Writing Services</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="job-hunting-services/index.html">Job Hunting</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ai-training/index.html">AI Training</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ai-seo/index.html">AI SEO</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
-                <a href="#" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
-            </div>
-        </div>
-    </nav>
-    
-    <main class="hero-gradient relative overflow-hidden">
-        <!-- Hero Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 flex flex-col justify-center text-center items-center">
-            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background leading-tight mb-6 max-w-3xl">
-                VerifiMe
-            </h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
-                Verify your credentials and enhance your professional reputation.
-            </p>
-            <a href="#" class="btn-hover bg-primary text-on-primary px-8 py-4 rounded-lg font-button text-button inline-flex items-center justify-center">
-                Get Started
-                <span class="material-symbols-outlined ml-2" style="font-size: 20px;">arrow_forward</span>
-            </a>
-        </section>
-
-        <!-- Benefits Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-elevated rounded-xl border border-border-low-contrast my-12">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Why Choose Us?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">star</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">Expert Professionals</h3>
-                    <p class="text-on-surface-variant">Our team consists of industry veterans and academic experts.</p>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex-shrink-0"><a href="index.html"><img src="assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="writing-services/index.html">Academic</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="job-hunting-services/index.html">Job Hunting</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ecommerce-marketing.html">eCommerce</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="pricing.html">Pricing</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
+<a href="order-now.html" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative overflow-hidden pt-section-padding pb-section-padding">
+<div class="max-w-container-max mx-auto px-gutter relative z-10 grid md:grid-cols-2 gap-stack-lg items-center">
+<div class="space-y-stack-lg">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/10 text-primary rounded-full font-label-lg uppercase tracking-wider text-xs">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+                    Trusted Global Identity Bridge
                 </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">timer</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">On-Time Delivery</h3>
-                    <p class="text-on-surface-variant">We never miss a deadline. Get your work when you need it.</p>
-                </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">support_agent</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">24/7 Support</h3>
-                    <p class="text-on-surface-variant">We're always here to answer your questions and assist you.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Overview Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Pricing Overview</h2>
-            <div class="bg-surface-elevated rounded-xl border border-border-low-contrast p-8 max-w-2xl mx-auto text-center card-shadow">
-                <h3 class="font-headline-md text-2xl font-bold mb-4">Transparent Pricing</h3>
-                <p class="text-on-surface-variant mb-6">Our pricing is clear, upfront, and competitive. Proceed to our order form to get an exact quote based on your requirements.</p>
-                <a href="#" class="btn-hover bg-accent-vibrant text-on-primary px-6 py-3 rounded-lg font-button text-button inline-flex items-center justify-center">
-                    View Full Pricing & Order
-                </a>
-            </div>
-        </section>
-
-        <!-- FAQs Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-subtle mb-16 rounded-xl">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Frequently Asked Questions</h2>
-            <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">How fast can you deliver?</h3>
-                    <p class="text-on-surface-variant">We offer various delivery speeds, starting from just 24 hours depending on the complexity of the task.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">Is the process confidential?</h3>
-                    <p class="text-on-surface-variant">Absolutely. We use enterprise-grade encryption and strict privacy policies to protect your data.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">What if I need revisions?</h3>
-                    <p class="text-on-surface-variant">We offer free revisions within a specified period to ensure you are 100% satisfied with the final result.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="col-span-1 md:col-span-1">
-                <div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
-                <p class="font-body-md text-body-md opacity-70">
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-headline-lg-mobile md:block text-primary">
+                    Professional Identity Verification. <span class="text-accent-vibrant">Global Trust.</span> Seamless Compliance.
+                </h1>
+<p class="text-body-lg text-on-surface-variant max-w-xl">
+                    VerifiMe connects individuals in developing countries with trusted U.S.-based identity partners, streamlining identity verification for online platforms. Ensuring secure, reliable, and compliant identity management.
+                </p>
+<div class="flex flex-wrap gap-stack-md pt-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-lg font-button flex items-center gap-2 hover:bg-surface-tint transition-all shadow-lg hover:shadow-xl" href="#">
+                        Order Now <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-button hover:bg-primary-fixed-dim/20 transition-all" href="#">
+                        How It Works
+                    </a>
+</div>
+</div>
+<div class="relative">
+<div class="absolute inset-0 bg-primary-container/5 rounded-3xl -rotate-3 scale-105"></div>
+<img alt="Professional digital identity verification platform interface being used by a diverse user. The visual style is high-tech, clean, and corporate, featuring a palette of primary blue and vibrant orange accents with soft, ambient lighting to evoke a sense of trust and modern security." class="rounded-3xl shadow-2xl relative z-10 w-full object-cover aspect-square md:aspect-[4/5]" src="https://lh3.googleusercontent.com/aida/AP1WRLtdSINk-YBGYoWjArmx2CtKjahYaILlqNC5AY0bYPaVUec2NSZDOn7GLEpsqWH8hU8xE5LCgO1vEnDvXDdzz597wT0SYqWHfm-BvIIh5-kWQd4nUQ4rsyXuPjQ4MYkJ011K5WABrSHi0lQmQbDHMcpOCienBVz8ZjiGNgnDoXP2hWwfFwulkYhB7jy0OLyqxuheRkJ0krDLsSFKG1VkBcnF4kgAGi1RO3DJn0gjkILAKfNhjgoAepXBKCM"/>
+<!-- Floating Trust Badge -->
+<div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl shadow-xl z-20 border border-border-low-contrast animate-bounce-slow">
+<div class="flex items-center gap-4">
+<div class="bg-accent-vibrant text-on-secondary p-3 rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div>
+<p class="font-label-lg text-primary">99.9% Accuracy</p>
+<p class="text-xs text-text-muted">Global Compliance Standards</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Why Choose Section (Bento Grid) -->
+<section class="bg-surface-subtle py-section-padding">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 space-y-stack-sm">
+<h2 class="font-headline-lg text-headline-lg text-primary">Why Choose VerifiMe</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    A multi-layered approach to identity management that combines cutting-edge AI with expert human-assisted verification.
+                </p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Security Card -->
+<div class="bg-surface-elevated p-8 rounded-2xl border border-border-low-contrast shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-primary-fixed rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary transition-colors group-hover:text-on-primary">
+<span class="material-symbols-outlined text-3xl">lock</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Security &amp; Compliance</h3>
+<p class="text-body-md text-on-surface-variant leading-relaxed">
+                        Industry-leading encryption and multi-factor authentication protect every byte. We adhere to the strictest international standards including GDPR, CCPA, and KYC/AML.
+                    </p>
+<a class="mt-6 flex items-center gap-2 text-primary font-button group-hover:text-accent-vibrant transition-colors" href="#">
+                        Learn More <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<!-- Global Access Card -->
+<div class="bg-surface-elevated p-8 rounded-2xl border border-border-low-contrast shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-tertiary-fixed rounded-xl flex items-center justify-center mb-6 text-tertiary-container group-hover:bg-accent-vibrant transition-colors group-hover:text-on-tertiary">
+<span class="material-symbols-outlined text-3xl">public</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Empowering Global Access</h3>
+<p class="text-body-md text-on-surface-variant leading-relaxed">
+                        Bridging the digital divide for professionals in developing nations. We facilitate access to freelance marketplaces and financial services regardless of location.
+                    </p>
+<a class="mt-6 flex items-center gap-2 text-primary font-button group-hover:text-accent-vibrant transition-colors" href="#">
+                        Our Mission <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<!-- Partner Rewards Card -->
+<div class="bg-surface-elevated p-8 rounded-2xl border border-border-low-contrast shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-primary-fixed-dim rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary transition-colors group-hover:text-on-primary">
+<span class="material-symbols-outlined text-3xl">handshake</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">U.S. Partnerships</h3>
+<p class="text-body-md text-on-surface-variant leading-relaxed">
+                        Rewarding and meaningful roles for U.S. identity partners. Earn competitive compensation while contributing to global economic inclusion and trust.
+                    </p>
+<a class="mt-6 flex items-center gap-2 text-primary font-button group-hover:text-accent-vibrant transition-colors" href="#">
+                        Join Network <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Identity Verification Process Section -->
+<section class="py-section-padding bg-white overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end gap-stack-lg mb-16">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Identity Verification Process</h2>
+<p class="text-body-lg text-on-surface-variant">
+                        A seamless, four-step journey designed for maximum security and global efficiency.
+                    </p>
+</div>
+<div class="bg-surface-container px-6 py-4 rounded-xl flex items-center gap-4">
+<div class="text-right">
+<p class="text-xs font-label-lg text-text-muted uppercase">Avg. Processing Time</p>
+<p class="font-headline-md text-primary">24-48 Hours</p>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl">timer</span>
+</div>
+</div>
+<div class="relative">
+<!-- Progress Line -->
+<div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-border-low-contrast z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg relative z-10">
+<!-- Step 1 -->
+<div class="space-y-stack-md">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline-md shadow-lg border-4 border-white mb-6">1</div>
+<h4 class="font-headline-md text-headline-md text-primary text-lg">Submission</h4>
+<p class="text-body-md text-on-surface-variant">Global user initiates a request through our secure portal with high-res document uploads.</p>
+</div>
+<!-- Step 2 -->
+<div class="space-y-stack-md">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline-md shadow-lg border-4 border-white mb-6">2</div>
+<h4 class="font-headline-md text-headline-md text-primary text-lg">Matching</h4>
+<p class="text-body-md text-on-surface-variant">Our algorithm identifies the ideal U.S.-based partner for the specific platform requirements.</p>
+</div>
+<!-- Step 3 -->
+<div class="space-y-stack-md">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline-md shadow-lg border-4 border-white mb-6">3</div>
+<h4 class="font-headline-md text-headline-md text-primary text-lg">Secure Verification</h4>
+<p class="text-body-md text-on-surface-variant">Expert human review combined with AI tools verifies authenticity in an encrypted environment.</p>
+</div>
+<!-- Step 4 -->
+<div class="space-y-stack-md">
+<div class="w-12 h-12 bg-accent-vibrant text-on-tertiary rounded-full flex items-center justify-center font-headline-md shadow-lg border-4 border-white mb-6">4</div>
+<h4 class="font-headline-md text-headline-md text-primary text-lg">Confirmation</h4>
+<p class="text-body-md text-on-surface-variant">Verification is finalized, notifications sent, and partner compensation is automatically processed.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Services Asymmetric Grid -->
+<section class="py-section-padding bg-surface-subtle">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="asymmetric-grid gap-12 items-center">
+<div class="order-2 md:order-1">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Our Commitment to Trust and Opportunity</h2>
+<p class="text-body-lg text-on-surface mb-8 italic">
+                        "Navigating the complexities of global identity verification requires more than just technology; it requires a human-centric approach built on empathy and expertise."
+                    </p>
+<div class="space-y-8">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-accent-vibrant text-4xl shrink-0">face</span>
+<div>
+<h4 class="font-headline-md text-primary text-xl mb-2">Biometric Verification</h4>
+<p class="text-body-md text-on-surface-variant leading-relaxed">State-of-the-art facial recognition and liveness detection ensure the person is real and present, preventing high-tech spoofing attempts.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-4xl shrink-0">history_edu</span>
+<div>
+<h4 class="font-headline-md text-primary text-xl mb-2">Document Authentication</h4>
+<p class="text-body-md text-on-surface-variant leading-relaxed">Analysis of physical security features like holographic overlays and microprinting across 200+ countries.</p>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<a class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-lg font-button hover:bg-surface-tint transition-all shadow-md" href="#">
+                            View All Services <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="order-1 md:order-2 grid grid-cols-1 gap-6">
+<div class="bg-surface-elevated p-8 rounded-3xl shadow-xl border border-border-low-contrast relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 text-primary opacity-5 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-[120px]">verified</span>
+</div>
+<h3 class="font-headline-md text-primary mb-4 relative z-10">Real-time Identity Verification</h3>
+<p class="text-body-md text-on-surface-variant relative z-10">Our hybrid AI-human system delivers 99.9% accuracy with near-instantaneous results, creating the foundation of instant trust in the fast-paced digital economy.</p>
+</div>
+<div class="bg-primary text-on-primary p-8 rounded-3xl shadow-xl relative overflow-hidden">
+<h3 class="font-headline-md mb-4">AML/KYC Compliance</h3>
+<p class="text-body-md text-blue-100 mb-6">Comprehensive screening against global sanctions lists, PEPs, and adverse media sources to meet international regulatory standards.</p>
+<div class="flex gap-4 items-center">
+<div class="px-3 py-1 bg-white/20 rounded-full text-xs font-label-lg">GDPR</div>
+<div class="px-3 py-1 bg-white/20 rounded-full text-xs font-label-lg">CCPA</div>
+<div class="px-3 py-1 bg-white/20 rounded-full text-xs font-label-lg">KYC/AML</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-padding bg-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-16">Frequently Asked Questions</h2>
+<div class="max-w-4xl mx-auto space-y-4">
+<!-- FAQ Item 1 -->
+<details class="group bg-surface-subtle rounded-xl p-2 transition-all duration-300" open="">
+<summary class="flex justify-between items-center p-4 cursor-pointer list-none font-headline-md text-primary text-lg">
+                        What is the core mission of VerifiMe?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-4 pt-0 text-body-md text-on-surface-variant leading-relaxed">
+                        VerifiMe was founded with the mission of democratizing access to the global digital economy. We bridge the gap for talented individuals in developing countries who are excluded from online platforms due to lack of traditional identity infrastructure.
+                    </div>
+</details>
+<!-- FAQ Item 2 -->
+<details class="group bg-surface-subtle rounded-xl p-2 transition-all duration-300">
+<summary class="flex justify-between items-center p-4 cursor-pointer list-none font-headline-md text-primary text-lg">
+                        How does VerifiMe ensure the absolute security of user data?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-4 pt-0 text-body-md text-on-surface-variant leading-relaxed">
+                        We employ a multi-layered defense strategy: end-to-end encryption for all data in transit and at rest, multi-factor authentication, and rigorous data minimization practices. Our infrastructure is hosted on cloud-native platforms meeting the highest industry standards.
+                    </div>
+</details>
+<!-- FAQ Item 3 -->
+<details class="group bg-surface-subtle rounded-xl p-2 transition-all duration-300">
+<summary class="flex justify-between items-center p-4 cursor-pointer list-none font-headline-md text-primary text-lg">
+                        Is VerifiMe's service legal and compliant?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-4 pt-0 text-body-md text-on-surface-variant leading-relaxed">
+                        Absolutely. VerifiMe is built on a foundation of legal and regulatory compliance. We work with international law experts to ensure our bridge adheres to KYC, AML, and global data privacy regulations including GDPR and CCPA.
+                    </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
+<p class="font-body-md text-body-md opacity-70">
                     Elevating communication through professional research and high-impact writing.
                 </p>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="writing-services/index.html">Academic Services</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="job-hunting-services/index.html">Career Coaching</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ai-training/index.html">AI Training</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ai-seo/index.html">AI SEO</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Pricing Plans</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Contact Us</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
-                <div class="flex space-x-2">
-                    <input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary" placeholder="Email address" type="email"/>
-                    <button class="bg-primary px-4 py-2 rounded-lg">
-                        <span class="material-symbols-outlined text-white">send</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="writing-services/index.html">Academic Services</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="job-hunting-services/index.html">Career Coaching</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ecommerce-marketing.html">eCommerce Strategy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="pricing.html">Pricing Plans</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="contact-us.html">Contact Us</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
+<div class="flex space-x-2">
+<input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary placeholder-white/40" placeholder="Email address" type="email"/>
+<button class="bg-primary px-4 py-2 rounded-lg text-white hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
             © 2024 WritersHub Plus. All rights reserved.
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+</footer>
+<!-- Sticky Floating Action (Global Trust) -->
+<div class="fixed bottom-8 right-8 z-40 hidden md:block">
+<button class="bg-accent-vibrant text-on-tertiary flex items-center gap-2 px-6 py-4 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all group">
+<span class="material-symbols-outlined group-hover:rotate-12 transition-transform">verified_user</span>
+<span class="font-button">Verify Identity Now</span>
+</button>
+</div>
+<script>
+        // Micro-interaction for process steps appearance
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.2
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.grid-cols-4 > div').forEach(el => {
+                el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>

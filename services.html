@@ -1,143 +1,397 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Our Services | WritersHub Plus</title>
-    <meta name="description" content="Explore the wide range of writing and career services we offer.">
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Services | WritersHub Plus</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#c0d2ff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#380d00",
+                    "background": "#f8f9ff",
+                    "surface-container-low": "#f0f4fe",
+                    "tertiary-fixed": "#ffdbc7",
+                    "on-surface-variant": "#434752",
+                    "surface-dim": "#d6dae4",
+                    "on-tertiary-fixed-variant": "#733500",
+                    "surface-container": "#eaeef8",
+                    "on-surface": "#171c23",
+                    "inverse-on-surface": "#edf1fb",
+                    "surface-tint": "#2a5caf",
+                    "on-secondary-container": "#742401",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#7e2b07",
+                    "surface": "#f8f9ff",
+                    "inverse-surface": "#2c3138",
+                    "on-tertiary-fixed": "#311300",
+                    "border-low-contrast": "#e2e8f0",
+                    "secondary": "#9e421d",
+                    "surface-bright": "#f8f9ff",
+                    "surface-subtle": "#f8fafc",
+                    "on-tertiary-container": "#ffc6a4",
+                    "surface-container-highest": "#dee2ec",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#ffdbcf",
+                    "on-error": "#ffffff",
+                    "primary-container": "#2558ab",
+                    "tertiary": "#6d3200",
+                    "secondary-container": "#ff8c61",
+                    "outline-variant": "#c3c6d3",
+                    "surface-elevated": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#aec6ff",
+                    "primary": "#00408e",
+                    "on-background": "#171c23",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#001a42",
+                    "outline": "#737783",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#aec6ff",
+                    "surface-variant": "#dee2ec",
+                    "tertiary-fixed-dim": "#ffb688",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-container-high": "#e4e8f2",
+                    "tertiary-container": "#914500",
+                    "accent-vibrant": "#ff6b35",
+                    "on-primary-fixed-variant": "#004395",
+                    "secondary-fixed-dim": "#ffb59b",
+                    "text-muted": "#64748b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "section-padding": "80px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "button": ["Montserrat"],
+                    "label-lg": ["Montserrat"],
+                    "body-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "label-lg": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .surface-glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 64, 142, 0.08);
+        }
+    </style>
+
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="{depth}assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="assets/js/tailwind-config.js"></script>
+    <script src="{depth}assets/js/tailwind-config.js"></script>
 </head>
-<body class="bg-background text-on-background antialiased">
-    <!-- TopNavBar -->
-    <nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
-        <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="flex-shrink-0"><a href="index.html"><img src="assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
-            <div class="hidden md:flex items-center space-x-gutter">
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="writing-services/index.html">Writing Services</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="job-hunting-services/index.html">Job Hunting</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ai-training/index.html">AI Training</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ai-seo/index.html">AI SEO</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
-                <a href="#" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
-            </div>
-        </div>
-    </nav>
-    
-    <main class="hero-gradient relative overflow-hidden">
-        <!-- Hero Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 flex flex-col justify-center text-center items-center">
-            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background leading-tight mb-6 max-w-3xl">
-                Our Services
-            </h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
-                Explore the wide range of writing and career services we offer.
-            </p>
-            <a href="#" class="btn-hover bg-primary text-on-primary px-8 py-4 rounded-lg font-button text-button inline-flex items-center justify-center">
-                Get Started
-                <span class="material-symbols-outlined ml-2" style="font-size: 20px;">arrow_forward</span>
-            </a>
-        </section>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-low docked full-width top-0 sticky z-50 border-b border-outline-variant dark:border-outline flat no shadows">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-headline-sm font-headline-md font-bold text-primary dark:text-primary-fixed">WritersHub Plus</div>
+<nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex-shrink-0"><a href="index.html"><img src="assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="writing-services/index.html">Academic</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="job-hunting-services/index.html">Job Hunting</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ecommerce-marketing.html">eCommerce</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="pricing.html">Pricing</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
+<a href="order-now.html" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
+</div>
+</div>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block text-primary font-button px-4 py-2 hover:bg-primary-fixed transition-colors rounded-lg">Login</button>
+<button class="bg-primary text-on-primary font-button px-6 py-2.5 rounded-lg active:scale-95 duration-150 transition-transform">Order Now</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-16 overflow-hidden">
 
-        <!-- Benefits Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-elevated rounded-xl border border-border-low-contrast my-12">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Why Choose Us?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">star</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">Expert Professionals</h3>
-                    <p class="text-on-surface-variant">Our team consists of industry veterans and academic experts.</p>
-                </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">timer</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">On-Time Delivery</h3>
-                    <p class="text-on-surface-variant">We never miss a deadline. Get your work when you need it.</p>
-                </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">support_agent</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">24/7 Support</h3>
-                    <p class="text-on-surface-variant">We're always here to answer your questions and assist you.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Overview Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Pricing Overview</h2>
-            <div class="bg-surface-elevated rounded-xl border border-border-low-contrast p-8 max-w-2xl mx-auto text-center card-shadow">
-                <h3 class="font-headline-md text-2xl font-bold mb-4">Transparent Pricing</h3>
-                <p class="text-on-surface-variant mb-6">Our pricing is clear, upfront, and competitive. Proceed to our order form to get an exact quote based on your requirements.</p>
-                <a href="#" class="btn-hover bg-accent-vibrant text-on-primary px-6 py-3 rounded-lg font-button text-button inline-flex items-center justify-center">
-                    View Full Pricing & Order
-                </a>
-            </div>
-        </section>
-
-        <!-- FAQs Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-subtle mb-16 rounded-xl">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Frequently Asked Questions</h2>
-            <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">How fast can you deliver?</h3>
-                    <p class="text-on-surface-variant">We offer various delivery speeds, starting from just 24 hours depending on the complexity of the task.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">Is the process confidential?</h3>
-                    <p class="text-on-surface-variant">Absolutely. We use enterprise-grade encryption and strict privacy policies to protect your data.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">What if I need revisions?</h3>
-                    <p class="text-on-surface-variant">We offer free revisions within a specified period to ensure you are 100% satisfied with the final result.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="col-span-1 md:col-span-1">
-                <div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
-                <p class="font-body-md text-body-md opacity-70">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-lg text-label-lg mb-stack-md uppercase tracking-widest">Our Expertise</span>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-on-surface max-w-4xl mx-auto mb-stack-lg">Professional Writing Solutions Tailored to Your Success</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">From academic excellence to career growth and business expansion, our human experts deliver precision-crafted content that drives results.</p>
+<!-- Quick Stats -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter max-w-3xl mx-auto border-t border-outline-variant pt-12">
+<div>
+<div class="font-headline-lg text-headline-lg text-primary">500+</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant uppercase">Expert Writers</div>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-primary">98%</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant uppercase">Success Rate</div>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-primary">15+</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant uppercase">Niche Markets</div>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-primary">24/7</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant uppercase">Live Support</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Pillars Bento Grid -->
+<section class="py-section-padding bg-surface-subtle">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">The Three Pillars of Excellence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Specialized writing departments focused on your specific objectives.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Academic Pillar (Large) -->
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-elevated rounded-xl border border-border-low-contrast p-10 hover-lift">
+<div class="flex flex-col md:flex-row gap-10 items-center">
+<div class="flex-1">
+<span class="material-symbols-outlined text-5xl text-primary mb-stack-md" data-icon="school">school</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Academic Services</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">Elevate your scholarly pursuits with meticulously researched and masterfully structured essays, dissertations, and research papers. Our writers hold advanced degrees and understand institutional rigor.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-xl" data-icon="check_circle">check_circle</span> Expert Citations (APA, MLA, Harvard)</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-xl" data-icon="check_circle">check_circle</span> Plagiarism-Free Guarantee</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-xl" data-icon="check_circle">check_circle</span> Subject Matter Specialization</li>
+</ul>
+<button class="group/btn flex items-center gap-2 font-button text-primary hover:text-secondary-container transition-colors">
+                                    Learn More <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="w-full md:w-1/3 aspect-square rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist high-end library setting with focus on a modern laptop and stacked leather-bound books. The lighting is bright and scholarly, featuring soft blues and deep primary blue accents to match a professional corporate aesthetic. The mood is focused and intellectual." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsZ1YLbSjH1RO2chaP2PdeBldhDb0IYmlQHGDqFGnLMGZFElTEzP0Hvl3XDoOzbGPJlNUnMAxC6RiFkOeNXBoVICd-deigMlp9ELoa7ZvRTezXDZv8DymvBQsOWVZBwOEP1nYWEG0mYt8DS9XalZH8albDGCRkqx-E3pC3bcncbBiQY8-5BteIsrMHLxI2-z155VM5MLTF_PUhTpiOOTY6XpH6z4QHr9pO3ITxU-SKw03f_C9Xe0hC"/>
+</div>
+</div>
+</div>
+<!-- Job Hunting Pillar -->
+<div class="md:col-span-4 bg-surface-elevated rounded-xl border border-border-low-contrast p-8 hover-lift flex flex-col">
+<span class="material-symbols-outlined text-5xl text-primary mb-stack-md" data-icon="work_history">work_history</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Career Coaching</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg flex-grow">Land your dream role with ATS-optimized resumes, compelling cover letters, and LinkedIn profile overhauls that demand attention from recruiters.</p>
+<div class="mt-auto">
+<div class="h-[1px] bg-outline-variant w-full mb-6"></div>
+<button class="group/btn flex items-center gap-2 font-button text-primary hover:text-secondary-container transition-colors">
+                                Browse Packages <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- eCommerce Pillar -->
+<div class="md:col-span-4 bg-surface-elevated rounded-xl border border-border-low-contrast p-8 hover-lift flex flex-col">
+<span class="material-symbols-outlined text-5xl text-primary mb-stack-md" data-icon="shopping_cart">shopping_cart</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">eCommerce &amp; Business</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg flex-grow">Drive conversions with persuasive product descriptions, high-performing ad copy, and SEO-driven blog content designed for the modern marketplace.</p>
+<div class="mt-auto">
+<div class="h-[1px] bg-outline-variant w-full mb-6"></div>
+<button class="group/btn flex items-center gap-2 font-button text-primary hover:text-secondary-container transition-colors">
+                                Scale My Business <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CTA Pillar -->
+<div class="md:col-span-8 bg-primary-container rounded-xl p-10 flex flex-col md:flex-row justify-between items-center text-on-primary-container relative overflow-hidden">
+<div class="relative z-10 max-w-lg">
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Need a custom solution?</h3>
+<p class="font-body-md text-body-md mb-stack-lg">Our strategic writers can tackle complex white papers, technical manuals, and multi-channel marketing campaigns. Talk to us today.</p>
+<button class="bg-secondary-container text-on-secondary-container font-button px-8 py-3 rounded-lg hover:bg-secondary transition-colors hover:text-on-secondary">
+                                Request Custom Quote
+                            </button>
+</div>
+<div class="hidden md:block absolute right-0 bottom-0 translate-x-1/4 translate-y-1/4 opacity-10">
+<span class="material-symbols-outlined text-[300px]" data-icon="edit_note">edit_note</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How We Work Section -->
+<section class="py-section-padding bg-surface-elevated border-y border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-16 items-start">
+<div class="md:w-1/3">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-md">How We Work</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">A human-first process built on transparency, expertise, and a commitment to your deadlines.</p>
+<div class="bg-surface-container rounded-xl p-6 border-l-4 border-primary">
+<p class="italic text-on-surface-variant mb-4">"The precision and attention to detail in the research phase was unlike any other service I've used. They truly understand academic rigor."</p>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">— Dr. Sarah Jenkins, Research Lead</div>
+</div>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
+<!-- Step 1 -->
+<div class="relative">
+<div class="absolute -left-8 top-0 font-display-lg text-primary opacity-10 select-none">01</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="assignment">assignment</span>
+                                Deep Discovery
+                            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">We don't just write; we analyze. Our team reviews your brief, target audience, and specific requirements to ensure perfect alignment.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<div class="absolute -left-8 top-0 font-display-lg text-primary opacity-10 select-none">02</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="person_search">person_search</span>
+                                Expert Matching
+                            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">We assign your project to a specialist with at least 5 years of experience in your specific niche or academic field.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<div class="absolute -left-8 top-0 font-display-lg text-primary opacity-10 select-none">03</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="stylus">stylus</span>
+                                Human Drafting
+                            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">NO AI-generated fluff. Our writers craft original, high-impact content from scratch, adhering to your unique voice or required academic tone.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative">
+<div class="absolute -left-8 top-0 font-display-lg text-primary opacity-10 select-none">04</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+                                Quality Assurance
+                            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Every piece passes through a rigorous multi-stage review for grammar, tone, factual accuracy, and plagiarism before delivery.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 bg-surface overflow-hidden relative">
+<div class="max-w-4xl mx-auto px-margin-mobile text-center relative z-10">
+<h2 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface mb-stack-lg">Ready to transform your ideas into professional results?</h2>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="w-full sm:w-auto bg-primary text-on-primary font-button px-10 py-4 rounded-lg shadow-lg hover:shadow-primary/20 transition-all active:scale-95">Get Started Now</button>
+<button class="w-full sm:w-auto border-2 border-primary text-primary font-button px-10 py-4 rounded-lg hover:bg-primary-fixed transition-colors">View Pricing Plans</button>
+</div>
+<p class="mt-8 font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">No hidden fees • 100% Confidential • Fast Delivery</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
+<p class="font-body-md text-body-md opacity-70">
                     Elevating communication through professional research and high-impact writing.
                 </p>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="writing-services/index.html">Academic Services</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="job-hunting-services/index.html">Career Coaching</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ai-training/index.html">AI Training</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ai-seo/index.html">AI SEO</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Pricing Plans</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Contact Us</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
-                <div class="flex space-x-2">
-                    <input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary" placeholder="Email address" type="email"/>
-                    <button class="bg-primary px-4 py-2 rounded-lg">
-                        <span class="material-symbols-outlined text-white">send</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="writing-services/index.html">Academic Services</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="job-hunting-services/index.html">Career Coaching</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ecommerce-marketing.html">eCommerce Strategy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="pricing.html">Pricing Plans</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="contact-us.html">Contact Us</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
+<div class="flex space-x-2">
+<input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary placeholder-white/40" placeholder="Email address" type="email"/>
+<button class="bg-primary px-4 py-2 rounded-lg text-white hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
             © 2024 WritersHub Plus. All rights reserved.
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+</footer>
+<script>
+        // Micro-interaction for service cards
+        document.querySelectorAll('.hover-lift').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.style.transform = 'scale(1.1) rotate(5deg)';
+                    icon.style.transition = 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.style.transform = 'scale(1) rotate(0deg)';
+                }
+            });
+        });
+
+        // Simple smooth entrance for steps
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.relative[class*="Step"]').forEach(step => {
+            step.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-700', 'ease-out');
+            observer.observe(step);
+        });
+    </script>
+</body></html>

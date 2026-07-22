@@ -1,143 +1,387 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>FAQ | WritersHub Plus</title>
-    <meta name="description" content="Frequently asked questions about our services, pricing, and process.">
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WritersHub Plus | FAQ &amp; Support Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+        .accordion-item.active .arrow-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#c0d2ff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#380d00",
+                        "background": "#f8f9ff",
+                        "surface-container-low": "#f0f4fe",
+                        "tertiary-fixed": "#ffdbc7",
+                        "on-surface-variant": "#434752",
+                        "surface-dim": "#d6dae4",
+                        "on-tertiary-fixed-variant": "#733500",
+                        "surface-container": "#eaeef8",
+                        "on-surface": "#171c23",
+                        "inverse-on-surface": "#edf1fb",
+                        "surface-tint": "#2a5caf",
+                        "on-secondary-container": "#742401",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#7e2b07",
+                        "surface": "#f8f9ff",
+                        "inverse-surface": "#2c3138",
+                        "on-tertiary-fixed": "#311300",
+                        "border-low-contrast": "#e2e8f0",
+                        "secondary": "#9e421d",
+                        "surface-bright": "#f8f9ff",
+                        "surface-subtle": "#f8fafc",
+                        "on-tertiary-container": "#ffc6a4",
+                        "surface-container-highest": "#dee2ec",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#ffdbcf",
+                        "on-error": "#ffffff",
+                        "primary-container": "#2558ab",
+                        "tertiary": "#6d3200",
+                        "secondary-container": "#ff8c61",
+                        "outline-variant": "#c3c6d3",
+                        "surface-elevated": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#aec6ff",
+                        "primary": "#00408e",
+                        "on-background": "#171c23",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#001a42",
+                        "outline": "#737783",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#aec6ff",
+                        "surface-variant": "#dee2ec",
+                        "tertiary-fixed-dim": "#ffb688",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container-high": "#e4e8f2",
+                        "tertiary-container": "#914500",
+                        "accent-vibrant": "#ff6b35",
+                        "on-primary-fixed-variant": "#004395",
+                        "secondary-fixed-dim": "#ffb59b",
+                        "text-muted": "#64748b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "section-padding": "80px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "button": ["Montserrat"],
+                        "label-lg": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "label-lg": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="{depth}assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="assets/js/tailwind-config.js"></script>
+    <script src="{depth}assets/js/tailwind-config.js"></script>
 </head>
-<body class="bg-background text-on-background antialiased">
-    <!-- TopNavBar -->
-    <nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
-        <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="flex-shrink-0"><a href="index.html"><img src="assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
-            <div class="hidden md:flex items-center space-x-gutter">
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="writing-services/index.html">Writing Services</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="job-hunting-services/index.html">Job Hunting</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ai-training/index.html">AI Training</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ai-seo/index.html">AI SEO</a>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-low docked full-width top-0 sticky z-50 border-b border-outline-variant dark:border-outline flat no shadows h-16">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-headline-sm font-headline-md font-bold text-primary dark:text-primary-fixed flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+                WritersHub Plus
             </div>
-            <div class="flex items-center space-x-4">
-                <button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
-                <a href="#" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
-            </div>
-        </div>
-    </nav>
-    
-    <main class="hero-gradient relative overflow-hidden">
-        <!-- Hero Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 flex flex-col justify-center text-center items-center">
-            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background leading-tight mb-6 max-w-3xl">
-                FAQ
-            </h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
-                Frequently asked questions about our services, pricing, and process.
-            </p>
-            <a href="#" class="btn-hover bg-primary text-on-primary px-8 py-4 rounded-lg font-button text-button inline-flex items-center justify-center">
-                Get Started
-                <span class="material-symbols-outlined ml-2" style="font-size: 20px;">arrow_forward</span>
-            </a>
-        </section>
+<nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex-shrink-0"><a href="index.html"><img src="assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="writing-services/index.html">Academic</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="job-hunting-services/index.html">Job Hunting</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="ecommerce-marketing.html">eCommerce</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="pricing.html">Pricing</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
+<a href="order-now.html" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
+</div>
+</div>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-primary dark:text-primary-fixed font-button text-button hover:underline transition-all">Login</button>
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform shadow-sm hover:bg-secondary-container hover:text-on-secondary-container">Order Now</button>
+</div>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Search Section -->
+<section class="relative bg-primary-container text-on-primary-container py-section-padding overflow-hidden">
+<div class="absolute inset-0 opacity-10">
 
-        <!-- Benefits Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-elevated rounded-xl border border-border-low-contrast my-12">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Why Choose Us?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">star</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">Expert Professionals</h3>
-                    <p class="text-on-surface-variant">Our team consists of industry veterans and academic experts.</p>
-                </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">timer</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">On-Time Delivery</h3>
-                    <p class="text-on-surface-variant">We never miss a deadline. Get your work when you need it.</p>
-                </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">support_agent</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">24/7 Support</h3>
-                    <p class="text-on-surface-variant">We're always here to answer your questions and assist you.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Overview Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Pricing Overview</h2>
-            <div class="bg-surface-elevated rounded-xl border border-border-low-contrast p-8 max-w-2xl mx-auto text-center card-shadow">
-                <h3 class="font-headline-md text-2xl font-bold mb-4">Transparent Pricing</h3>
-                <p class="text-on-surface-variant mb-6">Our pricing is clear, upfront, and competitive. Proceed to our order form to get an exact quote based on your requirements.</p>
-                <a href="#" class="btn-hover bg-accent-vibrant text-on-primary px-6 py-3 rounded-lg font-button text-button inline-flex items-center justify-center">
-                    View Full Pricing & Order
-                </a>
-            </div>
-        </section>
-
-        <!-- FAQs Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-subtle mb-16 rounded-xl">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Frequently Asked Questions</h2>
-            <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">How fast can you deliver?</h3>
-                    <p class="text-on-surface-variant">We offer various delivery speeds, starting from just 24 hours depending on the complexity of the task.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">Is the process confidential?</h3>
-                    <p class="text-on-surface-variant">Absolutely. We use enterprise-grade encryption and strict privacy policies to protect your data.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">What if I need revisions?</h3>
-                    <p class="text-on-surface-variant">We offer free revisions within a specified period to ensure you are 100% satisfied with the final result.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="col-span-1 md:col-span-1">
-                <div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
-                <p class="font-body-md text-body-md opacity-70">
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h1 class="font-display-lg text-display-lg mb-stack-md text-white">How can we help?</h1>
+<p class="font-body-lg text-body-lg mb-stack-lg max-w-2xl mx-auto opacity-90 text-white">Find answers to common questions about our academic services, career coaching, and order processing.</p>
+<div class="relative max-w-2xl mx-auto group">
+<span class="material-symbols-outlined absolute left-6 top-1/2 -translate-y-1/2 text-primary text-2xl group-focus-within:text-secondary transition-colors">search</span>
+<input class="w-full pl-16 pr-6 py-5 rounded-full bg-white text-on-surface text-body-lg border-none focus:ring-4 focus:ring-secondary/30 shadow-xl transition-all outline-none" placeholder="Search for questions (e.g. revisions, pricing, privacy)" type="text"/>
+</div>
+</div>
+</section>
+<!-- FAQ Content Grid -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Sidebar Navigation (Desktop) -->
+<aside class="hidden lg:block lg:col-span-3">
+<div class="sticky top-24 space-y-4">
+<h3 class="font-label-lg text-label-lg text-primary uppercase tracking-widest mb-6">Categories</h3>
+<nav class="flex flex-col gap-2">
+<button class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary-fixed text-on-primary-fixed font-button text-button w-full text-left transition-all" onclick="scrollToCategory('general')">
+<span class="material-symbols-outlined">info</span> General Information
+                            </button>
+<button class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high font-button text-button w-full text-left transition-all" onclick="scrollToCategory('orders')">
+<span class="material-symbols-outlined">shopping_cart</span> Orders &amp; Payments
+                            </button>
+<button class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high font-button text-button w-full text-left transition-all" onclick="scrollToCategory('services')">
+<span class="material-symbols-outlined">description</span> Our Services
+                            </button>
+<button class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high font-button text-button w-full text-left transition-all" onclick="scrollToCategory('privacy')">
+<span class="material-symbols-outlined">shield</span> Privacy &amp; Security
+                            </button>
+</nav>
+</div>
+</aside>
+<!-- Accordion Content -->
+<div class="lg:col-span-9 space-y-12">
+<!-- Category: General -->
+<div class="scroll-mt-24" id="general">
+<h2 class="font-headline-lg text-headline-lg mb-stack-lg border-b-2 border-primary-fixed pb-2 flex items-center gap-4">
+                            General Information
+                        </h2>
+<div class="space-y-4">
+<div class="accordion-item group border border-border-low-contrast rounded-xl bg-surface-elevated shadow-sm hover:shadow-md transition-all">
+<button class="flex items-center justify-between w-full p-6 text-left" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-body-lg font-semibold text-on-surface">What makes WritersHub Plus different from other agencies?</span>
+<span class="material-symbols-outlined arrow-icon transition-transform text-primary">expand_more</span>
+</button>
+<div class="accordion-content px-6 text-on-surface-variant">
+<p class="font-body-md">We focus on "Structured Clarity," combining human expertise with advanced quality controls. Unlike generic platforms, we hand-pick experts for specific domains—be it academic research or eCommerce strategy—to ensure precision and authority in every document.</p>
+</div>
+</div>
+<div class="accordion-item group border border-border-low-contrast rounded-xl bg-surface-elevated shadow-sm hover:shadow-md transition-all">
+<button class="flex items-center justify-between w-full p-6 text-left" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-body-lg font-semibold text-on-surface">How do I verify the credentials of my assigned writer?</span>
+<span class="material-symbols-outlined arrow-icon transition-transform text-primary">expand_more</span>
+</button>
+<div class="accordion-content px-6 text-on-surface-variant">
+<p class="font-body-md">Every writer in our network undergoes a rigorous 5-stage vetting process. You can view a summary of your assigned expert's qualifications and industry experience directly within your client dashboard once your order is active.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Category: Orders -->
+<div class="scroll-mt-24" id="orders">
+<h2 class="font-headline-lg text-headline-lg mb-stack-lg border-b-2 border-primary-fixed pb-2 flex items-center gap-4">
+                            Orders &amp; Payments
+                        </h2>
+<div class="space-y-4">
+<div class="accordion-item group border border-border-low-contrast rounded-xl bg-surface-elevated shadow-sm hover:shadow-md transition-all">
+<button class="flex items-center justify-between w-full p-6 text-left" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-body-lg font-semibold text-on-surface">What is the turnaround time for a standard project?</span>
+<span class="material-symbols-outlined arrow-icon transition-transform text-primary">expand_more</span>
+</button>
+<div class="accordion-content px-6 text-on-surface-variant">
+<p class="font-body-md">Turnaround times vary based on complexity. Standard academic essays typically take 3-5 days, while complex eCommerce strategies or job-hunting packages may take 7-10 business days. Expedited delivery is available for urgent needs.</p>
+</div>
+</div>
+<div class="accordion-item group border border-border-low-contrast rounded-xl bg-surface-elevated shadow-sm hover:shadow-md transition-all">
+<button class="flex items-center justify-between w-full p-6 text-left" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-body-lg font-semibold text-on-surface">Can I request a refund if I am not satisfied?</span>
+<span class="material-symbols-outlined arrow-icon transition-transform text-primary">expand_more</span>
+</button>
+<div class="accordion-content px-6 text-on-surface-variant">
+<p class="font-body-md">Yes, we have a clear refund policy. If the final deliverable does not meet the initial project specifications, you are entitled to free revisions or a partial/full refund depending on the case evaluation by our quality assurance team.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Category: Privacy -->
+<div class="scroll-mt-24" id="privacy">
+<h2 class="font-headline-lg text-headline-lg mb-stack-lg border-b-2 border-primary-fixed pb-2 flex items-center gap-4">
+                            Privacy &amp; Security
+                        </h2>
+<div class="space-y-4">
+<div class="accordion-item group border border-border-low-contrast rounded-xl bg-surface-elevated shadow-sm hover:shadow-md transition-all">
+<button class="flex items-center justify-between w-full p-6 text-left" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-body-lg font-semibold text-on-surface">Is my personal information shared with the writer?</span>
+<span class="material-symbols-outlined arrow-icon transition-transform text-primary">expand_more</span>
+</button>
+<div class="accordion-content px-6 text-on-surface-variant">
+<p class="font-body-md">No. We maintain strict anonymity between clients and writers. All communication happens through our secure platform, and your personal identifying information is encrypted and stored according to global privacy standards.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Still Need Help Section -->
+<section class="bg-surface-container-high py-section-padding">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg mb-stack-md">Still need help?</h2>
+<p class="font-body-lg text-body-lg mb-stack-lg text-on-surface-variant">Our support team is available 24/7 to assist you with any inquiries.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white p-8 rounded-xl shadow-sm border border-border-low-contrast hover:border-primary transition-all">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">chat</span>
+<h3 class="font-headline-md text-headline-md mb-2">Live Chat</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Talk to a support agent right now for quick answers.</p>
+<button class="text-secondary font-button text-button flex items-center gap-2 mx-auto hover:gap-4 transition-all">
+                            Start Chat <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-sm border border-border-low-contrast hover:border-primary transition-all">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">mail</span>
+<h3 class="font-headline-md text-headline-md mb-2">Email Us</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Send us a detailed message and we'll reply within 2 hours.</p>
+<button class="text-secondary font-button text-button flex items-center gap-2 mx-auto hover:gap-4 transition-all">
+                            support@writershub.plus <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-sm border border-border-low-contrast hover:border-primary transition-all">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">call</span>
+<h3 class="font-headline-md text-headline-md mb-2">Call Center</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Direct assistance for urgent order issues and escalations.</p>
+<button class="text-secondary font-button text-button flex items-center gap-2 mx-auto hover:gap-4 transition-all">
+                            +1 (800) WRITERS <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
+<p class="font-body-md text-body-md opacity-70">
                     Elevating communication through professional research and high-impact writing.
                 </p>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="writing-services/index.html">Academic Services</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="job-hunting-services/index.html">Career Coaching</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ai-training/index.html">AI Training</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ai-seo/index.html">AI SEO</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Pricing Plans</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Contact Us</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
-                <div class="flex space-x-2">
-                    <input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary" placeholder="Email address" type="email"/>
-                    <button class="bg-primary px-4 py-2 rounded-lg">
-                        <span class="material-symbols-outlined text-white">send</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="writing-services/index.html">Academic Services</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="job-hunting-services/index.html">Career Coaching</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="ecommerce-marketing.html">eCommerce Strategy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="pricing.html">Pricing Plans</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="contact-us.html">Contact Us</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
+<div class="flex space-x-2">
+<input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary placeholder-white/40" placeholder="Email address" type="email"/>
+<button class="bg-primary px-4 py-2 rounded-lg text-white hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
             © 2024 WritersHub Plus. All rights reserved.
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+</footer>
+<script>
+        function toggleAccordion(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items
+            document.querySelectorAll('.accordion-item').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        function scrollToCategory(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                
+                // Update sidebar active state
+                document.querySelectorAll('aside nav button').forEach(btn => {
+                    btn.classList.remove('bg-primary-fixed', 'text-on-primary-fixed');
+                    btn.classList.add('text-on-surface-variant');
+                });
+                
+                event.currentTarget.classList.add('bg-primary-fixed', 'text-on-primary-fixed');
+                event.currentTarget.classList.remove('text-on-surface-variant');
+            }
+        }
+        
+        // Dark mode support detection and toggle (optional utility)
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // document.documentElement.classList.add('dark');
+        }
+    </script>
+</body></html>

@@ -1,143 +1,429 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>LinkedIn Optimization | WritersHub Plus</title>
-    <meta name="description" content="Elevate your professional brand with an optimized LinkedIn profile.">
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LinkedIn Profile Optimization | WritersHub Plus</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#001a42",
+                        "tertiary-fixed-dim": "#ffb688",
+                        "accent-vibrant": "#ff6b35",
+                        "on-tertiary-fixed": "#311300",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f8f9ff",
+                        "surface-variant": "#dee2ec",
+                        "inverse-surface": "#2c3138",
+                        "error": "#ba1a1a",
+                        "secondary": "#9e421d",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#2558ab",
+                        "surface-dim": "#d6dae4",
+                        "on-primary-container": "#c0d2ff",
+                        "on-surface": "#171c23",
+                        "surface-container": "#eaeef8",
+                        "outline": "#737783",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#6d3200",
+                        "surface": "#f8f9ff",
+                        "on-secondary-container": "#742401",
+                        "primary": "#00408e",
+                        "primary-fixed": "#d8e2ff",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#dee2ec",
+                        "surface-elevated": "#ffffff",
+                        "on-background": "#171c23",
+                        "on-primary-fixed-variant": "#004395",
+                        "on-secondary-fixed": "#380d00",
+                        "surface-tint": "#2a5caf",
+                        "secondary-fixed-dim": "#ffb59b",
+                        "on-tertiary-container": "#ffc6a4",
+                        "primary-fixed-dim": "#aec6ff",
+                        "outline-variant": "#c3c6d3",
+                        "on-surface-variant": "#434752",
+                        "inverse-primary": "#aec6ff",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#ffdbcf",
+                        "on-secondary-fixed-variant": "#7e2b07",
+                        "on-tertiary-fixed-variant": "#733500",
+                        "tertiary-fixed": "#ffdbc7",
+                        "tertiary-container": "#914500",
+                        "surface-container-high": "#e4e8f2",
+                        "inverse-on-surface": "#edf1fb",
+                        "surface-container-low": "#f0f4fe",
+                        "text-muted": "#64748b",
+                        "secondary-container": "#ff8c61",
+                        "background": "#f8f9ff",
+                        "border-low-contrast": "#e2e8f0",
+                        "surface-subtle": "#f8fafc",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "stack-md": "16px",
+                        "section-padding": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "label-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "button": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../{depth}assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="../assets/js/tailwind-config.js"></script>
+    <script src="../{depth}assets/js/tailwind-config.js"></script>
 </head>
-<body class="bg-background text-on-background antialiased">
-    <!-- TopNavBar -->
-    <nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
-        <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="flex-shrink-0"><a href="../index.html"><img src="../assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
-            <div class="hidden md:flex items-center space-x-gutter">
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../writing-services/index.html">Writing Services</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../job-hunting-services/index.html">Job Hunting</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../ai-training/index.html">AI Training</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../ai-seo/index.html">AI SEO</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
-                <a href="#" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
-            </div>
-        </div>
-    </nav>
-    
-    <main class="hero-gradient relative overflow-hidden">
-        <!-- Hero Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 flex flex-col justify-center text-center items-center">
-            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background leading-tight mb-6 max-w-3xl">
-                LinkedIn Optimization
-            </h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
-                Elevate your professional brand with an optimized LinkedIn profile.
-            </p>
-            <a href="#" class="btn-hover bg-primary text-on-primary px-8 py-4 rounded-lg font-button text-button inline-flex items-center justify-center">
-                Get Started
-                <span class="material-symbols-outlined ml-2" style="font-size: 20px;">arrow_forward</span>
-            </a>
-        </section>
-
-        <!-- Benefits Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-elevated rounded-xl border border-border-low-contrast my-12">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Why Choose Us?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">star</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">Expert Professionals</h3>
-                    <p class="text-on-surface-variant">Our team consists of industry veterans and academic experts.</p>
-                </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">timer</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">On-Time Delivery</h3>
-                    <p class="text-on-surface-variant">We never miss a deadline. Get your work when you need it.</p>
-                </div>
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-accent-vibrant text-5xl mb-4">support_agent</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">24/7 Support</h3>
-                    <p class="text-on-surface-variant">We're always here to answer your questions and assist you.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Overview Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Pricing Overview</h2>
-            <div class="bg-surface-elevated rounded-xl border border-border-low-contrast p-8 max-w-2xl mx-auto text-center card-shadow">
-                <h3 class="font-headline-md text-2xl font-bold mb-4">Transparent Pricing</h3>
-                <p class="text-on-surface-variant mb-6">Our pricing is clear, upfront, and competitive. Proceed to our order form to get an exact quote based on your requirements.</p>
-                <a href="#" class="btn-hover bg-accent-vibrant text-on-primary px-6 py-3 rounded-lg font-button text-button inline-flex items-center justify-center">
-                    View Full Pricing & Order
-                </a>
-            </div>
-        </section>
-
-        <!-- FAQs Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 bg-surface-subtle mb-16 rounded-xl">
-            <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-12">Frequently Asked Questions</h2>
-            <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">How fast can you deliver?</h3>
-                    <p class="text-on-surface-variant">We offer various delivery speeds, starting from just 24 hours depending on the complexity of the task.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">Is the process confidential?</h3>
-                    <p class="text-on-surface-variant">Absolutely. We use enterprise-grade encryption and strict privacy policies to protect your data.</p>
-                </div>
-                <div class="bg-surface-elevated p-6 rounded-lg border border-border-low-contrast">
-                    <h3 class="font-bold text-lg mb-2">What if I need revisions?</h3>
-                    <p class="text-on-surface-variant">We offer free revisions within a specified period to ensure you are 100% satisfied with the final result.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="col-span-1 md:col-span-1">
-                <div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
-                <p class="font-body-md text-body-md opacity-70">
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex-shrink-0"><a href="../index.html"><img src="../assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../writing-services/index.html">Academic</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../job-hunting-services/index.html">Job Hunting</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../ecommerce-marketing.html">eCommerce</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../pricing.html">Pricing</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden md:block font-label-md text-label-md text-primary dark:text-primary-fixed hover:opacity-80">Login</button>
+<a href="../order-now.html" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-button active:scale-95 duration-150 transition-transform">Order Now</a>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface py-section-padding">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="inline-block py-1 px-3 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-lg font-label-lg mb-stack-md">
+                        CAREER ACCELERATION
+                    </span>
+<h1 class="font-display-lg text-headline-lg lg:text-display-lg text-on-surface mb-stack-md">
+                        The 24/7 Digital <span class="text-primary">Salesperson.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-stack-lg leading-relaxed">
+                        Your LinkedIn profile isn't just a resume; it's a living brand. We optimize your visibility to ensure you’re being found by the right recruiters while you sleep.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary text-on-secondary font-button px-8 py-4 rounded-lg shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all flex items-center gap-2">
+                            Optimize My Profile <span class="material-symbols-outlined">trending_up</span>
+</button>
+<button class="border border-outline text-on-surface font-button px-8 py-4 rounded-lg hover:bg-surface-container transition-all">
+                            View Case Studies
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary-fixed rounded-full blur-3xl opacity-30 animate-pulse"></div>
+<div class="relative glass-card p-6 rounded-xl shadow-2xl border border-low-contrast rotate-2 hover:rotate-0 transition-transform duration-500">
+<img class="w-full rounded-lg shadow-inner" data-alt="A professional LinkedIn profile interface displayed on a high-end sleek laptop screen. The environment is a modern, sunlit home office with minimalist wooden furniture and soft blue and orange atmospheric lighting. The image quality is crisp, corporate yet warm, highlighting a professional headshot and a compelling 'About' section on the screen. The overall aesthetic is clean, premium, and success-oriented." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAsUJPP_tVbB6ldtwkivIPRkOgWyGy9OEUzm4UQ2U6kQP-2T1RInuSUOfOTvWiSID4F-qR6qefRCrF8nBxJ78M_EMAEPL-l0AYZKu1ucXmb4TuXeevj82jB4qkZVtcqUZmGFc4p00wqJhaJjCbOctQ9fpqE9sfZZ7AqwxugzcV0rQACxnUQZwbwwujwbpgMvdzMX_xngoG3zHhGSImF3S82p86exCh7JgbxgtWIf870DUKA-uHoTE6"/>
+<div class="absolute -bottom-6 -left-6 bg-surface-elevated p-4 rounded-lg shadow-xl border border-low-contrast max-w-[200px]">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-accent-vibrant" style="font-variation-settings: 'FILL' 1;">visibility</span>
+<span class="font-label-lg text-label-lg text-on-surface">Search Appearances</span>
+</div>
+<div class="text-headline-md text-primary font-bold">+342%</div>
+<div class="text-label-lg text-text-muted">Last 30 days</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Before & After Section -->
+<section class="bg-surface-subtle py-section-padding border-y border-low-contrast">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">The Evolution of Impact</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">From a static digital document to a magnetic professional narrative.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+<!-- Before -->
+<div class="bg-surface-elevated p-8 rounded-xl border border-low-contrast shadow-sm opacity-80 flex flex-col">
+<div class="mb-6 flex items-center justify-between">
+<span class="text-label-lg font-bold uppercase tracking-wider text-outline">Typical Profile</span>
+<span class="material-symbols-outlined text-outline">error</span>
+</div>
+<div class="space-y-4 flex-grow">
+<div class="h-4 bg-surface-container rounded w-3/4"></div>
+<div class="h-4 bg-surface-container rounded w-1/2"></div>
+<div class="pt-4 border-t border-surface-container">
+<p class="text-text-muted italic">"Experienced Project Manager looking for new opportunities in the tech sector..."</p>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-4">
+<div class="h-2 bg-surface-container rounded"></div>
+<div class="h-2 bg-surface-container rounded"></div>
+<div class="h-2 bg-surface-container rounded"></div>
+</div>
+</div>
+<div class="mt-8 text-error font-label-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">close</span> Low Recruiter Engagement
+                        </div>
+</div>
+<!-- After -->
+<div class="bg-surface-elevated p-8 rounded-xl border-2 border-primary shadow-2xl relative overflow-hidden flex flex-col">
+<div class="absolute top-0 right-0 bg-primary text-on-primary px-4 py-1 text-label-lg font-bold rounded-bl-lg">OPTIMIZED</div>
+<div class="mb-6 flex items-center justify-between">
+<span class="text-label-lg font-bold uppercase tracking-wider text-primary">The 24/7 Brand</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="space-y-4 flex-grow">
+<div class="h-4 bg-primary-fixed rounded w-full"></div>
+<div class="h-4 bg-primary-fixed rounded w-5/6"></div>
+<div class="pt-4 border-t border-primary-fixed">
+<p class="text-on-surface font-semibold">"Architecting Scalable Tech Solutions | 15% Efficiency Increase for Fortune 500s | Thought Leader in Agile..."</p>
+</div>
+<div class="grid grid-cols-4 gap-2 mt-4">
+<div class="h-2 bg-accent-vibrant rounded"></div>
+<div class="h-2 bg-accent-vibrant rounded"></div>
+<div class="h-2 bg-accent-vibrant rounded"></div>
+<div class="h-2 bg-accent-vibrant rounded"></div>
+</div>
+</div>
+<div class="mt-8 text-primary font-label-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">trending_up</span> High-Value Inbound Leads
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Three Key Pillars (Bento Style) -->
+<section class="py-section-padding">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="mb-12">
+<h2 class="font-headline-lg text-headline-lg">The Pillars of Visibility</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Pillar 1 -->
+<div class="md:col-span-1 bg-surface-container-low p-8 rounded-xl border border-low-contrast hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Headline &amp; Summary Crafting</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                            Beyond just a job title. We craft an SEO-optimized headline and a narrative-driven summary that hooks the reader in seconds.
+                        </p>
+<ul class="space-y-2 text-label-lg font-label-lg text-on-surface">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">arrow_forward</span> Keyword Injection</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">arrow_forward</span> Brand Positioning</li>
+</ul>
+</div>
+<!-- Pillar 2 -->
+<div class="md:col-span-1 bg-surface-container-low p-8 rounded-xl border border-low-contrast hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">history_edu</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Experience Narrative</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                            Transforming job duties into achievements. We highlight your specific contributions with data-backed impact statements.
+                        </p>
+<ul class="space-y-2 text-label-lg font-label-lg text-on-surface">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">arrow_forward</span> STAR Method Writing</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">arrow_forward</span> Visual Formatting</li>
+</ul>
+</div>
+<!-- Pillar 3 -->
+<div class="md:col-span-1 bg-surface-container-low p-8 rounded-xl border border-low-contrast hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Skill &amp; Strategy</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                            A curated skill list designed to trigger the LinkedIn algorithm. We optimize for recruiter search filters and endorsements.
+                        </p>
+<ul class="space-y-2 text-label-lg font-label-lg text-on-surface">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">arrow_forward</span> Algorithm Alignment</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">arrow_forward</span> Social Proof Tactics</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Reach Section -->
+<section class="bg-on-primary-fixed text-on-primary py-section-padding relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-surface mb-stack-md">Global Search Performance</h2>
+<p class="text-primary-fixed-dim text-body-lg mb-stack-lg">
+                        Recruiters from New York to Singapore use specific boolean search strings. We reverse-engineer your profile to appear at the top of their lists.
+                    </p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<div class="text-display-lg text-accent-vibrant mb-1">92%</div>
+<p class="text-label-lg text-outline-variant">Recruiter trust factor increase</p>
+</div>
+<div>
+<div class="text-display-lg text-accent-vibrant mb-1">12x</div>
+<p class="text-label-lg text-outline-variant">Profile view frequency</p>
+</div>
+</div>
+</div>
+<div class="relative flex justify-center">
+<!-- Map Visualization -->
+<div class="w-full aspect-square max-w-md rounded-full border border-primary-container p-8 animate-[spin_60s_linear_infinite]">
+<div class="w-full h-full rounded-full border-2 border-dashed border-primary-fixed-dim/30 flex items-center justify-center">
+<div class="w-3/4 h-3/4 rounded-full border border-primary-fixed-dim/50"></div>
+</div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-8xl text-surface-elevated animate-pulse" style="font-variation-settings: 'wght' 200;">language</span>
+</div>
+<!-- Pings -->
+<div class="absolute top-1/4 right-1/4 w-3 h-3 bg-accent-vibrant rounded-full shadow-[0_0_15px_#ff6b35] animate-ping"></div>
+<div class="absolute bottom-1/3 left-1/4 w-2 h-2 bg-accent-vibrant rounded-full shadow-[0_0_15px_#ff6b35] animate-ping delay-700"></div>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 right-0 w-1/2 h-1/2 bg-primary rounded-full blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-secondary rounded-full blur-[100px]"></div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-section-padding bg-surface">
+<div class="max-w-4xl mx-auto px-gutter text-center reveal-on-scroll">
+<h2 class="font-display-lg text-headline-lg lg:text-display-lg mb-stack-md">Ready to be discovered?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
+                    Stop missing out on roles because your profile isn't communicating your value. Let's build your digital authority together.
+                </p>
+<div class="inline-flex flex-col sm:flex-row items-center gap-6">
+<button class="bg-primary text-on-primary font-button px-10 py-5 rounded-lg text-lg shadow-xl hover:bg-primary-container hover:shadow-2xl hover:scale-105 transition-all">
+                        Optimize My Profile Now
+                    </button>
+<p class="text-label-lg font-label-lg text-text-muted flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified_user</span> 100% Satisfaction Guarantee
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-sm font-headline-md text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
+<p class="font-body-md text-body-md opacity-70">
                     Elevating communication through professional research and high-impact writing.
                 </p>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="../writing-services/index.html">Academic Services</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="../job-hunting-services/index.html">Career Coaching</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="../ai-training/index.html">AI Training</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="../ai-seo/index.html">AI SEO</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
-                <ul class="space-y-2">
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Pricing Plans</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Contact Us</a></li>
-                    <li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
-                <div class="flex space-x-2">
-                    <input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary" placeholder="Email address" type="email"/>
-                    <button class="bg-primary px-4 py-2 rounded-lg">
-                        <span class="material-symbols-outlined text-white">send</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="../writing-services/index.html">Academic Services</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="../job-hunting-services/index.html">Career Coaching</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="../ecommerce-marketing.html">eCommerce Strategy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="../pricing.html">Pricing Plans</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="../contact-us.html">Contact Us</a></li>
+<li><a class="font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" href="../privacy-policy.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-white mb-4">Newsletter</h4>
+<div class="flex space-x-2">
+<input class="bg-surface/10 border-none text-white rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary placeholder-white/40" placeholder="Email address" type="email"/>
+<button class="bg-primary px-4 py-2 rounded-lg text-white hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-6 text-center font-label-sm text-label-sm opacity-50">
             © 2024 WritersHub Plus. All rights reserved.
         </div>
-    </footer>
-    <script src="../assets/js/main.js"></script>
-</body>
-</html>
+</footer>
+<script>
+        // Micro-interaction: Reveal on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+        // Background subtle parallax or movement
+        window.addEventListener('mousemove', (e) => {
+            const moveX = (e.clientX - window.innerWidth / 2) / 100;
+            const moveY = (e.clientY - window.innerHeight / 2) / 100;
+            document.querySelectorAll('.glass-card').forEach(card => {
+                card.style.transform = `translate(${moveX}px, ${moveY}px) rotate(2deg)`;
+            });
+        });
+    </script>
+</body></html>
