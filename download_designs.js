@@ -44,9 +44,9 @@ const indexFooter = indexHtml.match(footerRegex)[0];
 const headAdditions = `
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="{depth}assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="{depth}assets/js/tailwind-config.js"></script>
+    <script src="assets/js/tailwind-config.js"></script>
 `;
 
 function adjustDepth(html, depth) {
@@ -85,6 +85,7 @@ async function run() {
 
         html = html.replace(/<head>([\s\S]*?)<\/head>/i, (match, innerHead) => {
             let newHead = innerHead.replace(/<script src="https:\/\/cdn\.tailwindcss\.com.*?"><\/script>/i, '');
+            newHead = newHead.replace(/<script id="tailwind-config">[\s\S]*?<\/script>/i, '');
             return '<head>' + newHead + '\n' + adjustDepth(headAdditions, mapping.depth) + '</head>';
         });
 
