@@ -161,6 +161,32 @@ const pages = [
 
     {path: "ai-training/index.html", title: "AI Training", description: "Master AI tools and integrate them into your workflow for maximum productivity.", depth: "../"},
     {path: "ai-seo/index.html", title: "AI SEO Services", description: "Leverage generative AI to dominate search engine rankings.", depth: "../"},
+    
+    // Additional Missing Pages
+    {path: "verifime.html", title: "VerifiMe", description: "Verify your credentials and enhance your professional reputation.", depth: ""},
+    {path: "gen-ai-seo-generative-engine-optimization.html", title: "Gen AI SEO", description: "Generative Engine Optimization services for the modern web.", depth: ""},
+    {path: "review-my-business.html", title: "Review My Business", description: "Get a comprehensive review of your business strategy and web presence.", depth: ""},
+    {path: "writers-ai.html", title: "Writers AI", description: "Leverage AI to enhance your writing productivity and quality.", depth: ""},
+    {path: "ecommerce-marketing.html", title: "eCommerce Marketing", description: "Grow your online store with our proven eCommerce marketing strategies.", depth: ""},
+    {path: "job-hunters.html", title: "Job Hunters", description: "Comprehensive resources and services for job seekers.", depth: ""},
+    {path: "research-paper.html", title: "Research Paper Services", description: "Expert assistance with academic research papers.", depth: ""},
+    {path: "essay-cave.html", title: "Essay Cave", description: "Your sanctuary for high-quality, custom-written essays.", depth: ""},
+    {path: "emailmeessay.html", title: "Email Me Essay", description: "Fast, reliable essay delivery straight to your inbox.", depth: ""},
+    {path: "essay-writing-service.html", title: "Essay Writing Service", description: "Top-tier essay writing services tailored to your academic needs.", depth: ""},
+    {path: "about-us.html", title: "About Us", description: "Learn more about WritersHub Plus and our mission.", depth: ""},
+    {path: "thank-you.html", title: "Thank You", description: "Thank you for your order. We are processing your request.", depth: ""},
+    {path: "services.html", title: "Our Services", description: "Explore the wide range of writing and career services we offer.", depth: ""},
+    {path: "pricing.html", title: "Pricing", description: "Transparent, competitive pricing for all our professional services.", depth: ""},
+    {path: "order-now.html", title: "Order Now", description: "Place your order today and get started with WritersHub Plus.", depth: ""},
+    {path: "new-order.html", title: "New Order", description: "Start a new order for writing, editing, or career services.", depth: ""},
+    {path: "how-to-order.html", title: "How to Order", description: "A simple, step-by-step guide on how to place an order with us.", depth: ""},
+    {path: "how-it-works.html", title: "How It Works", description: "Understand our process from order placement to final delivery.", depth: ""},
+    {path: "faq.html", title: "FAQ", description: "Frequently asked questions about our services, pricing, and process.", depth: ""},
+    {path: "contact-us.html", title: "Contact Us", description: "Get in touch with our support team for any inquiries.", depth: ""},
+    {path: "buyer-purchase-protection.html", title: "Buyer Purchase Protection", description: "Our commitment to secure payments and guaranteed satisfaction.", depth: ""},
+    {path: "blog.html", title: "Blog", description: "Insights, tips, and news on writing, career growth, and more.", depth: ""},
+    {path: "essay-writers.html", title: "Essay Writers", description: "Meet our team of professional academic writers.", depth: ""},
+    {path: "privacy-policy.html", title: "Privacy Policy", description: "How we protect your data and ensure your confidentiality.", depth: ""}
 ];
 
 pages.forEach(p => {
