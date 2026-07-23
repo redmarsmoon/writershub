@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const target = btn.getAttribute('data-target');
             document.getElementById(target).classList.remove('hidden');
+            
+            calculatePrice();
         });
     });
 
@@ -112,93 +114,99 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Dynamic Pricing Engine
-    let pricingRules = {
-        base_price_academic: 11.00,
-        mult_level_undergrad_1: 0.0,
-        mult_level_undergrad_3: 0.10,
-        mult_level_masters: 0.25,
-        mult_level_phd: 0.40,
-        mult_writer_advanced: 0.25,
-        mult_writer_enl: 0.30
-    };
-
-    // Fetch live pricing rules from WP Backend
-    const fetchPricingRules = async () => {
-        try {
-            // Adjust the URL to match your WordPress installation URL
-            const response = await fetch('/?rest_route=/wh/v1/pricing');
-            if (response.ok) {
-                const rules = await response.json();
-                rules.forEach(rule => {
-                    pricingRules[rule.rule_key] = parseFloat(rule.rule_value);
-                });
-                calculatePrice(); // Recalculate once live rules are loaded
-            }
-        } catch (error) {
-            console.warn('Could not fetch live pricing from backend, using defaults.', error);
-        }
-    };
-    fetchPricingRules();
-
     const calculatePrice = () => {
-        let basePrice = pricingRules.base_price_academic;
-        let pages = parseInt(document.getElementById('qty-pages')?.value || 1);
-        let spacing = document.querySelector('.spacing-btn.bg-primary')?.getAttribute('data-value') || 'double';
-        
-        // Apply Academic Level Multiplier
-        let levelEl = document.querySelector('#step-2 .option-btn.bg-primary');
-        let levelText = levelEl ? levelEl.innerText.trim() : '';
-        let levelMult = 0;
-        if (levelText.includes('Undergrad (1-2)')) levelMult = pricingRules.mult_level_undergrad_1 || 0;
-        else if (levelText.includes('Undergrad (3-4)')) levelMult = pricingRules.mult_level_undergrad_3 || 0;
-        else if (levelText.includes("Master's")) levelMult = pricingRules.mult_level_masters || 0;
-        else if (levelText.includes('PhD')) levelMult = pricingRules.mult_level_phd || 0;
-        
-        basePrice = basePrice * (1 + levelMult);
+        const activeForm = document.querySelector('.form-container:not(.hidden)');
+        if (!activeForm) return;
 
-        // Apply Writer Category Multiplier
-        let writerEl = document.querySelector('#step-4 .option-btn.bg-primary');
-        let writerMult = 0;
-        if (writerEl) {
-            if (writerEl.innerText.includes('Advanced')) writerMult = pricingRules.mult_writer_advanced || 0;
-            else if (writerEl.innerText.includes('ENL')) writerMult = pricingRules.mult_writer_enl || 0;
-        }
-
-        basePrice = basePrice * (1 + writerMult);
-
-        // Spacing doubles the modified base price
-        if (spacing === 'single') {
-            basePrice *= 2;
-        }
-
-        let total = basePrice * pages;
-        
-        // Extras
-        const extras = document.querySelectorAll('.extra-service');
-        let extrasTotal = 0;
-        let extrasHtml = '';
-        
-        extras.forEach(extra => {
-            if(extra.checked || extra.classList.contains('bg-primary')) {
-                const price = parseFloat(extra.getAttribute('data-price') || 0);
-                const name = extra.getAttribute('data-name') || extra.value || 'Extra';
-                extrasTotal += price;
-                extrasHtml += `<div class="flex justify-between text-sm mb-2"><span class="text-on-surface-variant">${name}</span><span>$${price.toFixed(2)}</span></div>`;
+        if (activeForm.id === 'form-academic') {
+            let total = 0;
+            
+            // 1. Pages (Base price is $12/page)
+            let pages = parseInt(document.getElementById('qty-pages')?.value || 1);
+            let pagePrice = pages * 12.00;
+            
+            // 2. Spacing
+            let spacingEl = activeForm.querySelector('#spacing-group .option-btn.bg-primary');
+            let spacingVal = spacingEl ? spacingEl.getAttribute('data-value') : 'double';
+            if (spacingVal === 'single') {
+                pagePrice *= 2; // Double the page price for single spacing
             }
-        });
-        
-        total += extrasTotal;
-        
-        // Update UI
-        const summaryTotal = document.getElementById('summary-total');
-        if(summaryTotal) summaryTotal.textContent = `$${total.toFixed(2)}`;
-        
-        const summaryBase = document.getElementById('summary-base');
-        if(summaryBase) summaryBase.innerHTML = `${pages} pages x $${basePrice.toFixed(2)} = <strong class="ml-2">$${(basePrice * pages).toFixed(2)}</strong>`;
-        
-        const summaryExtras = document.getElementById('summary-extras');
-        if(summaryExtras) summaryExtras.innerHTML = extrasHtml;
+
+            // 3. Academic Level
+            let levelEl = activeForm.querySelector('#academic-level-group .option-btn.bg-primary');
+            let levelPrice = levelEl ? parseFloat(levelEl.getAttribute('data-price') || 0) : 0;
+            
+            // 4. Deadline
+            let deadlineEl = activeForm.querySelector('#deadline-group .option-btn.bg-primary');
+            let deadlinePrice = deadlineEl ? parseFloat(deadlineEl.getAttribute('data-price') || 0) : 0;
+
+            // 5. Writer Category
+            let writerEl = activeForm.querySelector('#writer-category-group .option-btn.bg-primary');
+            let writerPrice = writerEl ? parseFloat(writerEl.getAttribute('data-price') || 0) : 0;
+
+            // 6. Extras
+            let extrasTotal = 0;
+            let extrasHtml = '';
+            activeForm.querySelectorAll('.extra-service').forEach(extra => {
+                if(extra.checked || extra.classList.contains('bg-primary')) {
+                    const price = parseFloat(extra.getAttribute('data-price') || 0);
+                    const name = extra.getAttribute('data-name') || extra.value || 'Extra';
+                    extrasTotal += price;
+                    extrasHtml += `<div class="flex justify-between text-sm mb-2"><span class="text-on-surface-variant">${name}</span><span>$${price.toFixed(2)}</span></div>`;
+                }
+            });
+
+            total = pagePrice + levelPrice + deadlinePrice + writerPrice + extrasTotal;
+
+            // Update UI
+            const summaryTotal = document.getElementById('summary-total');
+            if(summaryTotal) summaryTotal.textContent = `$${total.toFixed(2)}`;
+
+            const summaryBase = document.getElementById('summary-base');
+            if(summaryBase) {
+                summaryBase.innerHTML = `
+                    <div class="flex justify-between text-sm mb-2"><span class="text-on-surface-variant">${pages} pages (${spacingVal})</span><span>$${pagePrice.toFixed(2)}</span></div>
+                    ${levelPrice > 0 ? `<div class="flex justify-between text-sm mb-2"><span class="text-on-surface-variant">Academic Level</span><span>$${levelPrice.toFixed(2)}</span></div>` : ''}
+                    ${deadlinePrice > 0 ? `<div class="flex justify-between text-sm mb-2"><span class="text-on-surface-variant">Deadline Premium</span><span>$${deadlinePrice.toFixed(2)}</span></div>` : ''}
+                    ${writerPrice > 0 ? `<div class="flex justify-between text-sm mb-2"><span class="text-on-surface-variant">Writer Category</span><span>$${writerPrice.toFixed(2)}</span></div>` : ''}
+                `;
+            }
+
+            const summaryExtras = document.getElementById('summary-extras');
+            if(summaryExtras) summaryExtras.innerHTML = extrasHtml;
+
+            const topicVal = document.getElementById('topic')?.value || "Writer's choice";
+            const paperType = document.getElementById('type-of-paper')?.value || "Essay";
+            const levelText = levelEl ? levelEl.innerText.trim() : "High School";
+            if (document.getElementById('summary-topic')) document.getElementById('summary-topic').textContent = topicVal;
+            if (document.getElementById('summary-level')) document.getElementById('summary-level').textContent = levelText;
+            if (document.getElementById('summary-paper')) document.getElementById('summary-paper').textContent = paperType;
+            
+        } else if (activeForm.id === 'form-career') {
+            let careerTotal = 0;
+            activeForm.querySelectorAll('.career-service').forEach(extra => {
+                if(extra.checked) {
+                    careerTotal += parseFloat(extra.getAttribute('data-price') || 0);
+                }
+            });
+            let appsDropdown = document.getElementById('career-job-apps');
+            if(appsDropdown && appsDropdown.options[appsDropdown.selectedIndex]) {
+                careerTotal += parseFloat(appsDropdown.options[appsDropdown.selectedIndex].getAttribute('data-price') || 0);
+            }
+            
+            const careerTotalEl = document.getElementById('career-total');
+            if (careerTotalEl) careerTotalEl.textContent = `$${careerTotal.toFixed(2)}`;
+            
+        } else if (activeForm.id === 'form-ecommerce') {
+            let ecoTotal = 0;
+            activeForm.querySelectorAll('.eco-service').forEach(extra => {
+                if(extra.checked) {
+                    ecoTotal += parseFloat(extra.getAttribute('data-price') || 0);
+                }
+            });
+            const ecoTotalEl = document.getElementById('eco-total');
+            if (ecoTotalEl) ecoTotalEl.textContent = `$${ecoTotal.toFixed(2)}`;
+        }
     };
 
     // Increment/Decrement logic
@@ -217,51 +225,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Form inputs change trigger price calculation
-    document.querySelectorAll('input, select').forEach(el => {
+    document.querySelectorAll('input, select, textarea').forEach(el => {
         el.addEventListener('change', calculatePrice);
+        el.addEventListener('keyup', () => {
+            if (el.id === 'topic') calculatePrice();
+        });
     });
 
-    // Submit Logic
+    // Submit Logic - Academic
     const submitBtn = document.getElementById('btn-submit');
     if (submitBtn) {
         submitBtn.addEventListener('click', async (e) => {
             e.preventDefault();
-            
-            // Simple validation
             const emailInput = document.getElementById('order-email');
             if(emailInput && !emailInput.value) {
                 alert('Please provide an email address in the final step.');
                 return;
             }
-
+            
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = 'Processing...';
             submitBtn.disabled = true;
 
-            // Gather all form data (simplified for this example)
             const formData = {
+                category: 'Academic Writing',
                 email: emailInput ? emailInput.value : 'guest@example.com',
-                pages: document.getElementById('qty-pages')?.value,
-                calculated_total: document.getElementById('summary-total')?.textContent.replace('$', ''),
-                service: document.querySelector('#step-1 .option-btn.bg-primary')?.innerText.trim(),
-                level: document.querySelector('#step-2 .option-btn.bg-primary')?.innerText.trim(),
+                total: document.getElementById('summary-total')?.textContent.replace('$', ''),
             };
             
             try {
                 const response = await fetch('/?rest_route=/wh/v1/orders/create', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
                 });
                 const result = await response.json();
                 
                 if (result.success) {
-                    // Success UI state
                     submitBtn.innerHTML = 'Success!';
-                    submitBtn.classList.replace('bg-primary', 'bg-green-600');
-                    // Redirect to simulated checkout
+                    submitBtn.classList.replace('bg-secondary', 'bg-green-600');
                     window.location.href = `/checkout/?order_id=${result.order_id}`;
                 } else {
                     alert('Error: ' + (result.message || 'Unknown error'));
@@ -270,9 +272,97 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } catch (error) {
                 console.error(error);
-                alert('An error occurred submitting the order. Please check your connection.');
+                alert('An error occurred submitting the order.');
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
+            }
+        });
+    }
+
+    // Submit Logic - Career
+    const submitBtnCareer = document.getElementById('btn-submit-career');
+    if (submitBtnCareer) {
+        submitBtnCareer.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const emailInput = document.getElementById('career-email');
+            if(emailInput && !emailInput.value) {
+                alert('Please provide an email address.');
+                return;
+            }
+            
+            const originalText = submitBtnCareer.innerHTML;
+            submitBtnCareer.innerHTML = 'Processing...';
+            submitBtnCareer.disabled = true;
+
+            const formData = {
+                category: 'Job Hunting & CV Services',
+                email: emailInput ? emailInput.value : 'guest@example.com',
+                total: document.getElementById('career-total')?.textContent.replace('$', ''),
+            };
+            
+            try {
+                const response = await fetch('/?rest_route=/wh/v1/orders/create', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                const result = await response.json();
+                if (result.success) {
+                    window.location.href = `/checkout/?order_id=${result.order_id}`;
+                } else {
+                    alert('Error: ' + (result.message || 'Unknown error'));
+                    submitBtnCareer.innerHTML = originalText;
+                    submitBtnCareer.disabled = false;
+                }
+            } catch (error) {
+                console.error(error);
+                alert('An error occurred submitting the order.');
+                submitBtnCareer.innerHTML = originalText;
+                submitBtnCareer.disabled = false;
+            }
+        });
+    }
+
+    // Submit Logic - Ecommerce
+    const submitBtnEco = document.getElementById('btn-submit-ecommerce');
+    if (submitBtnEco) {
+        submitBtnEco.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const emailInput = document.getElementById('eco-email');
+            if(emailInput && !emailInput.value) {
+                alert('Please provide an email address.');
+                return;
+            }
+            
+            const originalText = submitBtnEco.innerHTML;
+            submitBtnEco.innerHTML = 'Processing...';
+            submitBtnEco.disabled = true;
+
+            const formData = {
+                category: 'E-commerce & Digital Services',
+                email: emailInput ? emailInput.value : 'guest@example.com',
+                total: document.getElementById('eco-total')?.textContent.replace('$', ''),
+            };
+            
+            try {
+                const response = await fetch('/?rest_route=/wh/v1/orders/create', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                const result = await response.json();
+                if (result.success) {
+                    window.location.href = `/checkout/?order_id=${result.order_id}`;
+                } else {
+                    alert('Error: ' + (result.message || 'Unknown error'));
+                    submitBtnEco.innerHTML = originalText;
+                    submitBtnEco.disabled = false;
+                }
+            } catch (error) {
+                console.error(error);
+                alert('An error occurred submitting the order.');
+                submitBtnEco.innerHTML = originalText;
+                submitBtnEco.disabled = false;
             }
         });
     }

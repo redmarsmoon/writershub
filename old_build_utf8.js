@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const path = require('path');
 
 const targetFile = path.join(__dirname, 'order-now.html');
@@ -24,13 +24,13 @@ const newBody = `<!-- Form Section -->
             <span class="material-symbols-outlined">school</span> Academic Writing
         </button>
         <button data-target="form-career" class="tab-btn px-6 py-3 rounded-full font-label-lg border-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary-container transition-colors flex items-center gap-2">
-            <span class="material-symbols-outlined">business_center</span> Job Hunting & CV Services
+            <span class="material-symbols-outlined">business_center</span> Career Services
         </button>
         <button data-target="form-training" class="tab-btn px-6 py-3 rounded-full font-label-lg border-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary-container transition-colors flex items-center gap-2">
-            <span class="material-symbols-outlined">psychology</span> AI Training
+            <span class="material-symbols-outlined">model_training</span> AI Training
         </button>
         <button data-target="form-seo" class="tab-btn px-6 py-3 rounded-full font-label-lg border-2 border-transparent text-on-surface-variant hover:text-primary hover:border-primary-container transition-colors flex items-center gap-2">
-            <span class="material-symbols-outlined">query_stats</span> AI SEO & LLM
+            <span class="material-symbols-outlined">search_insights</span> AI SEO & LLM
         </button>
     </div>
 
@@ -71,24 +71,23 @@ const newBody = `<!-- Form Section -->
                 </div>
 
                 <form id="academic-wizard" class="p-8">
-                    <input type="hidden" id="service-category" value="Academic Writing">
                     <!-- Step 1: Academic Level & Paper Type -->
                     <div id="step-1" class="wizard-step-content space-y-8">
                         <h3 class="font-headline-sm text-lg text-primary mb-2">Step 1: Core Details</h3>
                         <div class="space-y-4">
                             <label class="block font-label-md text-on-surface-variant">Academic Level</label>
-                            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 option-group" id="academic-level-group">
-                                <button type="button" class="option-btn bg-primary text-white border border-primary p-3 rounded-lg text-sm transition-all" data-price="0">High School</button>
-                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-3 rounded-lg text-sm hover:border-primary transition-all" data-price="10">Undergraduate (1-2 yrs)</button>
-                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-3 rounded-lg text-sm hover:border-primary transition-all" data-price="15">Undergraduate (3-4 yrs)</button>
-                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-3 rounded-lg text-sm hover:border-primary transition-all" data-price="20">Masters</button>
-                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-3 rounded-lg text-sm hover:border-primary transition-all" data-price="30">PhD</button>
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 option-group">
+                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-3 rounded-lg text-sm hover:border-primary transition-all">High School</button>
+                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-3 rounded-lg text-sm hover:border-primary transition-all">Undergrad (1-2)</button>
+                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-3 rounded-lg text-sm hover:border-primary transition-all">Undergrad (3-4)</button>
+                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-3 rounded-lg text-sm hover:border-primary transition-all">Master's</button>
+                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-3 rounded-lg text-sm hover:border-primary transition-all">PhD</button>
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block font-label-md text-on-surface-variant mb-2">Type of Paper</label>
-                                <select id="type-of-paper" class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none">
+                                <select class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none">
                                     <option>Essay (any type)</option>
                                     <option>Research Paper</option>
                                     <option>Dissertation</option>
@@ -97,14 +96,12 @@ const newBody = `<!-- Form Section -->
                             </div>
                             <div>
                                 <label class="block font-label-md text-on-surface-variant mb-2">Discipline</label>
-                                <select id="discipline" class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none">
-                                    <option>Accounting & Auditing</option>
-                                    <option>Advertising & Marketing</option>
+                                <select class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none">
+                                    <option>Select...</option>
                                     <option>Computer Science</option>
                                     <option>Business & Management</option>
                                     <option>Nursing</option>
                                     <option>History</option>
-                                    <option>Other</option>
                                 </select>
                             </div>
                         </div>
@@ -115,11 +112,11 @@ const newBody = `<!-- Form Section -->
                         <h3 class="font-headline-sm text-lg text-primary mb-2">Step 2: Paper Information</h3>
                         <div>
                             <label class="block font-label-md text-on-surface-variant mb-2">Topic</label>
-                            <input type="text" id="topic" value="Writer's choice" class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"/>
+                            <input type="text" value="Writer's choice" class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"/>
                         </div>
                         <div>
                             <label class="block font-label-md text-on-surface-variant mb-2">Paper Instructions</label>
-                            <textarea id="instructions" rows="5" class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="Write anything you feel is important for the writer to consider..."></textarea>
+                            <textarea rows="5" class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="Write anything you feel is important for the writer to consider..."></textarea>
                         </div>
                     </div>
 
@@ -138,9 +135,9 @@ const newBody = `<!-- Form Section -->
                             </div>
                             <div>
                                 <label class="block font-label-md text-on-surface-variant mb-2">Spacing</label>
-                                <div class="flex option-group h-12" id="spacing-group">
-                                    <button type="button" class="option-btn spacing-btn flex-1 border border-border-low-contrast rounded-l-lg bg-surface text-on-surface" data-value="single" data-price="0">Single</button>
-                                    <button type="button" class="option-btn spacing-btn flex-1 border border-border-low-contrast rounded-r-lg bg-primary text-white border-primary" data-value="double" data-price="0">Double</button>
+                                <div class="flex option-group h-12">
+                                    <button type="button" class="option-btn spacing-btn flex-1 border border-border-low-contrast rounded-l-lg bg-surface text-on-surface" data-value="single">Single</button>
+                                    <button type="button" class="option-btn spacing-btn flex-1 border border-border-low-contrast rounded-r-lg bg-primary text-white border-primary" data-value="double">Double</button>
                                 </div>
                             </div>
                         </div>
@@ -163,14 +160,14 @@ const newBody = `<!-- Form Section -->
                         <h3 class="font-headline-sm text-lg text-primary mb-2">Step 4: Timeline & Assets</h3>
                         <div>
                             <label class="block font-label-md text-on-surface-variant mb-2">Deadline</label>
-                            <div class="grid grid-cols-3 md:grid-cols-7 gap-2 option-group" id="deadline-group">
-                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-2 rounded-lg text-sm" data-price="12">8 Hours</button>
-                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-2 rounded-lg text-sm" data-price="0">24 Hours</button>
-                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-2 rounded-lg text-sm" data-price="0">48 Hours</button>
-                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-2 rounded-lg text-sm" data-price="0">3 Days</button>
-                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-2 rounded-lg text-sm" data-price="0">5 Days</button>
-                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-2 rounded-lg text-sm" data-price="0">7 Days</button>
-                                <button type="button" class="option-btn bg-primary text-white border border-primary p-2 rounded-lg text-sm" data-price="0">14 Days</button>
+                            <div class="grid grid-cols-3 md:grid-cols-7 gap-2 option-group">
+                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-2 rounded-lg text-sm">8 hrs</button>
+                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-2 rounded-lg text-sm">24 hrs</button>
+                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-2 rounded-lg text-sm">48 hrs</button>
+                                <button type="button" class="option-btn bg-primary text-white border border-primary p-2 rounded-lg text-sm">3 days</button>
+                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-2 rounded-lg text-sm">5 days</button>
+                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-2 rounded-lg text-sm">7 days</button>
+                                <button type="button" class="option-btn bg-surface border border-border-low-contrast p-2 rounded-lg text-sm">14 days</button>
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -204,33 +201,39 @@ const newBody = `<!-- Form Section -->
                     <!-- Step 5: Writer Category -->
                     <div id="step-5" class="wizard-step-content space-y-8 hidden">
                         <h3 class="font-headline-sm text-lg text-primary mb-4">Step 5: Writer Category</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 option-group" id="writer-category-group">
-                            <button type="button" class="option-btn bg-primary text-white border border-primary p-6 rounded-xl text-left transition-all relative overflow-hidden" data-price="0">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 option-group">
+                            <button type="button" class="option-btn bg-primary text-white border border-primary p-6 rounded-xl text-left transition-all relative overflow-hidden">
                                 <h4 class="font-bold text-lg mb-2">Best Available</h4>
                                 <p class="text-sm opacity-90">Standard price</p>
                             </button>
-                            <button type="button" class="option-btn bg-surface border border-border-low-contrast p-6 rounded-xl text-left hover:border-primary transition-all" data-price="0">
-                                <h4 class="font-bold text-lg text-on-surface mb-2">Advanced</h4>
+                            <button type="button" class="option-btn bg-surface border border-border-low-contrast p-6 rounded-xl text-left hover:border-primary transition-all">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="font-bold text-lg text-on-surface">Advanced</h4>
+                                    <span class="text-xs font-bold text-primary bg-primary-container/20 px-2 py-1 rounded">+25%</span>
+                                </div>
                                 <p class="text-sm text-on-surface-variant">High-rank professional writer.</p>
                             </button>
-                            <button type="button" class="option-btn bg-surface border border-border-low-contrast p-6 rounded-xl text-left hover:border-primary transition-all" data-price="0">
-                                <h4 class="font-bold text-lg text-on-surface mb-2">ENL</h4>
+                            <button type="button" class="option-btn bg-surface border border-border-low-contrast p-6 rounded-xl text-left hover:border-primary transition-all">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="font-bold text-lg text-on-surface">ENL</h4>
+                                    <span class="text-xs font-bold text-primary bg-primary-container/20 px-2 py-1 rounded">+30%</span>
+                                </div>
                                 <p class="text-sm text-on-surface-variant">English native language writer (US, UK, CA, AU).</p>
                             </button>
                         </div>
                     </div>
 
                     <!-- Step 6: Additional Services -->
-                    <div id="step-6" class="wizard-step-content space-y-4 hidden" id="extras-group">
+                    <div id="step-6" class="wizard-step-content space-y-4 hidden">
                         <h3 class="font-headline-sm text-lg text-primary mb-4">Step 6: Additional Services</h3>
                         
-                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors">
-                            <input type="checkbox" class="extra-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="5.00" data-name="Writer Samples">
+                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors bg-green-50 border-green-200">
+                            <input type="checkbox" class="extra-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="5.00" data-name="Writer Samples" checked>
                             <div class="flex-grow">
-                                <h4 class="font-bold text-on-surface uppercase text-sm">Writer Samples</h4>
+                                <h4 class="font-bold text-on-surface uppercase text-sm">Get Writer Samples</h4>
                                 <p class="text-sm text-text-muted">3 samples of works previously completed by your writer.</p>
                             </div>
-                            <span class="font-bold text-on-surface-variant">$5.00</span>
+                            <span class="font-bold text-primary">$5.00</span>
                         </label>
                         
                         <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors">
@@ -242,40 +245,31 @@ const newBody = `<!-- Form Section -->
                             <span class="font-bold text-on-surface-variant">$24.75</span>
                         </label>
 
-                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors">
-                            <input type="checkbox" class="extra-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="9.99" data-name="VIP Support">
+                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors bg-green-50 border-green-200">
+                            <input type="checkbox" class="extra-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="9.99" data-name="VIP Support" checked>
                             <div class="flex-grow">
                                 <h4 class="font-bold text-on-surface uppercase text-sm">VIP Support</h4>
                                 <p class="text-sm text-text-muted">Personal 24/7 VIP manager responsible for tracking your order.</p>
                             </div>
-                            <span class="font-bold text-on-surface-variant">$9.99</span>
+                            <span class="font-bold text-primary">$9.99</span>
                         </label>
 
-                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors">
-                            <input type="checkbox" class="extra-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="14.99" data-name="Plagiarism Report">
+                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors bg-green-50 border-green-200">
+                            <input type="checkbox" class="extra-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="9.99" data-name="Plagiarism Report" checked>
                             <div class="flex-grow">
-                                <h4 class="font-bold text-on-surface uppercase text-sm">Plagiarism Report</h4>
+                                <h4 class="font-bold text-on-surface uppercase text-sm">Get Plagiarism Report</h4>
                                 <p class="text-sm text-text-muted">Official report alongside your paper.</p>
                             </div>
-                            <span class="font-bold text-on-surface-variant">$14.99</span>
+                            <span class="font-bold text-primary">$9.99</span>
                         </label>
 
-                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors">
-                            <input type="checkbox" class="extra-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="10.00" data-name="Progressive Delivery">
+                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors bg-green-50 border-green-200">
+                            <input type="checkbox" class="extra-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="14.95" data-name="Copy of Sources" checked>
                             <div class="flex-grow">
-                                <h4 class="font-bold text-on-surface uppercase text-sm">Progressive Delivery</h4>
-                                <p class="text-sm text-text-muted">Receive your paper in parts as it is written.</p>
+                                <h4 class="font-bold text-on-surface uppercase text-sm">Get Copy of Sources</h4>
+                                <p class="text-sm text-text-muted">Selection of related articles and books cited in your paper.</p>
                             </div>
-                            <span class="font-bold text-on-surface-variant">$10.00</span>
-                        </label>
-                        
-                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors">
-                            <input type="checkbox" class="extra-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="19.99" data-name="1-Page Summary">
-                            <div class="flex-grow">
-                                <h4 class="font-bold text-on-surface uppercase text-sm">1-Page Summary</h4>
-                                <p class="text-sm text-text-muted">Get a concise 1-page summary of your entire paper.</p>
-                            </div>
-                            <span class="font-bold text-on-surface-variant">$19.99</span>
+                            <span class="font-bold text-primary">$14.95</span>
                         </label>
                     </div>
 
@@ -297,19 +291,19 @@ const newBody = `<!-- Form Section -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block font-label-md text-on-surface-variant mb-2">Full Name</label>
-                                <input type="text" id="order-name" class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="John Doe">
+                                <input type="text" class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="John Doe">
                             </div>
                             <div>
                                 <label class="block font-label-md text-on-surface-variant mb-2">Email Address</label>
-                                <input type="email" id="order-email" class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="john@example.com">
+                                <input type="email" class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="john@example.com">
                             </div>
                             <div>
                                 <label class="block font-label-md text-on-surface-variant mb-2">Phone Number</label>
-                                <input type="tel" id="order-phone" class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="+1 (555) 000-0000">
+                                <input type="tel" class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="+1 (555) 000-0000">
                             </div>
                             <div>
                                 <label class="block font-label-md text-on-surface-variant mb-2">Country</label>
-                                <select id="order-country" class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none">
+                                <select class="w-full border border-border-low-contrast p-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none">
                                     <option>United States</option>
                                     <option>United Kingdom</option>
                                     <option>Canada</option>
@@ -352,14 +346,14 @@ const newBody = `<!-- Form Section -->
             <div class="lg:col-span-4 space-y-6">
                 <div class="bg-surface-container-low p-6 rounded-xl border border-border-low-contrast shadow-sm sticky top-24">
                     <div class="border-b border-border-low-contrast pb-4 mb-4">
-                        <h3 class="font-headline-sm text-lg text-primary mb-1" id="summary-topic">Writer's choice</h3>
-                        <p class="text-sm text-on-surface-variant" id="summary-level">High School</p>
-                        <p class="text-sm text-on-surface-variant" id="summary-paper">Essay (any type)</p>
+                        <h3 class="font-headline-sm text-lg text-primary mb-1">Writer's choice</h3>
+                        <p class="text-sm text-on-surface-variant">High school</p>
+                        <p class="text-sm text-on-surface-variant">Essay (any type)</p>
                     </div>
                     
                     <div class="space-y-3 mb-6 border-b border-border-low-contrast pb-4">
                         <div class="flex justify-between text-on-surface" id="summary-base">
-                            1 page x $12.00 = <strong class="ml-2">$12.00</strong>
+                            1 page x $11.00 = <strong class="ml-2">$11.00</strong>
                         </div>
                         <div id="summary-extras">
                             <!-- Populated via JS -->
@@ -393,121 +387,154 @@ const newBody = `<!-- Form Section -->
         </div>
     </div>
 
-    <!-- 2. Job Hunting & CV Services Form -->
+    <!-- 2. Career Services Order Form (Hidden by default) -->
     <div id="form-career" class="form-container hidden">
         <div class="bg-white border border-border-low-contrast rounded-xl p-8 shadow-lg max-w-4xl mx-auto">
-            <h2 class="font-headline-lg text-headline-lg text-primary mb-8 text-center">Job Hunting & CV Services</h2>
-            <form class="space-y-8" id="career-form">
-                <input type="hidden" id="service-category" value="Job Hunting & CV Services">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-8 text-center">Career Services Order Form</h2>
+            <form class="space-y-8">
+                <!-- Implementation for Career Form (Condensed) -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block font-label-md text-on-surface-variant mb-2">Full Name</label>
-                        <input type="text" id="career-name" class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary" placeholder="Full Name">
+                        <input type="text" class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary" placeholder="Full Name">
                     </div>
                     <div>
                         <label class="block font-label-md text-on-surface-variant mb-2">Email</label>
-                        <input type="email" id="career-email" class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary" placeholder="Email Address">
+                        <input type="email" class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary" placeholder="Email Address">
+                    </div>
+                    <div>
+                        <label class="block font-label-md text-on-surface-variant mb-2">Career Level</label>
+                        <select class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary">
+                            <option>Entry Level</option>
+                            <option>Mid Level</option>
+                            <option>Senior Level</option>
+                            <option>Executive Level</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-label-md text-on-surface-variant mb-2">Industry</label>
+                        <select class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary">
+                            <option>Information Technology</option>
+                            <option>Finance</option>
+                            <option>Healthcare</option>
+                            <option>Engineering</option>
+                            <option>Marketing</option>
+                        </select>
                     </div>
                 </div>
                 
                 <div>
                     <label class="block font-label-md text-on-surface-variant mb-4">Service Selection</label>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors">
-                            <input type="checkbox" class="career-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="100.00" data-name="Resume/CV Writing - Professional">
-                            <div class="flex-grow">
-                                <h4 class="font-bold text-on-surface uppercase text-sm">Resume/CV Writing - Professional</h4>
-                            </div>
-                            <span class="font-bold text-primary">$100.00</span>
-                        </label>
-                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors">
-                            <input type="checkbox" class="career-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="150.00" data-name="Resume/CV Writing - Executive">
-                            <div class="flex-grow">
-                                <h4 class="font-bold text-on-surface uppercase text-sm">Resume/CV Writing - Executive</h4>
-                            </div>
-                            <span class="font-bold text-primary">$150.00</span>
-                        </label>
-                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors">
-                            <input type="checkbox" class="career-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="50.00" data-name="Resume/CV Writing - Basic">
-                            <div class="flex-grow">
-                                <h4 class="font-bold text-on-surface uppercase text-sm">Resume/CV Writing - Basic</h4>
-                            </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="border border-border-low-contrast p-4 rounded-xl hover:border-primary cursor-pointer transition-colors bg-surface">
+                            <h4 class="font-bold text-on-surface mb-1">Resume Writing</h4>
+                            <p class="text-sm text-text-muted mb-2">Professional ATS-friendly resume.</p>
+                            <span class="font-bold text-primary">$120.00</span>
+                        </div>
+                        <div class="border border-border-low-contrast p-4 rounded-xl hover:border-primary cursor-pointer transition-colors bg-surface">
+                            <h4 class="font-bold text-on-surface mb-1">LinkedIn Optimization</h4>
+                            <p class="text-sm text-text-muted mb-2">Complete profile overhaul.</p>
+                            <span class="font-bold text-primary">$80.00</span>
+                        </div>
+                        <div class="border border-border-low-contrast p-4 rounded-xl hover:border-primary cursor-pointer transition-colors bg-surface">
+                            <h4 class="font-bold text-on-surface mb-1">Cover Letter</h4>
+                            <p class="text-sm text-text-muted mb-2">Tailored to your target job.</p>
                             <span class="font-bold text-primary">$50.00</span>
-                        </label>
-                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors">
-                            <input type="checkbox" class="career-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="30.00" data-name="Cover Letter - Standard">
-                            <div class="flex-grow">
-                                <h4 class="font-bold text-on-surface uppercase text-sm">Cover Letter - Standard</h4>
-                            </div>
-                            <span class="font-bold text-primary">$30.00</span>
-                        </label>
-                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors">
-                            <input type="checkbox" class="career-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="50.00" data-name="Cover Letter - Tailored">
-                            <div class="flex-grow">
-                                <h4 class="font-bold text-on-surface uppercase text-sm">Cover Letter - Tailored</h4>
-                            </div>
-                            <span class="font-bold text-primary">$50.00</span>
-                        </label>
-                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors">
-                            <input type="checkbox" class="career-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="50.00" data-name="LinkedIn Profile Optimization - Basic">
-                            <div class="flex-grow">
-                                <h4 class="font-bold text-on-surface uppercase text-sm">LinkedIn Optimization - Basic</h4>
-                            </div>
-                            <span class="font-bold text-primary">$50.00</span>
-                        </label>
-                        <label class="flex items-start gap-4 p-4 border border-border-low-contrast rounded-lg cursor-pointer hover:bg-surface-variant transition-colors">
-                            <input type="checkbox" class="career-service w-5 h-5 mt-1 text-primary focus:ring-primary rounded border-border-low-contrast" data-price="100.00" data-name="LinkedIn Profile Optimization - Full">
-                            <div class="flex-grow">
-                                <h4 class="font-bold text-on-surface uppercase text-sm">LinkedIn Optimization - Full</h4>
-                            </div>
-                            <span class="font-bold text-primary">$100.00</span>
-                        </label>
-                        
-                        <div class="col-span-1 md:col-span-2 border border-border-low-contrast p-4 rounded-lg">
-                            <label class="block font-bold text-on-surface text-sm mb-2 uppercase">Job Application Assistance</label>
-                            <select id="career-job-apps" class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary">
-                                <option data-price="0">None</option>
-                                <option data-price="100">10 Applications - $100.00</option>
-                                <option data-price="200">20 Applications - $200.00</option>
-                                <option data-price="450">50 Applications - $450.00</option>
-                                <option data-price="750">80 Applications - $750.00</option>
-                                <option data-price="950">100 Applications - $950.00</option>
-                            </select>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-surface-container-low p-6 rounded-xl text-center border border-border-low-contrast">
-                    <p class="text-on-surface-variant mb-2">Total Amount</p>
-                    <h3 class="font-display-md text-3xl font-bold text-[#2ecc71]" id="career-total">$0.00</h3>
-                </div>
-
                 <div>
                     <label class="block font-label-md text-on-surface-variant mb-2">Career Objectives & Instructions</label>
-                    <textarea id="career-instructions" rows="4" class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary" placeholder="Describe your target roles, companies, etc."></textarea>
+                    <textarea rows="4" class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary" placeholder="Describe your target roles, companies, etc."></textarea>
                 </div>
                 
-                <button type="button" id="btn-submit-career" class="w-full bg-primary text-white py-4 rounded-lg font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
-                    <span class="material-symbols-outlined">lock</span> Proceed to Payment
+                <button type="button" class="w-full bg-primary text-white py-4 rounded-lg font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+                    Proceed to Order
                 </button>
             </form>
         </div>
     </div>
 
-﻿const fs = require('fs');
-const path = require('path');
+    <!-- 3. AI Training Enrollment Form (Hidden by default) -->
+    <div id="form-training" class="form-container hidden">
+        <div class="bg-white border border-border-low-contrast rounded-xl p-8 shadow-lg max-w-4xl mx-auto">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-8 text-center">AI Training Enrollment</h2>
+            <form class="space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block font-label-md text-on-surface-variant mb-2">Full Name</label>
+                        <input type="text" class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary" placeholder="Full Name">
+                    </div>
+                    <div>
+                        <label class="block font-label-md text-on-surface-variant mb-2">Email Address</label>
+                        <input type="email" class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary" placeholder="Email Address">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block font-label-md text-on-surface-variant mb-4">Training Program</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="flex items-center gap-2"><input type="checkbox" class="w-4 h-4 text-primary rounded border-border-low-contrast"> ChatGPT Mastery</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="w-4 h-4 text-primary rounded border-border-low-contrast"> Prompt Engineering</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="w-4 h-4 text-primary rounded border-border-low-contrast"> AI for Business</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="w-4 h-4 text-primary rounded border-border-low-contrast"> AI SEO & Optimization</label>
+                    </div>
+                </div>
 
-const targetFile = path.join(__dirname, 'order-now.html');
-let content = fs.readFileSync(targetFile, 'utf8');
+                <div>
+                    <label class="block font-label-md text-on-surface-variant mb-2">Learning Objectives</label>
+                    <textarea rows="4" class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary" placeholder="What do you hope to achieve after completing this training?"></textarea>
+                </div>
+                
+                <button type="button" class="w-full bg-secondary text-white py-4 rounded-lg font-bold hover:scale-[1.02] transition-transform shadow-xl shadow-secondary/20">
+                    Enroll Now
+                </button>
+            </form>
+        </div>
+    </div>
 
-// Ensure order-engine.js is included in head
-if(!content.includes('order-engine.js')) {
-    content = content.replace('</head>', '    <script src="/assets/js/order-engine.js"></script>\n</head>');
-}
+    <!-- 4. AI SEO Form (Hidden by default) -->
+    <div id="form-seo" class="form-container hidden">
+        <div class="bg-white border border-border-low-contrast rounded-xl p-8 shadow-lg max-w-4xl mx-auto">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-8 text-center">AI SEO & LLM Optimization Service Request</h2>
+            <form class="space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block font-label-md text-on-surface-variant mb-2">Company Name</label>
+                        <input type="text" class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary" placeholder="Company Name">
+                    </div>
+                    <div>
+                        <label class="block font-label-md text-on-surface-variant mb-2">Company Website</label>
+                        <input type="url" class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary" placeholder="https://">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block font-label-md text-on-surface-variant mb-4">Services Required</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="flex items-center gap-2"><input type="checkbox" class="w-4 h-4 text-primary rounded border-border-low-contrast"> AI SEO Audit</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="w-4 h-4 text-primary rounded border-border-low-contrast"> LLM Optimization</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="w-4 h-4 text-primary rounded border-border-low-contrast"> ChatGPT Visibility</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="w-4 h-4 text-primary rounded border-border-low-contrast"> Semantic SEO</label>
+                    </div>
+                </div>
 
-const headerSplit = content.split('<!-- Form Section -->');
-const header = headerSplit[0];
-const footerSplit = headerSplit[1].split('`;
+                <div>
+                    <label class="block font-label-md text-on-surface-variant mb-2">Goals & Challenges</label>
+                    <textarea rows="4" class="w-full border border-border-low-contrast p-3 rounded-lg outline-none focus:ring-2 focus:ring-primary" placeholder="Describe your business goals and current visibility challenges..."></textarea>
+                </div>
+                
+                <button type="button" class="w-full bg-primary text-white py-4 rounded-lg font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+                    Request Consultation
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+</section>
+`;
 
 const finalContent = header + newBody + footer;
 

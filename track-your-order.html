@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Track Your Order | WritersHub Plus</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="/assets/js/tailwind-config.js"></script>
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md flex flex-col min-h-screen">
+<!-- Notice Bar -->
+<div style="background-color: #ff8057;" class="text-white text-center py-2 text-sm font-semibold relative z-[60]">
+    Under construction
+</div>
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows h-16">
+<div class="flex items-center w-full h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex-shrink-0 mr-8 lg:mr-16"><a href="/index.html"><img src="/assets/images/logo.png" alt="WritersHub Plus Logo" class="h-10 w-auto object-contain"></a></div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center justify-center space-x-6 lg:space-x-8 flex-1">
+<a class="text-on-surface-variant dark:text-surface-variant text-[15px] font-semibold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="/how-it-works.html">How It Works</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-[15px] font-semibold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="/pricing.html">Pricing</a>
+<!-- Services Dropdown -->
+<div class="relative group">
+    <button class="flex items-center text-on-surface-variant dark:text-surface-variant text-[15px] font-semibold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 py-2">
+        Our Services
+        <span class="material-symbols-outlined ml-1" style="font-size: 18px;">expand_more</span>
+    </button>
+    <div class="absolute left-0 mt-0 w-56 rounded-md shadow-lg bg-surface dark:bg-surface-container-high ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <div class="py-1" role="menu" aria-orientation="vertical">
+            <a href="/writing-services/index.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">Academic Services</a>
+            <a href="/job-hunting-services/index.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">Career Services</a>
+            <a href="/ecommerce-marketing.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">eCommerce Strategy</a>
+            <hr class="border-outline-variant dark:border-outline my-1">
+            <a href="/services.html" class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">View All Services</a>
+        </div>
+    </div>
+</div>
+<!-- FAQ Dropdown -->
+<div class="relative group">
+    <button class="flex items-center text-on-surface-variant dark:text-surface-variant text-[15px] font-semibold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 py-2">
+        FAQ
+        <span class="material-symbols-outlined ml-1" style="font-size: 18px;">expand_more</span>
+    </button>
+    <div class="absolute left-0 mt-0 w-48 rounded-md shadow-lg bg-surface dark:bg-surface-container-high ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <div class="py-1" role="menu" aria-orientation="vertical">
+            <a href="/faq.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">FAQ</a>
+            <a href="/about-us.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">About Us</a>
+            <a href="/contact-us.html" class="block px-4 py-2 text-sm text-on-surface hover:bg-surface-variant dark:hover:bg-surface-container-highest" role="menuitem">Contact Us</a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden md:flex items-center text-[15px] font-semibold text-accent-vibrant hover:opacity-80">
+    <span class="material-symbols-outlined mr-1" style="font-size: 20px;">person</span>
+    Login
+</button>
+<a href="/new-orders.html" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-button text-sm font-semibold active:scale-95 duration-150 transition-transform">Order Now</a>
+</div>
+</div>
+</nav>
+
+<main class="flex-grow bg-surface-container-lowest">
+<section class="py-12 md:py-16">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+        <h1 class="text-4xl md:text-5xl font-display-lg text-primary mb-4">Track Your <span class="text-on-surface">Order</span></h1>
+        <p class="text-on-surface-variant text-lg">Enter your Order ID to check the real-time status of your project.</p>
+    </div>
+
+    <!-- Tracking Form -->
+    <div id="tracking-form-container" class="bg-white p-8 rounded-2xl shadow-lg border border-outline-variant mb-10 transition-all duration-300">
+        <form id="track-form" class="space-y-6">
+            <div>
+                <label for="order_id" class="block text-sm font-medium text-on-surface mb-2">Order ID</label>
+                <input type="text" id="order_id" name="order_id" placeholder="e.g., WHP-10294" class="w-full px-4 py-3 rounded-lg border border-outline focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors" required>
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-on-surface mb-2">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full px-4 py-3 rounded-lg border border-outline focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors" required>
+            </div>
+            <button type="submit" class="w-full bg-primary text-on-primary py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors flex justify-center items-center gap-2">
+                <span class="material-symbols-outlined">search</span> Track Order
+            </button>
+        </form>
+    </div>
+
+    <!-- Tracking Results (Hidden initially) -->
+    <div id="tracking-result-container" class="hidden bg-white p-8 rounded-2xl shadow-lg border border-outline-variant transition-all duration-300">
+        <div class="flex justify-between items-center mb-8 border-b border-outline-variant pb-4">
+            <div>
+                <h2 class="text-2xl font-bold text-on-surface">Order Status</h2>
+                <p class="text-on-surface-variant mt-1">Order <span id="display-order-id" class="font-semibold text-primary"></span></p>
+            </div>
+            <button id="reset-tracking" class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors" title="Track another order">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
+        <div class="relative">
+            <!-- Progress Steps -->
+            <div class="absolute left-[1.1rem] top-2 bottom-6 w-0.5 bg-surface-variant"></div>
+            
+            <div class="space-y-8">
+                <!-- Step 1 -->
+                <div class="relative flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shrink-0 z-10 border-4 border-white shadow-sm">
+                        <span class="material-symbols-outlined text-xl">receipt_long</span>
+                    </div>
+                    <div class="pt-2">
+                        <h3 class="font-bold text-on-surface">Order Placed</h3>
+                        <p class="text-sm text-on-surface-variant">We have received your order and payment.</p>
+                        <p class="text-xs text-primary mt-1 font-medium" id="status-date-1"></p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="relative flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shrink-0 z-10 border-4 border-white shadow-sm">
+                        <span class="material-symbols-outlined text-xl">assignment_ind</span>
+                    </div>
+                    <div class="pt-2">
+                        <h3 class="font-bold text-on-surface">Expert Assigned</h3>
+                        <p class="text-sm text-on-surface-variant">A specialized writer has been assigned to your project.</p>
+                        <p class="text-xs text-primary mt-1 font-medium" id="status-date-2"></p>
+                    </div>
+                </div>
+
+                <!-- Step 3 (Current) -->
+                <div class="relative flex items-start gap-4" id="step-3-container">
+                    <div class="w-10 h-10 rounded-full bg-accent-vibrant text-white flex items-center justify-center shrink-0 z-10 border-4 border-white shadow-sm animate-pulse">
+                        <span class="material-symbols-outlined text-xl">edit_document</span>
+                    </div>
+                    <div class="pt-2">
+                        <h3 class="font-bold text-on-surface">In Progress</h3>
+                        <p class="text-sm text-on-surface-variant">Your document is currently being written and researched.</p>
+                        <div class="mt-3 bg-surface-variant rounded-full h-1.5 w-full max-w-xs overflow-hidden">
+                            <div class="bg-accent-vibrant h-full w-2/3 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 (Pending) -->
+                <div class="relative flex items-start gap-4 opacity-50">
+                    <div class="w-10 h-10 rounded-full bg-surface-variant text-text-muted flex items-center justify-center shrink-0 z-10 border-4 border-white">
+                        <span class="material-symbols-outlined text-xl">fact_check</span>
+                    </div>
+                    <div class="pt-2">
+                        <h3 class="font-bold text-on-surface">Quality Review</h3>
+                        <p class="text-sm text-on-surface-variant">Our editorial team is reviewing the final draft.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 (Pending) -->
+                <div class="relative flex items-start gap-4 opacity-50">
+                    <div class="w-10 h-10 rounded-full bg-surface-variant text-text-muted flex items-center justify-center shrink-0 z-10 border-4 border-white">
+                        <span class="material-symbols-outlined text-xl">check_circle</span>
+                    </div>
+                    <div class="pt-2">
+                        <h3 class="font-bold text-on-surface">Completed</h3>
+                        <p class="text-sm text-on-surface-variant">Your order is ready to be downloaded.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 pt-6 border-t border-outline-variant text-center">
+            <p class="text-sm text-on-surface-variant mb-4">Have a question about your order?</p>
+            <a href="/contact-us.html" class="inline-flex items-center gap-2 text-primary hover:text-primary-fixed-dim font-medium transition-colors">
+                <span class="material-symbols-outlined text-sm">support_agent</span> Contact Support
+            </a>
+        </div>
+    </div>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="full-width bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-bold text-primary-fixed dark:text-primary mb-4">WritersHub Plus</div>
+<p class="text-sm opacity-70">
+                    Elevating communication through professional research and high-impact writing.
+                </p>
+</div>
+<div>
+<h4 class="text-[15px] font-semibold text-white mb-4">Writing Services</h4>
+<ul class="space-y-2">
+<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/writing-services/index.html">Academic Services</a></li>
+<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/writing-services/dissertation-writing.html">Dissertation Writing</a></li>
+<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/essay-cave.html">Essay Cave</a></li>
+<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/research-paper.html">Research Papers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[15px] font-semibold text-white mb-4">Career Services</h4>
+<ul class="space-y-2">
+<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/job-hunting-services/index.html">Job Hunting</a></li>
+<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/job-hunting-services/linkedin-optimization.html">LinkedIn Optimization</a></li>
+<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/ai-training/index.html">Writers AI</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[15px] font-semibold text-white mb-4">eCommerce & Company</h4>
+<ul class="space-y-2">
+<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/ecommerce-marketing.html">eCommerce Strategy</a></li>
+<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/blog.html">Blog</a></li>
+<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/pricing.html">Pricing Plans</a></li>
+<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/contact-us.html">Contact Us</a></li>
+<li><a class="text-[14px] hover:text-secondary-fixed transition-colors" href="/privacy-policy.html">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 py-6 text-center text-[14px] opacity-50">
+            © <span id="current-year"></span> WritersHub Plus. All rights reserved.
+            <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+        </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('track-form');
+        const formContainer = document.getElementById('tracking-form-container');
+        const resultContainer = document.getElementById('tracking-result-container');
+        const resetBtn = document.getElementById('reset-tracking');
+        const displayOrderId = document.getElementById('display-order-id');
+
+        // Check if URL has order_id and email
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlOrderId = urlParams.get('order_id');
+        const urlEmail = urlParams.get('email');
+        
+        if (urlOrderId && urlEmail) {
+            document.getElementById('order_id').value = urlOrderId;
+            document.getElementById('email').value = urlEmail;
+            simulateTracking(urlOrderId, urlEmail);
+        } else if (urlOrderId) {
+            document.getElementById('order_id').value = urlOrderId;
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const orderId = document.getElementById('order_id').value;
+            const email = document.getElementById('email').value;
+            simulateTracking(orderId, email);
+        });
+
+        resetBtn.addEventListener('click', () => {
+            resultContainer.classList.add('hidden');
+            formContainer.classList.remove('hidden');
+            form.reset();
+            
+            // remove from url
+            const url = new URL(window.location);
+            url.searchParams.delete('order_id');
+            url.searchParams.delete('email');
+            window.history.pushState({}, '', url);
+        });
+
+        function simulateTracking(orderId, email) {
+            displayOrderId.textContent = orderId;
+            
+            // Set dynamic dates based on today to look realistic
+            const today = new Date();
+            const yesterday = new Date(today);
+            yesterday.setDate(yesterday.getDate() - 1);
+            
+            const formatDate = (date) => {
+                return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) + 
+                       ' - ' + date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+            };
+
+            document.getElementById('status-date-1').textContent = formatDate(yesterday);
+            
+            const fewHoursAgo = new Date(today);
+            fewHoursAgo.setHours(fewHoursAgo.getHours() - 3);
+            document.getElementById('status-date-2').textContent = formatDate(fewHoursAgo);
+
+            formContainer.classList.add('hidden');
+            resultContainer.classList.remove('hidden');
+            
+            // update url
+            const url = new URL(window.location);
+            url.searchParams.set('order_id', orderId);
+            url.searchParams.set('email', email);
+            window.history.pushState({}, '', url);
+        }
+    });
+</script>
+</body>
+</html>
