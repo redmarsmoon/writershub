@@ -30,13 +30,13 @@ jQuery(document).ready(function($) {
     }
 
     // Attach event listeners using jQuery to catch both native and jQuery triggered events
-    $('#gform_wrapper_2').on('change', 'input[type="radio"], select', calculateTotal);
+    $('#gform_wrapper_2').on('change', 'input[type="radio"], select', function() { setTimeout(calculateTotal, 50); });
     
     // Fallback click listener for radios just in case
-    $('#gform_wrapper_2').on('click', 'input[type="radio"]', calculateTotal);
+    $('#gform_wrapper_2').on('click', 'input[type="radio"]', function() { setTimeout(calculateTotal, 50); });
     
     // Listen for custom change events that might be fired by conditional logic
-    $('#gform_wrapper_2').on('change', calculateTotal);
+    $('#gform_wrapper_2').on('change', function() { setTimeout(calculateTotal, 50); });
     
     // Run initial calculation with a slight delay to allow all custom JS to initialize
     setTimeout(calculateTotal, 250);

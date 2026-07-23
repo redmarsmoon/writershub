@@ -72,15 +72,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const typeSelect = document.getElementById('input_2_3');
         const val = typeSelect ? typeSelect.value : '';
         
+        const spacingChecked = document.querySelector('input[name="input_23"]:checked');
+        const spacingVal = spacingChecked ? spacingChecked.value : '';
+        
         // Hide all specific ones first
         hideFields(['field_2_13', 'field_2_24', 'field_2_20']);
         
         if (val === 'PowerPoint Presentation') {
             showFields(['field_2_20']); // Slides
-        } else if (val.includes('Chart')) {
-            showFields(['field_2_24']); // Charts
-        } else if (val !== '') {
-            showFields(['field_2_13']); // Pages (default for essays)
+            hideFields(['field_2_23']); // Hide Spacing for slides
+        } else {
+            showFields(['field_2_23']); // Show Spacing
+            if (spacingVal.includes('Single')) {
+                showFields(['field_2_24']); // Single spaced pages
+            } else {
+                showFields(['field_2_13']); // Double spaced pages
+            }
         }
     }
 
@@ -89,6 +96,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if(typeSelect) {
         typeSelect.addEventListener('change', updateAcademicDynamicFields);
     }
+
+    // Listen for Spacing changes to toggle Single/Double Pages
+    const spacingRadios = document.querySelectorAll('input[name="input_23"]');
+    spacingRadios.forEach(radio => {
+        radio.addEventListener('change', updateAcademicDynamicFields);
+    });
     
     // Check if any category is already checked on load
     const checkedCategory = document.querySelector('input[name="input_37"]:checked');

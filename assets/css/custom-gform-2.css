@@ -223,7 +223,7 @@
 }
 
 /* Base style for the label of all radios */
-#gform_wrapper_2 .gfield--input-type-radio .gform-field-label {
+#gform_wrapper_2 .gfield--input-type-radio .gchoice .gform-field-label {
     display: flex !important;
     align-items: center !important;
     gap: 0.75rem !important;
@@ -256,7 +256,7 @@
 }
 
 /* Custom Circle via ::before */
-#gform_wrapper_2 .gfield--input-type-radio .gform-field-label::before {
+#gform_wrapper_2 .gfield--input-type-radio .gchoice .gform-field-label::before {
     content: '';
     display: block !important;
     flex-shrink: 0 !important;
