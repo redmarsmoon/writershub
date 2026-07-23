@@ -346,6 +346,9 @@
     margin: 0 !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    line-height: 1.4 !important;
 }
 
 #gform_wrapper_2 .gfield--type-radio .gfield-choice-input:checked + .gform-field-label {
