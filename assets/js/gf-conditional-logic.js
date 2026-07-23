@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Hide all specific ones first
         hideFields(['field_2_13', 'field_2_24', 'field_2_20']);
         
-        if (val === 'PowerPoint Presentation') {
+        if (val.includes('Presentation')) {
             showFields(['field_2_20']); // Slides
             hideFields(['field_2_23']); // Hide Spacing for slides
         } else {
