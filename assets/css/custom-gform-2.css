@@ -260,7 +260,7 @@
     color: white !important;
 }
 
-/* Reset the label so it has no borders, just text */
+/* Reset the label so it has no borders, just text, and add padding for the circle */
 #gform_wrapper_2 #field_2_59 .gchoice .gform-field-label,
 #gform_wrapper_2 #field_2_60 .gchoice .gform-field-label,
 #gform_wrapper_2 #field_2_31 .gchoice .gform-field-label,
@@ -269,28 +269,18 @@
     border: none !important;
     background: transparent !important;
     box-shadow: none !important;
-    padding: 0 !important;
+    padding: 0 0 0 2.5rem !important;
     margin: 0 !important;
     color: var(--whp-text) !important;
     display: inline-block !important;
-    line-height: 1.2 !important;
+    line-height: 1.4 !important;
     font-size: 14px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    width: 100% !important;
 }
 
-/* Make sure the radio input is visible inside the card */
-#gform_wrapper_2 #field_2_59 .gchoice input[type="radio"],
-#gform_wrapper_2 #field_2_60 .gchoice input[type="radio"],
-#gform_wrapper_2 #field_2_31 .gchoice input[type="radio"],
-#gform_wrapper_2 #field_2_23 .gchoice input[type="radio"],
-#gform_wrapper_2 #field_2_16 .gchoice input[type="radio"] {
-    display: block !important;
-    position: static !important;
-    opacity: 1 !important;
-    margin: 0 !important;
-    flex-shrink: 0 !important;
-}
-
-/* Make clicking anywhere on the card toggle the radio */
+/* Custom Radio Circle */
 #gform_wrapper_2 #field_2_59 .gchoice label::before,
 #gform_wrapper_2 #field_2_60 .gchoice label::before,
 #gform_wrapper_2 #field_2_31 .gchoice label::before,
@@ -298,9 +288,40 @@
 #gform_wrapper_2 #field_2_16 .gchoice label::before {
     content: '';
     position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--whp-border);
+    border-radius: 50%;
+    background-color: white;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    z-index: 5;
+}
+
+/* Checked State Circle */
+#gform_wrapper_2 #field_2_59 .gchoice:has(input:checked) label::before,
+#gform_wrapper_2 #field_2_60 .gchoice:has(input:checked) label::before,
+#gform_wrapper_2 #field_2_31 .gchoice:has(input:checked) label::before,
+#gform_wrapper_2 #field_2_23 .gchoice:has(input:checked) label::before,
+#gform_wrapper_2 #field_2_16 .gchoice:has(input:checked) label::before {
+    border: 5px solid var(--whp-primary);
+    background-color: white;
+}
+
+/* Make clicking anywhere on the card toggle the radio using ::after */
+#gform_wrapper_2 #field_2_59 .gchoice label::after,
+#gform_wrapper_2 #field_2_60 .gchoice label::after,
+#gform_wrapper_2 #field_2_31 .gchoice label::after,
+#gform_wrapper_2 #field_2_23 .gchoice label::after,
+#gform_wrapper_2 #field_2_16 .gchoice label::after {
+    content: '';
+    position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     cursor: pointer;
-    z-index: 5;
+    z-index: 4;
 }
 
 /* Style for the 'Other' text input field to sit inline on the side */
