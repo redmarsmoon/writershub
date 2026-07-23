@@ -137,11 +137,54 @@ jQuery(document).ready(function($) {
         updateDisplay();
     }
     
+    function convertInputToCounter(inputId, labelSuffix = '') {
+        const $input = $('#' + inputId);
+        if ($input.length === 0 || $input.next('.whp-counter-widget').length > 0) return;
+
+        $input.hide();
+        
+        const $ui = $('<div class="whp-counter-widget" style="display: flex; align-items: center; border: 1px solid var(--whp-border); border-radius: 0.5rem; overflow: hidden; background: white; width: 100%;"></div>');
+        const $btnMinus = $('<button type="button" style="background: var(--whp-background); border: none; padding: 1rem 1.25rem; cursor: pointer; color: var(--whp-primary); display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--whp-border); font-size: 24px; font-weight: bold; line-height: 1;">&minus;</button>');
+        const $valueDisplay = $('<div style="flex: 1; text-align: center; font-weight: 600; font-family: \'Work Sans\', sans-serif; display: flex; flex-direction: column; line-height: 1.2;"></div>');
+        const $btnPlus = $('<button type="button" style="background: var(--whp-background); border: none; padding: 1rem 1.25rem; cursor: pointer; color: var(--whp-primary); display: flex; align-items: center; justify-content: center; border-left: 1px solid var(--whp-border); font-size: 24px; font-weight: bold; line-height: 1;">&plus;</button>');
+
+        $ui.append($btnMinus, $valueDisplay, $btnPlus);
+        $input.after($ui);
+
+        function updateDisplay() {
+            let val = parseInt($input.val()) || 0;
+            $valueDisplay.empty();
+            $valueDisplay.append(`<span style="font-size: 1.25rem; color: var(--whp-text);">${val}</span>`);
+            if (labelSuffix) {
+                $valueDisplay.append(`<span style="font-size: 0.75rem; color: var(--whp-text-muted); font-weight: normal;">${labelSuffix}</span>`);
+            }
+        }
+
+        $btnMinus.on('click', function(e) {
+            e.preventDefault();
+            let val = parseInt($input.val()) || 0;
+            if (val > 0) { // Assuming minimum of 0
+                $input.val(val - 1).trigger('change');
+                updateDisplay();
+            }
+        });
+
+        $btnPlus.on('click', function(e) {
+            e.preventDefault();
+            let val = parseInt($input.val()) || 0;
+            $input.val(val + 1).trigger('change');
+            updateDisplay();
+        });
+
+        $input.on('change', updateDisplay);
+        updateDisplay();
+    }
+    
     function applyCounters() {
         convertSelectToCounter('input_2_13', 'Pages');
         convertSelectToCounter('input_2_24', 'Pages');
         convertSelectToCounter('input_2_20', 'Slides');
-        convertSelectToCounter('input_2_22', 'Sources');
+        convertInputToCounter('input_2_22', 'Sources');
     }
     
     applyCounters();
