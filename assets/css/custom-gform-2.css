@@ -206,143 +206,11 @@
 #gform_wrapper_2 #field_2_16 .gfield_radio {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
-    gap: 1rem !important; /* Increased gap to prevent touching */
+    gap: 1rem !important;
     border: none !important;
     border-radius: 0 !important;
     overflow: visible !important;
 }
-
-/* The .gchoice container becomes the card so the radio is INSIDE it */
-#gform_wrapper_2 #field_2_59 .gchoice,
-#gform_wrapper_2 #field_2_60 .gchoice,
-#gform_wrapper_2 #field_2_31 .gchoice,
-#gform_wrapper_2 #field_2_23 .gchoice,
-#gform_wrapper_2 #field_2_16 .gchoice {
-    border: 1px solid var(--whp-border) !important;
-    border-radius: 0.5rem !important;
-    background: white !important;
-    padding: 0.75rem 1rem !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.5rem !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02) !important;
-    transition: all 0.2s ease !important;
-    margin: 0 !important;
-    position: relative !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-#gform_wrapper_2 #field_2_59 .gchoice:hover,
-#gform_wrapper_2 #field_2_60 .gchoice:hover,
-#gform_wrapper_2 #field_2_31 .gchoice:hover,
-#gform_wrapper_2 #field_2_23 .gchoice:hover,
-#gform_wrapper_2 #field_2_16 .gchoice:hover {
-    border-color: var(--whp-primary-container) !important;
-    background: #f7f9ff !important;
-}
-
-/* Checked state for the card using :has() */
-#gform_wrapper_2 #field_2_59 .gchoice:has(input:checked),
-#gform_wrapper_2 #field_2_60 .gchoice:has(input:checked),
-#gform_wrapper_2 #field_2_31 .gchoice:has(input:checked),
-#gform_wrapper_2 #field_2_23 .gchoice:has(input:checked),
-#gform_wrapper_2 #field_2_16 .gchoice:has(input:checked) {
-    background-color: var(--whp-primary-container) !important;
-    border-color: var(--whp-primary-container) !important;
-    box-shadow: 0 4px 12px rgba(37, 88, 171, 0.15) !important;
-}
-
-#gform_wrapper_2 #field_2_59 .gchoice:has(input:checked) label,
-#gform_wrapper_2 #field_2_60 .gchoice:has(input:checked) label,
-#gform_wrapper_2 #field_2_31 .gchoice:has(input:checked) label,
-#gform_wrapper_2 #field_2_23 .gchoice:has(input:checked) label,
-#gform_wrapper_2 #field_2_16 .gchoice:has(input:checked) label {
-    color: white !important;
-}
-
-/* Reset the label so it has no borders, just text, and add padding for the circle */
-#gform_wrapper_2 #field_2_59 .gchoice .gform-field-label,
-#gform_wrapper_2 #field_2_60 .gchoice .gform-field-label,
-#gform_wrapper_2 #field_2_31 .gchoice .gform-field-label,
-#gform_wrapper_2 #field_2_23 .gchoice .gform-field-label,
-#gform_wrapper_2 #field_2_16 .gchoice .gform-field-label {
-    border: none !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    padding: 0 0 0 2.5rem !important;
-    margin: 0 !important;
-    color: var(--whp-text) !important;
-    display: inline-block !important;
-    line-height: 1.4 !important;
-    font-size: 14px !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    width: 100% !important;
-}
-
-/* Custom Radio Circle */
-#gform_wrapper_2 #field_2_59 .gchoice label::before,
-#gform_wrapper_2 #field_2_60 .gchoice label::before,
-#gform_wrapper_2 #field_2_31 .gchoice label::before,
-#gform_wrapper_2 #field_2_23 .gchoice label::before,
-#gform_wrapper_2 #field_2_16 .gchoice label::before {
-    content: '';
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
-    border: 2px solid var(--whp-border);
-    border-radius: 50%;
-    background-color: white;
-    box-sizing: border-box;
-    transition: all 0.2s;
-    z-index: 5;
-}
-
-/* Checked State Circle */
-#gform_wrapper_2 #field_2_59 .gchoice:has(input:checked) label::before,
-#gform_wrapper_2 #field_2_60 .gchoice:has(input:checked) label::before,
-#gform_wrapper_2 #field_2_31 .gchoice:has(input:checked) label::before,
-#gform_wrapper_2 #field_2_23 .gchoice:has(input:checked) label::before,
-#gform_wrapper_2 #field_2_16 .gchoice:has(input:checked) label::before {
-    border: 5px solid var(--whp-primary);
-    background-color: white;
-}
-
-/* Make clicking anywhere on the card toggle the radio using ::after */
-#gform_wrapper_2 #field_2_59 .gchoice label::after,
-#gform_wrapper_2 #field_2_60 .gchoice label::after,
-#gform_wrapper_2 #field_2_31 .gchoice label::after,
-#gform_wrapper_2 #field_2_23 .gchoice label::after,
-#gform_wrapper_2 #field_2_16 .gchoice label::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    cursor: pointer;
-    z-index: 4;
-}
-
-/* Style for the 'Other' text input field to sit inline on the side */
-#gform_wrapper_2 .gchoice input[type="text"] {
-    flex: 1 !important;
-    margin-left: 0.5rem !important;
-    padding: 0.25rem 0.5rem !important;
-    border: 1px solid var(--whp-border) !important;
-    border-radius: 0.25rem !important;
-    font-size: 14px !important;
-    z-index: 10 !important; /* Above the label click area */
-    position: relative !important;
-    background-color: white !important;
-    color: var(--whp-text) !important;
-}
-
-#gform_wrapper_2 .gchoice:has(input[type="radio"]:checked) input[type="text"] {
-    border-color: var(--whp-primary-container) !important;
-}
-
 
 #gform_wrapper_2 .gfield--type-radio .gchoice {
     position: relative !important;
@@ -354,28 +222,84 @@
     display: none !important;
 }
 
+/* Base style for the label of all radios */
 #gform_wrapper_2 .gfield--type-radio .gform-field-label {
     display: flex !important;
     align-items: center !important;
     gap: 0.75rem !important;
-    border: 2px solid var(--whp-blue-muted) !important;
-    padding: 1rem !important;
+    border: 1px solid var(--whp-border) !important;
+    padding: 1rem 1.25rem !important;
     border-radius: 0.5rem !important;
     font-weight: 500 !important;
     font-size: 14px !important;
+    color: var(--whp-text) !important;
+    background-color: var(--whp-surface) !important;
     transition: all 0.2s !important;
     cursor: pointer !important;
     margin: 0 !important;
     width: 100% !important;
     box-sizing: border-box !important;
-    white-space: normal !important;
-    word-break: break-word !important;
     line-height: 1.4 !important;
+    white-space: normal !important;
+}
+
+#gform_wrapper_2 .gfield--type-radio .gchoice:hover .gform-field-label {
+    border-color: var(--whp-primary-container) !important;
+    background-color: #f7f9ff !important;
 }
 
 #gform_wrapper_2 .gfield--type-radio .gfield-choice-input:checked + .gform-field-label {
-    border-color: var(--whp-primary) !important;
-    background-color: var(--whp-blue-muted) !important;
+    border-color: var(--whp-primary-container) !important;
+    background-color: var(--whp-primary-container) !important;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(37, 88, 171, 0.15) !important;
+}
+
+/* Custom Circle via ::before */
+#gform_wrapper_2 .gfield--type-radio .gform-field-label::before {
+    content: '';
+    display: block !important;
+    flex-shrink: 0 !important;
+    width: 18px !important;
+    height: 18px !important;
+    border: 2px solid var(--whp-border) !important;
+    border-radius: 50% !important;
+    background-color: white !important;
+    box-sizing: border-box !important;
+    transition: all 0.2s !important;
+}
+
+#gform_wrapper_2 .gfield--type-radio .gfield-choice-input:checked + .gform-field-label::before {
+    border: 5px solid var(--whp-primary) !important;
+    background-color: white !important;
+}
+
+/* Grid layout explicit min-height for uniformity */
+#gform_wrapper_2 #field_2_59 .gform-field-label,
+#gform_wrapper_2 #field_2_60 .gform-field-label,
+#gform_wrapper_2 #field_2_31 .gform-field-label,
+#gform_wrapper_2 #field_2_23 .gform-field-label,
+#gform_wrapper_2 #field_2_16 .gform-field-label {
+    min-height: 4.5rem !important;
+}
+
+/* Style for the 'Other' text input field to sit inline on the side */
+#gform_wrapper_2 .gchoice input[type="text"] {
+    flex: 1 !important;
+    margin-top: 0.5rem !important;
+    padding: 0.5rem 0.75rem !important;
+    border: 1px solid var(--whp-border) !important;
+    border-radius: 0.25rem !important;
+    font-size: 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    background-color: white !important;
+    color: var(--whp-text) !important;
+}
+
+#gform_wrapper_2 .gchoice:has(input[type="radio"]:checked) input[type="text"] {
+    border-color: var(--whp-primary-container) !important;
 }
 
 /* File Upload */
