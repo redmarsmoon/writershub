@@ -173,7 +173,7 @@
 }
 
 /* Radio buttons as chips */
-#gform_wrapper_2 .gfield--type-radio .gfield_radio {
+#gform_wrapper_2 .gfield--input-type-radio .gfield_radio {
     display: flex !important;
     flex-wrap: wrap !important;
     gap: 1rem !important;
@@ -212,18 +212,18 @@
     overflow: visible !important;
 }
 
-#gform_wrapper_2 .gfield--type-radio .gchoice {
+#gform_wrapper_2 .gfield--input-type-radio .gchoice {
     position: relative !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-#gform_wrapper_2 .gfield--type-radio input[type="radio"] {
+#gform_wrapper_2 .gfield--input-type-radio input[type="radio"] {
     display: none !important;
 }
 
 /* Base style for the label of all radios */
-#gform_wrapper_2 .gfield--type-radio .gform-field-label {
+#gform_wrapper_2 .gfield--input-type-radio .gform-field-label {
     display: flex !important;
     align-items: center !important;
     gap: 0.75rem !important;
@@ -243,12 +243,12 @@
     white-space: normal !important;
 }
 
-#gform_wrapper_2 .gfield--type-radio .gchoice:hover .gform-field-label {
+#gform_wrapper_2 .gfield--input-type-radio .gchoice:hover .gform-field-label {
     border-color: var(--whp-primary-container) !important;
     background-color: #f7f9ff !important;
 }
 
-#gform_wrapper_2 .gfield--type-radio .gfield-choice-input:checked + .gform-field-label {
+#gform_wrapper_2 .gfield--input-type-radio .gfield-choice-input:checked + .gform-field-label {
     border-color: var(--whp-primary-container) !important;
     background-color: var(--whp-primary-container) !important;
     color: white !important;
@@ -256,7 +256,7 @@
 }
 
 /* Custom Circle via ::before */
-#gform_wrapper_2 .gfield--type-radio .gform-field-label::before {
+#gform_wrapper_2 .gfield--input-type-radio .gform-field-label::before {
     content: '';
     display: block !important;
     flex-shrink: 0 !important;
@@ -269,7 +269,7 @@
     transition: all 0.2s !important;
 }
 
-#gform_wrapper_2 .gfield--type-radio .gfield-choice-input:checked + .gform-field-label::before {
+#gform_wrapper_2 .gfield--input-type-radio .gfield-choice-input:checked + .gform-field-label::before {
     border: 5px solid var(--whp-primary) !important;
     background-color: white !important;
 }
