@@ -263,7 +263,7 @@
     width: 18px !important;
     height: 18px !important;
     border: 2px solid var(--whp-border) !important;
-    border-radius: 50% !important;
+    border-radius: 4px !important;
     background-color: white !important;
     box-sizing: border-box !important;
     transition: all 0.2s !important;
@@ -444,4 +444,15 @@
     cursor: pointer;
     font-size: 14px;
     text-decoration: none;
+}
+
+/* Ensure category cards are equal height */
+#gform_wrapper_2 #field_2_37 .gchoice {
+    height: 100% !important;
+}
+#gform_wrapper_2 #field_2_37 .gform-field-label {
+    height: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    flex-direction: column !important;
 }
