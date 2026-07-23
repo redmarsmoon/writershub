@@ -86,29 +86,29 @@
 }
 
 /* Gravity Forms Overrides */
-#gform_wrapper_2 {
+.gform_wrapper {
     padding: 2rem;
     margin: 0 !important;
     max-width: 100% !important;
 }
 
-#gform_wrapper_2 .gform_heading {
+.gform_wrapper .gform_heading {
     display: none !important;
 }
 
-#gform_wrapper_2 fieldset.gfield {
+.gform_wrapper fieldset.gfield {
     border: none !important;
     margin: 0 !important;
     padding: 0 !important;
     min-width: 0 !important;
 }
 
-#gform_wrapper_2 .gform_body {
+.gform_wrapper .gform_body {
     width: 100%;
 }
 
-#gform_wrapper_2 .gfield_label,
-#gform_wrapper_2 .gsection_title {
+.gform_wrapper .gfield_label,
+.gform_wrapper .gsection_title {
     font-weight: 500 !important;
     font-size: 14px !important;
     color: var(--whp-text) !important;
@@ -117,27 +117,27 @@
     font-family: 'Work Sans', sans-serif !important;
 }
 
-#gform_wrapper_2 .gsection {
+.gform_wrapper .gsection {
     border-bottom: 2px solid var(--whp-primary-container) !important;
     padding-bottom: 1rem !important;
     margin-bottom: 2rem !important;
     margin-top: 2.5rem !important;
 }
 
-#gform_wrapper_2 .gfield {
+.gform_wrapper .gfield {
     border-bottom: 1px solid var(--whp-border) !important;
     padding-bottom: 2rem !important;
     margin-top: 1.5rem !important;
     margin-bottom: 2rem !important;
 }
 
-#gform_wrapper_2 .gfield:last-child {
+.gform_wrapper .gfield:last-child {
     border-bottom: none !important;
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
 }
 
-#gform_wrapper_2 .gsection_title {
+.gform_wrapper .gsection_title {
     font-size: 1.25rem !important;
     font-family: 'Montserrat', sans-serif !important;
     color: var(--whp-primary) !important;
@@ -145,13 +145,13 @@
 }
 
 /* Style Inputs */
-#gform_wrapper_2 input[type="text"],
-#gform_wrapper_2 input[type="number"],
-#gform_wrapper_2 input[type="email"],
-#gform_wrapper_2 input[type="tel"],
-#gform_wrapper_2 input[type="date"],
-#gform_wrapper_2 select,
-#gform_wrapper_2 textarea {
+.gform_wrapper input[type="text"],
+.gform_wrapper input[type="number"],
+.gform_wrapper input[type="email"],
+.gform_wrapper input[type="tel"],
+.gform_wrapper input[type="date"],
+.gform_wrapper select,
+.gform_wrapper textarea {
     width: 100% !important;
     border: 1px solid var(--whp-border) !important;
     padding: 1rem !important;
@@ -164,46 +164,46 @@
     box-sizing: border-box !important;
 }
 
-#gform_wrapper_2 input:focus,
-#gform_wrapper_2 select:focus,
-#gform_wrapper_2 textarea:focus {
+.gform_wrapper input:focus,
+.gform_wrapper select:focus,
+.gform_wrapper textarea:focus {
     outline: none !important;
     border-color: var(--whp-primary-container) !important;
     box-shadow: 0 0 0 2px rgba(37, 88, 171, 0.1) !important;
 }
 
 /* Radio buttons as chips */
-#gform_wrapper_2 .gfield--input-type-radio .gfield_radio {
+.gform_wrapper .gfield--input-type-radio .gfield_radio {
     display: flex !important;
     flex-wrap: wrap !important;
     gap: 1rem !important;
 }
 
 /* Service Category (Field 37) - Title and 3 buttons in a row */
-#gform_wrapper_2 #field_2_37 > .gfield_label {
+.gform_wrapper [id^="field_"][id$="_37"] > .gfield_label {
     font-size: 1.25rem !important;
     font-family: 'Montserrat', sans-serif !important;
     color: var(--whp-primary) !important;
     font-weight: 600 !important;
     margin-bottom: 1.5rem !important;
 }
-#gform_wrapper_2 #field_2_37 .gfield_radio {
+.gform_wrapper [id^="field_"][id$="_37"] .gfield_radio {
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 1rem !important;
 }
 @media(min-width: 768px) {
-    #gform_wrapper_2 #field_2_37 .gfield_radio {
+    .gform_wrapper [id^="field_"][id$="_37"] .gfield_radio {
         grid-template-columns: repeat(3, 1fr) !important;
     }
 }
 
 /* Grid Cards for Radios (Academic Level, Deadline, Spacing, Format, Paper Format) */
-#gform_wrapper_2 #field_2_59 .gfield_radio,
-#gform_wrapper_2 #field_2_60 .gfield_radio,
-#gform_wrapper_2 #field_2_31 .gfield_radio,
-#gform_wrapper_2 #field_2_23 .gfield_radio,
-#gform_wrapper_2 #field_2_16 .gfield_radio {
+.gform_wrapper [id^="field_"][id$="_59"] .gfield_radio,
+.gform_wrapper [id^="field_"][id$="_60"] .gfield_radio,
+.gform_wrapper [id^="field_"][id$="_31"] .gfield_radio,
+.gform_wrapper [id^="field_"][id$="_23"] .gfield_radio,
+.gform_wrapper [id^="field_"][id$="_16"] .gfield_radio {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
     gap: 1rem !important;
@@ -212,18 +212,18 @@
     overflow: visible !important;
 }
 
-#gform_wrapper_2 .gfield--input-type-radio .gchoice {
+.gform_wrapper .gfield--input-type-radio .gchoice {
     position: relative !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-#gform_wrapper_2 .gfield--input-type-radio input[type="radio"] {
+.gform_wrapper .gfield--input-type-radio input[type="radio"] {
     display: none !important;
 }
 
 /* Base style for the label of all radios */
-#gform_wrapper_2 .gfield--input-type-radio .gchoice .gform-field-label {
+.gform_wrapper .gfield--input-type-radio .gchoice .gform-field-label {
     display: flex !important;
     align-items: center !important;
     gap: 0.75rem !important;
@@ -243,12 +243,12 @@
     white-space: normal !important;
 }
 
-#gform_wrapper_2 .gfield--input-type-radio .gchoice:hover .gform-field-label {
+.gform_wrapper .gfield--input-type-radio .gchoice:hover .gform-field-label {
     border-color: var(--whp-primary-container) !important;
     background-color: #f7f9ff !important;
 }
 
-#gform_wrapper_2 .gfield--input-type-radio .gfield-choice-input:checked + .gform-field-label {
+.gform_wrapper .gfield--input-type-radio .gfield-choice-input:checked + .gform-field-label {
     border-color: var(--whp-primary-container) !important;
     background-color: var(--whp-primary-container) !important;
     color: white !important;
@@ -256,7 +256,7 @@
 }
 
 /* Custom Circle via ::before */
-#gform_wrapper_2 .gfield--input-type-radio .gchoice .gform-field-label::before {
+.gform_wrapper .gfield--input-type-radio .gchoice .gform-field-label::before {
     content: '';
     display: block !important;
     flex-shrink: 0 !important;
@@ -269,22 +269,22 @@
     transition: all 0.2s !important;
 }
 
-#gform_wrapper_2 .gfield--input-type-radio .gfield-choice-input:checked + .gform-field-label::before {
+.gform_wrapper .gfield--input-type-radio .gfield-choice-input:checked + .gform-field-label::before {
     border: 5px solid var(--whp-primary) !important;
     background-color: white !important;
 }
 
 /* Grid layout explicit min-height for uniformity */
-#gform_wrapper_2 #field_2_59 .gform-field-label,
-#gform_wrapper_2 #field_2_60 .gform-field-label,
-#gform_wrapper_2 #field_2_31 .gform-field-label,
-#gform_wrapper_2 #field_2_23 .gform-field-label,
-#gform_wrapper_2 #field_2_16 .gform-field-label {
+.gform_wrapper [id^="field_"][id$="_59"] .gform-field-label,
+.gform_wrapper [id^="field_"][id$="_60"] .gform-field-label,
+.gform_wrapper [id^="field_"][id$="_31"] .gform-field-label,
+.gform_wrapper [id^="field_"][id$="_23"] .gform-field-label,
+.gform_wrapper [id^="field_"][id$="_16"] .gform-field-label {
     min-height: 4.5rem !important;
 }
 
 /* Style for the 'Other' text input field to sit inline on the side */
-#gform_wrapper_2 .gchoice input[type="text"] {
+.gform_wrapper .gchoice input[type="text"] {
     flex: 1 !important;
     margin-top: 0.5rem !important;
     padding: 0.5rem 0.75rem !important;
@@ -298,12 +298,12 @@
     color: var(--whp-text) !important;
 }
 
-#gform_wrapper_2 .gchoice:has(input[type="radio"]:checked) input[type="text"] {
+.gform_wrapper .gchoice:has(input[type="radio"]:checked) input[type="text"] {
     border-color: var(--whp-primary-container) !important;
 }
 
 /* File Upload */
-#gform_wrapper_2 .gform_fileupload_multifile {
+.gform_wrapper .gform_fileupload_multifile {
     border: 2px dashed var(--whp-border) !important;
     border-radius: 0.75rem !important;
     padding: 1.5rem !important;
@@ -311,12 +311,12 @@
     background: #fcfdfe !important;
 }
 
-#gform_wrapper_2 .gform_drop_instructions {
+.gform_wrapper .gform_drop_instructions {
     font-family: 'Work Sans', sans-serif !important;
     color: var(--whp-text-muted) !important;
 }
 
-#gform_wrapper_2 .gform_button_select_files {
+.gform_wrapper .gform_button_select_files {
     background: transparent !important;
     color: var(--whp-primary-container) !important;
     font-weight: bold !important;
@@ -328,12 +328,12 @@
 }
 
 /* Submit Button */
-#gform_wrapper_2 .gform_footer {
+.gform_wrapper .gform_footer {
     padding-top: 1rem !important;
     margin: 0 !important;
 }
 
-#gform_wrapper_2 .gform_button {
+.gform_wrapper .gform_button {
     width: 100% !important;
     background-color: var(--whp-secondary) !important;
     color: white !important;
@@ -349,7 +349,7 @@
     margin: 0 !important;
 }
 
-#gform_wrapper_2 .gform_button:active {
+.gform_wrapper .gform_button:active {
     transform: scale(0.98) !important;
 }
 
@@ -447,10 +447,10 @@
 }
 
 /* Ensure category cards are equal height */
-#gform_wrapper_2 #field_2_37 .gchoice {
+.gform_wrapper [id^="field_"][id$="_37"] .gchoice {
     height: 100% !important;
 }
-#gform_wrapper_2 #field_2_37 .gform-field-label {
+.gform_wrapper [id^="field_"][id$="_37"] .gform-field-label {
     height: 100% !important;
     justify-content: center !important;
     text-align: center !important;

@@ -1,7 +1,14 @@
-jQuery(document).ready(function($) {
-    if ($('#gform_wrapper_2').length === 0) return;
+// Load iframe resizer contentWindow script for automatic height stretching
+if (!window.iFrameResizer) {
+    var script = document.createElement('script');
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.9/iframeResizer.contentWindow.min.js";
+    document.head.appendChild(script);
+}
 
-    const $wrapper = $('#gform_wrapper_2');
+jQuery(document).ready(function($) {
+    if ($('.gform_wrapper').length === 0) return;
+
+    const $wrapper = $('.gform_wrapper');
     
     // Wrap the entire form in our grid layout
     const layoutHtml = `
@@ -72,7 +79,7 @@ jQuery(document).ready(function($) {
     };
 
     function processRadioIcons() {
-        $('#gform_wrapper_2 .gfield--type-radio .gchoice').each(function() {
+        $('.gform_wrapper .gfield--type-radio .gchoice').each(function() {
             const text = $(this).find('label').text().trim();
             if (iconsMap[text]) {
                 if ($(this).find('.material-symbols-outlined').length === 0) {
