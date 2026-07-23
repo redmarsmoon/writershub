@@ -127,6 +127,7 @@
 #gform_wrapper_2 .gfield {
     border-bottom: 1px solid var(--whp-border) !important;
     padding-bottom: 2rem !important;
+    margin-top: 1.5rem !important;
     margin-bottom: 2rem !important;
 }
 
@@ -204,7 +205,7 @@
 #gform_wrapper_2 #field_2_23 .gfield_radio,
 #gform_wrapper_2 #field_2_16 .gfield_radio {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
     gap: 1rem !important; /* Increased gap to prevent touching */
     border: none !important;
     border-radius: 0 !important;
