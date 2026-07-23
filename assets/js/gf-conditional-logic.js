@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // Arrays of field IDs for each section
-    const acGroup1 = ['field_2_36', 'field_2_59']; // Title, Academic Level
-    const acGroup2 = ['field_2_3']; // Type of Paper
-    const acGroup3 = ['field_2_5']; // Discipline
-    const acGroup4 = ['field_2_29', 'field_2_6', 'field_2_7', 'field_2_8', 'field_2_60', 'field_2_23']; // Instructions, Topic, Format, Spacing
-    const acGroup5 = ['field_2_13', 'field_2_24', 'field_2_20']; // Pages, Slides, Charts
-    const acGroup6 = ['field_2_16', 'field_2_22']; // Deadline, Price
+    const academicFields = [
+        'field_2_36', 'field_2_59', 'field_2_3', 'field_2_5',
+        'field_2_29', 'field_2_6', 'field_2_7', 'field_2_8', 'field_2_60', 'field_2_23',
+        'field_2_16', 'field_2_22'
+    ]; 
     
     const jobHuntingFields = [
         'field_2_38', 'field_2_42', 'field_2_43', 'field_2_44', 
@@ -21,8 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const commonBottomFields = [
         'field_2_28', 'field_2_25', 'field_2_26', 'field_2_27', 'field_2_57', 'field_2_58'
     ];
-
-    const allAcademicGroups = [acGroup1, acGroup2, acGroup3, acGroup4, acGroup5, acGroup6];
 
     function hideFields(fieldsArray) {
         fieldsArray.forEach(id => {
@@ -40,10 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize: Hide all conditional sections
     function resetAll() {
-        allAcademicGroups.forEach(group => hideFields(group));
+        hideFields(academicFields);
         hideFields(jobHuntingFields);
         hideFields(ecommerceFields);
         hideFields(commonBottomFields);
+        hideFields(['field_2_13', 'field_2_24', 'field_2_20']); // Pages, Slides, Charts
     }
     
     resetAll();
@@ -53,56 +51,49 @@ document.addEventListener('DOMContentLoaded', function() {
     categoryRadios.forEach(radio => {
         radio.addEventListener('change', function(e) {
             resetAll();
-            const selectedCategory = e.target.value;
+            // Use includes to safely match values with &amp; encoded differently
+            const val = e.target.value || '';
             
-            if (selectedCategory === 'Academic Writing') {
-                showFields(acGroup1);
-            } else if (selectedCategory === 'Job Hunting & CV Services') {
+            if (val.includes('Academic Writing')) {
+                showFields(academicFields);
+                showFields(commonBottomFields);
+                updateAcademicDynamicFields();
+            } else if (val.includes('Job Hunting')) {
                 showFields(jobHuntingFields);
                 showFields(commonBottomFields);
-            } else if (selectedCategory === 'E-commerce & Digital Services') {
+            } else if (val.includes('E-commerce')) {
                 showFields(ecommerceFields);
                 showFields(commonBottomFields);
             }
         });
     });
+    
+    function updateAcademicDynamicFields() {
+        const typeSelect = document.getElementById('input_2_3');
+        const val = typeSelect ? typeSelect.value : '';
+        
+        // Hide all specific ones first
+        hideFields(['field_2_13', 'field_2_24', 'field_2_20']);
+        
+        if (val === 'PowerPoint Presentation') {
+            showFields(['field_2_20']); // Slides
+        } else if (val.includes('Chart')) {
+            showFields(['field_2_24']); // Charts
+        } else if (val !== '') {
+            showFields(['field_2_13']); // Pages (default for essays)
+        }
+    }
 
-    // Progressive Disclosure for Academic Writing
-    // 1. Academic Level -> Shows Type of Paper
-    document.querySelectorAll('input[name="input_59"]').forEach(radio => {
-        radio.addEventListener('change', () => showFields(acGroup2));
-    });
-
-    // 2. Type of Paper -> Shows Discipline
+    // Listen for Type of Paper changes to toggle Pages/Slides/Charts
     const typeSelect = document.getElementById('input_2_3');
     if(typeSelect) {
-        typeSelect.addEventListener('change', () => {
-            if(typeSelect.value) showFields(acGroup3);
-        });
+        typeSelect.addEventListener('change', updateAcademicDynamicFields);
     }
-
-    // 3. Discipline -> Shows Instructions & Spacing
-    const discSelect = document.getElementById('input_2_5');
-    if(discSelect) {
-        discSelect.addEventListener('change', () => {
-            if(discSelect.value) showFields(acGroup4);
-        });
-    }
-
-    // 4. Spacing -> Shows Pages, Slides, Charts
-    document.querySelectorAll('input[name="input_23"]').forEach(radio => {
-        radio.addEventListener('change', () => showFields(acGroup5));
-    });
-
-    // 5. Pages -> Shows Deadline & Bottom Fields
-    const pagesSelect = document.getElementById('input_2_13');
-    if(pagesSelect) {
-        pagesSelect.addEventListener('change', () => {
-            if(pagesSelect.value) {
-                showFields(acGroup6);
-                showFields(commonBottomFields);
-            }
-        });
+    
+    // Check if any category is already checked on load
+    const checkedCategory = document.querySelector('input[name="input_37"]:checked');
+    if (checkedCategory) {
+        checkedCategory.dispatchEvent(new Event('change'));
     }
 });
 
