@@ -81,7 +81,7 @@
 </div>
 </div>
 </nav>
-<main class="pt-16">
+<main>
 <!-- Hero Section -->
 <section class="relative px-gutter py-section-padding overflow-hidden">
 <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center relative z-10">
@@ -178,11 +178,38 @@
                                 </button>
 </div>
 </div>
+<div id="academicLevelWrapper">
+<label class="block font-label-lg text-on-surface-variant mb-4">Academic Level</label>
+<select class="w-full border-low-contrast rounded-lg font-button focus:ring-primary focus:border-primary" id="academicLevelSelect" onchange="calculate()">
+<option value="High School">High School</option>
+<option value="Undergrad (1-2)">Undergrad (Years 1-2)</option>
+<option value="Undergrad (3-4)">Undergrad (Years 3-4)</option>
+<option value="Master's">Master's</option>
+<option value="PhD">PhD</option>
+</select>
+</div>
+<div id="careerProductWrapper" class="hidden">
+<label class="block font-label-lg text-on-surface-variant mb-4">Select a Service</label>
+<select class="w-full border-low-contrast rounded-lg font-button focus:ring-primary focus:border-primary" id="careerProductSelect" onchange="calculate()">
+<option value="50">Resume/CV Writing - Basic ($50)</option>
+<option value="100">Resume/CV Writing - Professional ($100)</option>
+<option value="150">Resume/CV Writing - Executive ($150)</option>
+<option value="30">Cover Letter - Standard ($30)</option>
+<option value="50">Cover Letter - Tailored to Job ($50)</option>
+<option value="50">LinkedIn Optimization - Basic ($50)</option>
+<option value="100">LinkedIn Optimization - Full ($100)</option>
+<option value="200">Job Application Assistance - 10 Applications ($200)</option>
+<option value="300">Job Application Assistance - 20 Applications ($300)</option>
+<option value="550">Job Application Assistance - 50 Applications ($550)</option>
+<option value="850">Job Application Assistance - 80 Applications ($850)</option>
+<option value="1050">Job Application Assistance - 100 Applications ($1,050)</option>
+</select>
+</div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div>
+<div id="urgencyWrapper">
 <label class="block font-label-lg text-on-surface-variant mb-4">Urgency (Days)</label>
 <div class="flex items-center gap-4">
-<input class="w-full accent-primary h-2 bg-surface-container rounded-lg appearance-none cursor-pointer" id="urgencySlider" max="14" min="1" type="range" value="7"/>
+<input class="w-full accent-primary h-2 bg-surface-container rounded-lg appearance-none cursor-pointer" id="urgencySlider" max="14" min="1" type="range" value="7" oninput="handleUrgencyInput()"/>
 <span class="font-headline-md text-primary w-16" id="urgencyValue">7d</span>
 </div>
 <div class="flex justify-between text-xs text-text-muted mt-2">
@@ -191,11 +218,11 @@
 <span>14 Days</span>
 </div>
 </div>
-<div>
+<div id="volumeWrapper">
 <label class="block font-label-lg text-on-surface-variant mb-4">Volume (Pages/Words)</label>
 <div class="flex items-center gap-2">
 <button class="w-10 h-10 rounded bg-surface-container hover:bg-surface-variant flex items-center justify-center font-bold" onclick="decrementVolume()">-</button>
-<input class="flex-1 text-center border-low-contrast rounded-lg font-headline-md focus:ring-primary focus:border-primary" id="volumeInput" min="1" type="number" value="1"/>
+<input class="flex-1 text-center border-low-contrast rounded-lg font-headline-md focus:ring-primary focus:border-primary" id="volumeInput" min="1" type="number" value="1" onchange="handleVolumeInput()"/>
 <button class="w-10 h-10 rounded bg-surface-container hover:bg-surface-variant flex items-center justify-center font-bold" onclick="incrementVolume()">+</button>
 </div>
 </div>
@@ -209,20 +236,20 @@
 <span>Service Type:</span>
 <span class="font-button" id="summaryType">Academic</span>
 </div>
-<div class="flex justify-between text-on-primary-container">
+<div class="flex justify-between text-on-primary-container" id="summaryUrgencyRow">
 <span>Urgency:</span>
 <span class="font-button" id="summaryUrgency">7 Days</span>
 </div>
-<div class="flex justify-between text-on-primary-container">
+<div class="flex justify-between text-on-primary-container" id="summaryVolumeRow">
 <span>Volume:</span>
 <span class="font-button" id="summaryVolume">1 Page</span>
 </div>
 </div>
 <div class="pt-6 border-t border-on-primary/20">
 <p class="text-sm opacity-80 mb-1">Total Starting From</p>
-<div class="text-5xl font-display-lg" id="totalPrice">$18.00</div>
+<div class="text-5xl font-display-lg" id="totalPrice">$12.00</div>
 </div>
-<a href="https://orders.writershubplus.com" class="w-full bg-accent-vibrant text-on-primary py-4 rounded-lg font-button shadow-md hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2">
+<a href="https://orders.writershubplus.com/?service=academic" id="calculatorOrderLink" class="w-full bg-accent-vibrant text-on-primary py-4 rounded-lg font-button shadow-md hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2">
                             Order Now <span class="material-symbols-outlined">arrow_forward</span>
 </a>
 <p class="text-[10px] text-center opacity-60">Prices exclude local VAT/GST where applicable.</p>
@@ -264,7 +291,7 @@
 <span class="font-button text-primary">From $29.99/pg</span>
 </div>
 </div>
-<a href="https://orders.writershubplus.com" class="w-full border border-primary text-primary py-3 rounded-lg font-button hover:bg-primary/5 transition-colors block text-center">Select Tier</a>
+<a href="https://orders.writershubplus.com/?service=academic" class="w-full border border-primary text-primary py-3 rounded-lg font-button hover:bg-primary/5 transition-colors block text-center">Select Tier</a>
 </div>
 </div>
 <!-- Job Hunting -->
@@ -284,19 +311,19 @@
 </div>
 <div class="space-y-4">
 <div class="flex justify-between items-center border-b border-surface-variant pb-2">
-<span class="text-sm">Standard (5 Days)</span>
-<span class="font-button text-accent-vibrant">$89.00 Flat</span>
+<span class="text-sm">Resume/CV Writing</span>
+<span class="font-button text-accent-vibrant">From $50.00</span>
 </div>
 <div class="flex justify-between items-center border-b border-surface-variant pb-2">
-<span class="text-sm">Priority (3 Days)</span>
-<span class="font-button text-accent-vibrant">$115.00 Flat</span>
+<span class="text-sm">Cover Letter</span>
+<span class="font-button text-accent-vibrant">From $30.00</span>
 </div>
 <div class="flex justify-between items-center border-b border-surface-variant pb-2">
-<span class="text-sm">Rush (24 Hours)</span>
-<span class="font-button text-accent-vibrant">$149.00 Flat</span>
+<span class="text-sm">Job Application Assistance</span>
+<span class="font-button text-accent-vibrant">From $200.00</span>
 </div>
 </div>
-<a href="https://orders.writershubplus.com" class="w-full bg-accent-vibrant text-on-primary py-3 rounded-lg font-button shadow-sm hover:brightness-110 transition-all block text-center">Select Tier</a>
+<a href="https://orders.writershubplus.com/?service=career" class="w-full bg-accent-vibrant text-on-primary py-3 rounded-lg font-button shadow-sm hover:brightness-110 transition-all block text-center">Select Tier</a>
 </div>
 </div>
 <!-- eCommerce -->
@@ -472,11 +499,17 @@
 </footer>
 <!-- Interactive Script -->
 <script>
-        const basePrices = {
-            'Academic': 18,
-            'Career': 89,
-            'eCommerce': 35
+        // Mirrors the real per-page pricing matrix used at checkout on
+        // orders.writershubplus.com (assets/js/order-engine.js) so this
+        // calculator's estimate matches what customers are actually charged.
+        const academicMatrix = {
+            "High School":      { "14 days": 7,  "7 days": 12, "5 days": 14, "3 days": 16, "48 hrs": 18, "24 hrs": 21 },
+            "Undergrad (1-2)":  { "14 days": 12, "7 days": 14, "5 days": 16, "3 days": 18, "48 hrs": 20, "24 hrs": 25 },
+            "Undergrad (3-4)":  { "14 days": 15, "7 days": 16, "5 days": 18, "3 days": 20, "48 hrs": 22, "24 hrs": 25 },
+            "Master's":         { "14 days": 20, "7 days": 22, "5 days": 23, "3 days": 26, "48 hrs": 29, "24 hrs": 31 },
+            "PhD":              { "14 days": 23, "7 days": 25, "5 days": 29, "3 days": 29, "48 hrs": 36, "24 hrs": 40 }
         };
+        const ecommerceBase = 35; // per 500 words, matches the tier card below
 
         let currentType = 'Academic';
         let currentUrgency = 7;
@@ -486,10 +519,22 @@
         const urgencyVal = document.getElementById('urgencyValue');
         const volumeInput = document.getElementById('volumeInput');
         const totalPriceEl = document.getElementById('totalPrice');
+        const academicLevelSelect = document.getElementById('academicLevelSelect');
+        const careerProductSelect = document.getElementById('careerProductSelect');
 
         const summaryType = document.getElementById('summaryType');
         const summaryUrgency = document.getElementById('summaryUrgency');
         const summaryVolume = document.getElementById('summaryVolume');
+
+        function urgencyToBucket(days) {
+            days = parseInt(days, 10);
+            if (days <= 1) return "24 hrs";
+            if (days <= 2) return "48 hrs";
+            if (days <= 3) return "3 days";
+            if (days <= 5) return "5 days";
+            if (days <= 7) return "7 days";
+            return "14 days";
+        }
 
         function updateType(type) {
             currentType = type;
@@ -501,17 +546,30 @@
                     btn.classList.remove('border-low-contrast', 'text-text-muted');
                 }
             });
+
+            document.getElementById('academicLevelWrapper').classList.toggle('hidden', type !== 'Academic');
+            document.getElementById('careerProductWrapper').classList.toggle('hidden', type !== 'Career');
+            document.getElementById('urgencyWrapper').classList.toggle('hidden', type === 'Career');
+            document.getElementById('volumeWrapper').classList.toggle('hidden', type === 'Career');
+            document.getElementById('summaryUrgencyRow').classList.toggle('hidden', type === 'Career');
+            document.getElementById('summaryVolumeRow').classList.toggle('hidden', type === 'Career');
+
+            // eCommerce has no dedicated order form yet, so it also lands on Academic.
+            const serviceParam = type === 'Career' ? 'career' : 'academic';
+            document.getElementById('calculatorOrderLink').href = 'https://orders.writershubplus.com/?service=' + serviceParam;
+
             calculate();
         }
 
-        slider.oninput = function() {
-            currentUrgency = this.value;
-            urgencyVal.innerText = this.value + 'd';
+        function handleUrgencyInput() {
+            currentUrgency = slider.value;
+            urgencyVal.innerText = slider.value + 'd';
             calculate();
         }
 
-        volumeInput.oninput = function() {
-            currentVolume = Math.max(1, this.value);
+        function handleVolumeInput() {
+            currentVolume = Math.max(1, parseInt(volumeInput.value) || 1);
+            volumeInput.value = currentVolume;
             calculate();
         }
 
@@ -530,20 +588,29 @@
         }
 
         function calculate() {
-            // Simple logic: base price * volume * (1.5 if urgency < 3 days)
-            let base = basePrices[currentType];
-            let multiplier = 1;
-            
-            if (currentUrgency <= 1) multiplier = 2;
-            else if (currentUrgency <= 3) multiplier = 1.4;
-            else if (currentUrgency > 10) multiplier = 0.9;
+            let total = 0;
 
-            let total = (base * currentVolume * multiplier).toFixed(2);
-            
-            totalPriceEl.innerText = '$' + total;
+            if (currentType === 'Academic') {
+                const level = academicLevelSelect.value;
+                const bucket = urgencyToBucket(currentUrgency);
+                const perPage = academicMatrix[level][bucket];
+                total = perPage * currentVolume;
+            } else if (currentType === 'Career') {
+                total = parseFloat(careerProductSelect.value);
+            } else {
+                // eCommerce: no live order backend yet, so this stays an
+                // illustrative per-500-words estimate matching the tier card.
+                let multiplier = 1;
+                if (currentUrgency <= 1) multiplier = 2;
+                else if (currentUrgency <= 3) multiplier = 1.4;
+                else if (currentUrgency > 10) multiplier = 0.9;
+                total = ecommerceBase * currentVolume * multiplier;
+            }
+
+            totalPriceEl.innerText = '$' + total.toFixed(2);
             summaryType.innerText = currentType;
             summaryUrgency.innerText = currentUrgency + ' Days';
-            summaryVolume.innerText = currentVolume + (currentType === 'Career' ? ' Pack' : (currentType === 'eCommerce' ? ' Units' : ' Pages'));
+            summaryVolume.innerText = currentVolume + (currentType === 'eCommerce' ? ' Units' : ' Pages');
         }
 
         // Initialize
