@@ -4,8 +4,24 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Track Your Order | WritersHub Plus</title>
+<meta content="index, follow" name="robots"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Track Your Order | WritersHub Plus" name="twitter:title"/>
+<meta content="Track the status of your WritersHub Plus order in real time and stay connected with your assigned writer or specialist." name="twitter:description"/>
+<meta content="https://writershubplus.com/assets/images/logo.png" name="twitter:image"/>
+<meta content="Track Your Order | WritersHub Plus" property="og:title"/>
+<meta content="Track the status of your WritersHub Plus order in real time and stay connected with your assigned writer or specialist." property="og:description"/>
+<meta content="https://writershubplus.com/track-your-order.html" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="WritersHub Plus" property="og:site_name"/>
+<meta content="https://writershubplus.com/assets/images/logo.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<link href="https://writershubplus.com/track-your-order.html" rel="canonical"/>
+<meta content="Track the status of your WritersHub Plus order in real time and stay connected with your assigned writer or specialist." name="description"/>
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -17,6 +33,9 @@
             vertical-align: middle;
         }
     </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://writershubplus.com/#organization","name":"WritersHub Plus","url":"https://writershubplus.com/","logo":{"@type":"ImageObject","url":"https://writershubplus.com/assets/images/logo.png"},"sameAs":[]},{"@type":"WebSite","@id":"https://writershubplus.com/#website","url":"https://writershubplus.com/","name":"WritersHub Plus","publisher":{"@id":"https://writershubplus.com/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://writershubplus.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}}]}
+</script>
 </head>
 <body class="bg-surface text-on-surface font-body-md flex flex-col min-h-screen">
 <!-- TopNavBar -->
@@ -100,7 +119,7 @@
                 <h2 class="text-2xl font-bold text-on-surface">Order Status</h2>
                 <p class="text-on-surface-variant mt-1">Order <span id="display-order-id" class="font-semibold text-primary"></span></p>
             </div>
-            <button id="reset-tracking" class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors" title="Track another order">
+            <button id="reset-tracking" aria-label="Track another order" class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors" title="Track another order">
                 <span class="material-symbols-outlined">close</span>
             </button>
         </div>

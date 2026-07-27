@@ -4,6 +4,22 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Contact Us - WritersHub Plus</title>
+<meta content="index, follow" name="robots"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Contact Us - WritersHub Plus" name="twitter:title"/>
+<meta content="Get in touch with WritersHub Plus for questions about academic writing, career services, or eCommerce content. Our support team is available 24/7." name="twitter:description"/>
+<meta content="https://writershubplus.com/assets/images/logo.png" name="twitter:image"/>
+<meta content="Contact Us - WritersHub Plus" property="og:title"/>
+<meta content="Get in touch with WritersHub Plus for questions about academic writing, career services, or eCommerce content. Our support team is available 24/7." property="og:description"/>
+<meta content="https://writershubplus.com/contact-us.html" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="WritersHub Plus" property="og:site_name"/>
+<meta content="https://writershubplus.com/assets/images/logo.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<link href="https://writershubplus.com/contact-us.html" rel="canonical"/>
+<meta content="Get in touch with WritersHub Plus for questions about academic writing, career services, or eCommerce content. Our support team is available 24/7." name="description"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
@@ -33,6 +49,9 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="/assets/js/tailwind-config.js"></script>
 <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://writershubplus.com/#organization","name":"WritersHub Plus","url":"https://writershubplus.com/","logo":{"@type":"ImageObject","url":"https://writershubplus.com/assets/images/logo.png"},"sameAs":[]},{"@type":"WebSite","@id":"https://writershubplus.com/#website","url":"https://writershubplus.com/","name":"WritersHub Plus","publisher":{"@id":"https://writershubplus.com/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://writershubplus.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}}]}
+</script>
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
 <!-- TopNavBar -->
@@ -101,17 +120,17 @@
 <form class="space-y-stack-md">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
 <div>
-<label class="block font-label-lg text-label-lg mb-2 text-on-surface-variant">Full Name</label>
-<input class="w-full bg-surface-subtle border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John Doe" type="text"/>
+<label class="block font-label-lg text-label-lg mb-2 text-on-surface-variant" for="contact-fullname">Full Name</label>
+<input id="contact-fullname" class="w-full bg-surface-subtle border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John Doe" type="text"/>
 </div>
 <div>
-<label class="block font-label-lg text-label-lg mb-2 text-on-surface-variant">Email Address</label>
-<input class="w-full bg-surface-subtle border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="john@example.com" type="email"/>
+<label class="block font-label-lg text-label-lg mb-2 text-on-surface-variant" for="contact-email">Email Address</label>
+<input id="contact-email" class="w-full bg-surface-subtle border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="john@example.com" type="email"/>
 </div>
 </div>
 <div>
-<label class="block font-label-lg text-label-lg mb-2 text-on-surface-variant">Service Type</label>
-<select class="w-full bg-surface-subtle border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+<label class="block font-label-lg text-label-lg mb-2 text-on-surface-variant" for="contact-service-type">Service Type</label>
+<select id="contact-service-type" class="w-full bg-surface-subtle border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
 <option>Academic Writing</option>
 <option>Career Coaching</option>
 <option>eCommerce Strategy</option>
@@ -119,8 +138,8 @@
 </select>
 </div>
 <div>
-<label class="block font-label-lg text-label-lg mb-2 text-on-surface-variant">How can we help?</label>
-<textarea class="w-full bg-surface-subtle border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Briefly describe your project needs..." rows="4"></textarea>
+<label class="block font-label-lg text-label-lg mb-2 text-on-surface-variant" for="contact-message">How can we help?</label>
+<textarea id="contact-message" class="w-full bg-surface-subtle border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Briefly describe your project needs..." rows="4"></textarea>
 </div>
 <button class="w-full bg-primary text-on-primary py-4 rounded-lg font-button hover:bg-primary-container hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
 <span>Submit Request</span>
