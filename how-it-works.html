@@ -115,8 +115,32 @@
 </div>
 </div>
 <div class="relative mt-12 lg:mt-0">
-<div class="relative z-10 transform hover:scale-[1.02] transition-transform duration-500">
-<img alt="Illustration of the WritersHub Plus service selection and planning workflow" class="w-full h-auto drop-shadow-2xl rounded-xl" src="https://lh3.googleusercontent.com/aida/AP1WRLsJVtW8n08gejXb2eo4D2B7Qr1v_JMcYP4llaGt4p-SA8aLPyTmQdnfHwsuOWnJxPJa1Iu25t-y0i34Dapmo9zpapn1fB-_YZomSMHgYuWpiCs2CdMgqgeLgV9rd1jANiSqgL3mw64_sIfEo7oT8e0Lwg8WSx7tx8MfNydxmmzV6KReS6HL8q65ZFr5HO16NEUprjKwC4hTAjYhFnwPXstygDt33y4PlFaXO6Z7FwdFdf8e0mdItHCHIw"/>
+<div class="relative z-10 grid grid-cols-2 gap-4 p-8 rounded-xl border border-border-low-contrast bg-white shadow-xl">
+<div class="col-span-2 flex items-center gap-3 pb-4 mb-2 border-b border-border-low-contrast">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">route</span>
+</div>
+<div>
+<div class="font-headline-sm text-on-surface font-bold">Your Order Timeline</div>
+<div class="text-sm text-on-surface-variant">Brief to delivery, in four steps</div>
+</div>
+</div>
+<div class="flex flex-col items-center text-center gap-2 p-4 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">edit_note</span>
+<span class="text-xs font-semibold text-on-surface-variant">Submit</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2 p-4 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">person_search</span>
+<span class="text-xs font-semibold text-on-surface-variant">Match</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2 p-4 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">forum</span>
+<span class="text-xs font-semibold text-on-surface-variant">Collaborate</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2 p-4 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">task_alt</span>
+<span class="text-xs font-semibold text-on-surface-variant">Deliver</span>
+</div>
 </div>
 <!-- Decorative Element -->
 <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-container opacity-10 rounded-full blur-3xl -z-10"></div>
@@ -126,16 +150,20 @@
 <!-- 4-Step Roadmap -->
 <section class="py-section-padding px-margin-mobile bg-surface-elevated" id="how-it-works">
 <div class="max-w-container-max mx-auto">
-<div class="text-center mb-16">
+<div class="text-center mb-10">
 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Four Steps</h2>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Here's exactly what happens after you place an order.</p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mb-6">Here's exactly what happens after you place an order.</p>
+<div class="inline-flex rounded-lg border border-border-low-contrast p-1 bg-white">
+<button class="hiw-tab-btn px-6 py-2 rounded-md font-button text-sm font-semibold transition-colors bg-primary text-on-primary" data-track="academic" onclick="switchHowItWorksTrack('academic')">Academic Writing</button>
+<button class="hiw-tab-btn px-6 py-2 rounded-md font-button text-sm font-semibold transition-colors text-on-surface-variant" data-track="career" onclick="switchHowItWorksTrack('career')">Career Services</button>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative">
+</div>
+<div id="hiw-academic" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative">
 <!-- Step 1 -->
 <div class="group relative p-8 rounded-xl border border-border-low-contrast bg-white hover:border-primary transition-colors duration-300">
 <div class="w-12 h-12 bg-primary-container text-on-primary-container flex items-center justify-center rounded-lg mb-6 font-bold text-xl group-hover:scale-110 transition-transform">1</div>
 <h3 class="font-headline-md text-headline-md text-on-surface mb-3">Submit Requirements</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Tell us your deadline, topic, and any instructions or files we need.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Tell us your deadline, topic, citation style, and any rubric or notes we need.</p>
 <div class="mt-4 flex items-center text-primary font-label-lg group-hover:gap-2 transition-all">
                             Get started <span class="material-symbols-outlined">chevron_right</span>
 </div>
@@ -144,7 +172,7 @@
 <div class="group relative p-8 rounded-xl border border-border-low-contrast bg-white hover:border-primary transition-colors duration-300">
 <div class="w-12 h-12 bg-primary-container text-on-primary-container flex items-center justify-center rounded-lg mb-6 font-bold text-xl group-hover:scale-110 transition-transform">2</div>
 <h3 class="font-headline-md text-headline-md text-on-surface mb-3">Expert Match</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">We assign a writer with real background in your subject or industry.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">We assign a writer with a graduate degree in your subject area.</p>
 <div class="mt-4 flex items-center text-primary font-label-lg group-hover:gap-2 transition-all">
                             Learn about writers <span class="material-symbols-outlined">chevron_right</span>
 </div>
@@ -164,6 +192,44 @@
 <h3 class="font-headline-md text-headline-md text-on-surface mb-3">Quality Review</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">An editor checks the draft for accuracy, plagiarism, and grammar before it's delivered.</p>
 <div class="mt-4 flex items-center text-primary font-label-lg group-hover:gap-2 transition-all">
+                            Our standards <span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+<div id="hiw-career" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative">
+<!-- Step 1 -->
+<div class="group relative p-8 rounded-xl border border-border-low-contrast bg-white hover:border-[#006b5f] transition-colors duration-300">
+<div class="w-12 h-12 bg-[#d0f0ec] text-[#006b5f] flex items-center justify-center rounded-lg mb-6 font-bold text-xl group-hover:scale-110 transition-transform">1</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Submit Your Background</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Upload your current resume and the job descriptions you're targeting.</p>
+<div class="mt-4 flex items-center text-[#006b5f] font-label-lg group-hover:gap-2 transition-all">
+                            Get started <span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="group relative p-8 rounded-xl border border-border-low-contrast bg-white hover:border-[#006b5f] transition-colors duration-300">
+<div class="w-12 h-12 bg-[#d0f0ec] text-[#006b5f] flex items-center justify-center rounded-lg mb-6 font-bold text-xl group-hover:scale-110 transition-transform">2</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Strategist Match</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We assign a career strategist with experience in your industry.</p>
+<div class="mt-4 flex items-center text-[#006b5f] font-label-lg group-hover:gap-2 transition-all">
+                            Meet our strategists <span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="group relative p-8 rounded-xl border border-border-low-contrast bg-white hover:border-[#006b5f] transition-colors duration-300">
+<div class="w-12 h-12 bg-[#d0f0ec] text-[#006b5f] flex items-center justify-center rounded-lg mb-6 font-bold text-xl group-hover:scale-110 transition-transform">3</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Resume &amp; Profile Drafting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Message your strategist directly as your resume, cover letter, or LinkedIn profile comes together.</p>
+<div class="mt-4 flex items-center text-[#006b5f] font-label-lg group-hover:gap-2 transition-all">
+                            Collaboration tools <span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="group relative p-8 rounded-xl border border-border-low-contrast bg-white hover:border-[#006b5f] transition-colors duration-300">
+<div class="w-12 h-12 bg-[#d0f0ec] text-[#006b5f] flex items-center justify-center rounded-lg mb-6 font-bold text-xl group-hover:scale-110 transition-transform">4</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">ATS Check &amp; Delivery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We test your final documents against ATS scanners before delivery.</p>
+<div class="mt-4 flex items-center text-[#006b5f] font-label-lg group-hover:gap-2 transition-all">
                             Our standards <span class="material-symbols-outlined">chevron_right</span>
 </div>
 </div>
@@ -209,8 +275,8 @@
 </div>
 <div class="lg:w-1/2 grid grid-cols-2 gap-4">
 <div class="space-y-4">
-<div class="h-64 rounded-2xl overflow-hidden bg-white shadow-sm border border-border-low-contrast">
-<div class="w-full h-full bg-cover bg-center" data-alt="A clean, minimalist workspace with a sleek laptop, a leather-bound notebook, and a designer pen on a white oak desk. Soft morning light filters through large windows, creating a serene and professional atmosphere. The composition is balanced and elegant, reflecting a focus on intellectual work and high-quality writing services." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDE7SNohjud8z8f6wIBp8jzg07MHDbwkbqSDu32l5nt4wjgaj3sqNyhi7xbJe5nFloLKCV3GeQT5Ny9ntajXkLTuuoopumUZQfqdl90oGfngLdK8d47csyCYZKWQ5NSkGhBC_O7bW5X1DFRSSOw8epyHFa0ZC96C-zkikT1Xvoifpd_-z4-71bzdXzoLUoEdFDGBHD1XXY1NJ0Ex9M8LDUNfzgFlvKimZraRGiFRM2Cw6jOUWD1YxOe')"></div>
+<div class="h-64 rounded-2xl overflow-hidden bg-gradient-to-br from-primary-container to-surface-container-low shadow-sm border border-border-low-contrast flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-size: 64px;">school</span>
 </div>
 <div class="h-48 rounded-2xl overflow-hidden glass-card shadow-sm border border-border-low-contrast flex items-center justify-center p-8">
 <div class="text-center">
@@ -224,8 +290,8 @@
 <div class="text-2xl font-bold">15k+</div>
 <div class="text-sm opacity-80">Projects Delivered</div>
 </div>
-<div class="h-64 rounded-2xl overflow-hidden bg-white shadow-sm border border-border-low-contrast">
-<div class="w-full h-full bg-cover bg-center" data-alt="Two professional colleagues engaged in a collaborative discussion over a series of digital documents displayed on a tablet. The setting is a modern, light-filled office with minimalist architecture. The mood is focused and productive, highlighting the partnership between clients and experts. The lighting is bright and natural, maintaining a high-key, modern aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkvqHsiAzG5XLKHNjzKKZjcMsAZ6J82FuD1XmzqQ8gM1vFJRNnkiwtS6V4LGnII-YfqiAy3GbQ1xNas0rsomKbQWUTh9FV1fH-Owqfuu9a6I3-kb07uG5ZaHPUICZwgLtAXjiNsITyEJ_g5miOymBNR1naJBs3rMmh2v4kz-evvL48uy_Xe6aMprE-UYwRHd7hrMF5Y9ELJ7JupqreFSXwxEh6_lBW1ZP8cvA-Ia_iV3lskG93__0I')"></div>
+<div class="h-64 rounded-2xl overflow-hidden bg-gradient-to-br from-[#006b5f]/10 to-surface-container-low shadow-sm border border-border-low-contrast flex items-center justify-center">
+<span class="material-symbols-outlined text-[#006b5f]" style="font-size: 64px;">work</span>
 </div>
 </div>
 </div>
@@ -260,7 +326,10 @@
 <section class="py-16 bg-surface-container-lowest border-t border-outline-variant dark:border-outline">
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div class="prose dark:prose-invert max-w-none">
-            <h2 class="text-3xl font-display-md text-on-surface mb-6">More detail on each step</h2>
+            <h2 class="text-3xl font-display-md text-on-surface mb-6">How it works for each service</h2>
+            <p class="text-on-surface-variant leading-relaxed mb-4">
+                The same four steps apply to both <a href="/writing-services/index.html" class="text-primary hover:underline">academic writing</a> and <a href="/job-hunting-services/index.html" class="text-primary hover:underline">career services</a>, with a different specialist and deliverable at each stage.
+            </p>
 
             <h3 class="text-2xl font-semibold text-on-surface mt-8 mb-4">1. Submit your requirements</h3>
             <p class="text-on-surface-variant leading-relaxed mb-4">
@@ -269,17 +338,17 @@
 
             <h3 class="text-2xl font-semibold text-on-surface mt-8 mb-4">2. Pay and get matched</h3>
             <p class="text-on-surface-variant leading-relaxed mb-4">
-                You get a quote based on our <a href="/pricing.html" class="text-primary hover:underline">published pricing</a>, pay through an encrypted gateway, and we assign a writer with relevant background. A <a href="/writing-services/dissertation-writing.html" class="text-primary hover:underline">nursing dissertation</a> goes to a writer with a nursing or public health background; an <a href="/ecommerce-marketing.html" class="text-primary hover:underline">eCommerce SEO project</a> goes to a digital marketer.
+                You get a quote based on our <a href="/pricing.html" class="text-primary hover:underline">published pricing</a>, pay through an encrypted gateway, and we assign a specialist with relevant background. A <a href="/writing-services/dissertation-writing.html" class="text-primary hover:underline">nursing dissertation</a> goes to a writer with a nursing or public health background; a resume for a marketing role goes to a career strategist who has worked in <a href="/ecommerce-marketing.html" class="text-primary hover:underline">marketing and eCommerce</a>.
             </p>
 
-            <h3 class="text-2xl font-semibold text-on-surface mt-8 mb-4">3. Work with your writer</h3>
+            <h3 class="text-2xl font-semibold text-on-surface mt-8 mb-4">3. Work with your specialist</h3>
             <p class="text-on-surface-variant leading-relaxed mb-4">
-                You get a client portal to message your writer, track progress, and answer questions as they come up, including on <a href="/research-paper.html" class="text-primary hover:underline">methodology</a> for research-based work.
+                You get a client portal to message your writer or strategist, track progress, and answer questions as they come up, including on <a href="/research-paper.html" class="text-primary hover:underline">methodology</a> for research-based work or on target roles for a <a href="/job-hunting-services/linkedin-optimization.html" class="text-primary hover:underline">LinkedIn profile</a> or resume.
             </p>
 
             <h3 class="text-2xl font-semibold text-on-surface mt-8 mb-4">4. Quality check and delivery</h3>
             <p class="text-on-surface-variant leading-relaxed mb-4">
-                Before delivery, an editor checks the draft against your instructions and runs it through plagiarism and AI-detection software. Every document is 100% human-written.
+                Academic papers are checked against your instructions and run through plagiarism and AI-detection software before delivery, 100% human-written. Resumes and cover letters are tested against ATS scanners before delivery.
             </p>
             <p class="text-on-surface-variant leading-relaxed">
                 Once delivered, review the work. If it doesn't match your instructions, request a free revision under our <a href="/buyer-purchase-protection.html" class="text-primary hover:underline">Buyer Purchase Protection</a>. Ready to start? <a href="/how-to-order.html" class="text-primary hover:underline">See the full ordering guide</a>.
@@ -331,6 +400,17 @@
         </div>
 </footer>
 <script>
+        function switchHowItWorksTrack(track) {
+            document.getElementById('hiw-academic').classList.toggle('hidden', track !== 'academic');
+            document.getElementById('hiw-career').classList.toggle('hidden', track !== 'career');
+            document.querySelectorAll('.hiw-tab-btn').forEach((btn) => {
+                const active = btn.dataset.track === track;
+                btn.classList.toggle('bg-primary', active);
+                btn.classList.toggle('text-on-primary', active);
+                btn.classList.toggle('text-on-surface-variant', !active);
+            });
+        }
+
         // Simple scroll reveal interaction
         document.addEventListener('DOMContentLoaded', () => {
             const observerOptions = {
@@ -346,7 +426,7 @@
                 });
             }, observerOptions);
 
-            document.querySelectorAll('#how-it-works > div > div > div').forEach(card => {
+            document.querySelectorAll('#hiw-academic > div, #hiw-career > div').forEach(card => {
                 card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
                 observer.observe(card);
             });
